@@ -1,0 +1,9 @@
+development_journal.md
+research_journal.md
+
+.env
+.env.*
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
