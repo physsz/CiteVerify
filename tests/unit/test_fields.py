@@ -82,6 +82,37 @@ def test_page_range_matches_first_page_only() -> None:
     assert pages.result == ComparisonResult.MATCH
 
 
+def test_pages_match_found_article_number() -> None:
+    comparisons = compare_references(
+        ParsedReference(
+            reference_id="ref-1",
+            raw_text="raw",
+            pages="090502",
+        ),
+        RegistryRecord(source="fixture", article_number="090502"),
+    )
+    pages = next(
+        comparison for comparison in comparisons if comparison.field == "pages"
+    )
+    assert pages.result == ComparisonResult.MATCH
+    assert pages.note == "input pages matched found article number"
+
+
+def test_pages_mismatch_found_article_number() -> None:
+    comparisons = compare_references(
+        ParsedReference(
+            reference_id="ref-1",
+            raw_text="raw",
+            pages="090502",
+        ),
+        RegistryRecord(source="fixture", article_number="094101"),
+    )
+    pages = next(
+        comparison for comparison in comparisons if comparison.field == "pages"
+    )
+    assert pages.result == ComparisonResult.MISMATCH
+
+
 def test_venue_matches_when_volume_is_embedded_in_found_venue() -> None:
     comparisons = compare_references(
         ParsedReference(

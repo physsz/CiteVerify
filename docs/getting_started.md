@@ -64,10 +64,12 @@ uv run citeverify verify example_refs.bib
 By default, this writes:
 
 ```text
-citeverify_full_report.md
-citeverify_short_report.md
-citeverify_report.json
+reports/full_report.md
+reports/short_report.md
+reports/report.json
 ```
+
+CiteVerify creates the `reports/` directory if it does not already exist.
 
 ## Quick Start: Choose Output Paths
 
@@ -77,6 +79,9 @@ uv run citeverify verify example_refs.bib \
   --short-report reports/short_report.md \
   --json-report reports/report.json
 ```
+
+If the parent directory for a chosen report path does not exist, CiteVerify
+creates it before writing the report artifact.
 
 The full report includes every reference. The short report includes only
 references with lookup failures, ambiguous matches, or supplied-field

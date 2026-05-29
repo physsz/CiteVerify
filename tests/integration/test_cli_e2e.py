@@ -50,6 +50,15 @@ class FakeProvider:
             raw_status_code=200 if matches else 404,
         )
 
+    async def get_by_arxiv_id(self, arxiv_id: str) -> LookupResponse:
+        return LookupResponse(
+            source=self.name,
+            query_kind="arxiv_id",
+            query_value=arxiv_id,
+            records=[],
+            raw_status_code=404,
+        )
+
     async def search_by_title(self, title: str) -> LookupResponse:
         return LookupResponse(
             source=self.name,
@@ -71,18 +80,15 @@ class FakeProvider:
         )
 
 
-def test_cli_verifies_bibtex_and_writes_reports(
-    tmp_path: Path, monkeypatch: Any
-) -> None:
+def _patch_lookup_providers(monkeypatch: Any) -> None:
     monkeypatch.setattr(cli_module, "CrossrefProvider", FakeProvider)
     monkeypatch.setattr(cli_module, "DataCiteProvider", FakeProvider)
+    monkeypatch.setattr(cli_module, "ArxivProvider", FakeProvider)
     monkeypatch.setattr(cli_module, "OpenAlexProvider", FakeProvider)
 
-    bib_path = tmp_path / "refs.bib"
-    full_report = tmp_path / "full.md"
-    short_report = tmp_path / "short.md"
-    json_report = tmp_path / "report.json"
-    bib_path.write_text(
+
+def _write_example_bib(path: Path) -> None:
+    path.write_text(
         """
 @article{clean,
   author = {Smith, J.},
@@ -107,6 +113,17 @@ def test_cli_verifies_bibtex_and_writes_reports(
         encoding="utf-8",
     )
 
+
+def test_cli_verifies_bibtex_and_writes_reports(
+    tmp_path: Path, monkeypatch: Any
+) -> None:
+    _patch_lookup_providers(monkeypatch)
+    bib_path = tmp_path / "refs.bib"
+    full_report = tmp_path / "missing" / "reports" / "full.md"
+    short_report = tmp_path / "missing" / "reports" / "short.md"
+    json_report = tmp_path / "missing" / "json" / "report.json"
+    _write_example_bib(bib_path)
+
     result = CliRunner().invoke(
         app,
         [
@@ -123,6 +140,9 @@ def test_cli_verifies_bibtex_and_writes_reports(
     )
 
     assert result.exit_code == 0, result.output
+    assert full_report.exists()
+    assert short_report.exists()
+    assert json_report.exists()
     assert "Verified 2 reference(s)." in result.output
     assert "Exception references: 1." in result.output
 
@@ -139,3 +159,29 @@ def test_cli_verifies_bibtex_and_writes_reports(
         "clean_references": 1,
         "exception_references": 1,
     }
+
+
+def test_cli_default_reports_go_to_reports_directory(
+    tmp_path: Path, monkeypatch: Any
+) -> None:
+    _patch_lookup_providers(monkeypatch)
+    monkeypatch.chdir(tmp_path)
+    bib_path = tmp_path / "refs.bib"
+    _write_example_bib(bib_path)
+
+    result = CliRunner().invoke(
+        app,
+        [
+            "verify",
+            str(bib_path),
+            "--no-cache",
+        ],
+    )
+
+    assert result.exit_code == 0, result.output
+    assert (tmp_path / "reports" / "full_report.md").exists()
+    assert (tmp_path / "reports" / "short_report.md").exists()
+    assert (tmp_path / "reports" / "report.json").exists()
+    assert "Full report: reports/full_report.md" in result.output
+    assert "Short report: reports/short_report.md" in result.output
+    assert "JSON report: reports/report.json" in result.output

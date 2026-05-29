@@ -30,6 +30,29 @@ from citeverify.normalize.pages import (
 )
 from citeverify.normalize.title import normalize_title, titles_match
 
+_JOURNAL_LOCATOR_COMPARISON_FIELDS = {
+    "year",
+    "venue",
+    "volume",
+    "issue",
+    "pages",
+    "article_number",
+}
+_FALLBACK_IDENTIFIER_FIELDS = _JOURNAL_LOCATOR_COMPARISON_FIELDS | {"doi", "title"}
+_APS_DOI_JOURNAL_STEMS = {
+    "physical review letters": "PhysRevLett",
+    "physical review a": "PhysRevA",
+    "physical review b": "PhysRevB",
+    "physical review c": "PhysRevC",
+    "physical review d": "PhysRevD",
+    "physical review e": "PhysRevE",
+    "physical review applied": "PhysRevApplied",
+    "physical review research": "PhysRevResearch",
+    "physical review x": "PhysRevX",
+    "prx quantum": "PRXQuantum",
+    "reviews of modern physics": "RevModPhys",
+}
+
 
 class Verifier:
     def __init__(
@@ -61,7 +84,13 @@ class Verifier:
 
         title_candidate = _first_candidate(candidates, IdentifierKind.TITLE)
         if title_candidate:
-            return await self._verify_by_title(reference, candidates, title_candidate)
+            result = await self._verify_by_title(reference, candidates, title_candidate)
+            if result.selected_record is not None:
+                return result
+            fallback = await self._fallback_to_journal_locator(reference, candidates)
+            if fallback is not None:
+                return fallback
+            return result
 
         locator_candidate = _first_candidate(candidates, IdentifierKind.JOURNAL_LOCATOR)
         if locator_candidate:
@@ -88,6 +117,11 @@ class Verifier:
         records, sources, errors = _collect_responses(responses)
         selected = records[0] if records else None
         if selected is None:
+            fallback = await self._fallback_to_title_or_journal_locator(
+                reference, candidates
+            )
+            if fallback is not None:
+                return fallback
             return _result(
                 reference,
                 candidates,
@@ -104,6 +138,12 @@ class Verifier:
 
         comparisons = compare_references(reference, selected)
         status = _status_for_doi(comparisons)
+        if _should_try_fallback_after_doi_result(status, comparisons):
+            fallback = await self._fallback_after_doi_conflict(
+                reference, candidates, status, comparisons
+            )
+            if fallback is not None:
+                return fallback
         return _result(
             reference,
             candidates,
@@ -115,6 +155,59 @@ class Verifier:
             status,
             errors,
         )
+
+    async def _fallback_after_doi_conflict(
+        self,
+        reference: ParsedReference,
+        candidates: list[IdentifierCandidate],
+        status: VerificationStatus,
+        comparisons: list[FieldComparison],
+    ) -> VerificationResult | None:
+        if _should_try_title_after_doi_result(status, comparisons):
+            title_result = await self._fallback_to_title(reference, candidates)
+            if title_result is not None:
+                return title_result
+        if not _should_try_journal_locator_after_doi_result(status, comparisons):
+            return None
+        return await self._fallback_to_journal_locator(reference, candidates)
+
+    async def _fallback_to_title_or_journal_locator(
+        self,
+        reference: ParsedReference,
+        candidates: list[IdentifierCandidate],
+    ) -> VerificationResult | None:
+        title_result = await self._fallback_to_title(reference, candidates)
+        if title_result is not None:
+            return title_result
+        return await self._fallback_to_journal_locator(reference, candidates)
+
+    async def _fallback_to_title(
+        self,
+        reference: ParsedReference,
+        candidates: list[IdentifierCandidate],
+    ) -> VerificationResult | None:
+        title_candidate = _first_candidate(candidates, IdentifierKind.TITLE)
+        if title_candidate is None:
+            return None
+        result = await self._verify_by_title(reference, candidates, title_candidate)
+        if _is_actionable_fallback_result(result):
+            return result
+        return None
+
+    async def _fallback_to_journal_locator(
+        self,
+        reference: ParsedReference,
+        candidates: list[IdentifierCandidate],
+    ) -> VerificationResult | None:
+        locator_candidate = _first_candidate(candidates, IdentifierKind.JOURNAL_LOCATOR)
+        if locator_candidate is None:
+            return None
+        result = await self._verify_by_journal_locator(
+            reference, candidates, locator_candidate
+        )
+        if _is_actionable_fallback_result(result):
+            return result
+        return None
 
     async def _verify_by_title(
         self,
@@ -251,6 +344,14 @@ class Verifier:
         identifier: IdentifierCandidate,
     ) -> VerificationResult:
         locator = reference.journal_locator()
+        inferred_doi = _infer_aps_doi(locator)
+        if inferred_doi:
+            inferred_result = await self._verify_journal_locator_by_inferred_doi(
+                reference, candidates, identifier, inferred_doi
+            )
+            if inferred_result is not None:
+                return inferred_result
+
         responses = await self._query_providers("journal_locator", locator)
         records, sources, errors = _collect_responses(responses)
         matches = _dedupe_records(_filter_journal_locator_matches(locator, records))
@@ -282,6 +383,36 @@ class Verifier:
                 errors,
             )
         selected = matches[0]
+        comparisons = compare_references(reference, selected)
+        status = (
+            VerificationStatus.JOURNAL_LOCATOR_FOUND_WITH_FIELD_MISMATCHES
+            if mismatches(comparisons)
+            else VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
+        )
+        return _result(
+            reference,
+            candidates,
+            identifier,
+            sources,
+            records,
+            selected,
+            comparisons,
+            status,
+            errors,
+        )
+
+    async def _verify_journal_locator_by_inferred_doi(
+        self,
+        reference: ParsedReference,
+        candidates: list[IdentifierCandidate],
+        identifier: IdentifierCandidate,
+        inferred_doi: str,
+    ) -> VerificationResult | None:
+        responses = await self._query_providers("doi", inferred_doi)
+        records, sources, errors = _collect_responses(responses)
+        selected = records[0] if records else None
+        if selected is None:
+            return None
         comparisons = compare_references(reference, selected)
         status = (
             VerificationStatus.JOURNAL_LOCATOR_FOUND_WITH_FIELD_MISMATCHES
@@ -341,7 +472,9 @@ def _collect_responses(
     errors: list[str] = []
     for response in responses:
         sources.append(response.source)
-        records.extend(response.records)
+        records.extend(
+            record for record in response.records if _record_has_metadata(record)
+        )
         if response.error:
             errors.append(f"{response.source}: {response.error}")
     return records, sources, errors
@@ -380,6 +513,42 @@ def _status_for_doi(comparisons: list[FieldComparison]) -> VerificationStatus:
     if mismatch_fields:
         return VerificationStatus.IDENTIFIER_CONFLICT
     return VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
+
+
+def _should_try_fallback_after_doi_result(
+    status: VerificationStatus, comparisons: list[FieldComparison]
+) -> bool:
+    if status == VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH:
+        return False
+    mismatch_fields = {comparison.field for comparison in mismatches(comparisons)}
+    return bool(mismatch_fields.intersection(_FALLBACK_IDENTIFIER_FIELDS))
+
+
+def _should_try_title_after_doi_result(
+    status: VerificationStatus, comparisons: list[FieldComparison]
+) -> bool:
+    if status == VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH:
+        return False
+    mismatch_fields = {comparison.field for comparison in mismatches(comparisons)}
+    return "doi" in mismatch_fields or "title" in mismatch_fields
+
+
+def _should_try_journal_locator_after_doi_result(
+    status: VerificationStatus, comparisons: list[FieldComparison]
+) -> bool:
+    if status == VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH:
+        return False
+    mismatch_fields = {comparison.field for comparison in mismatches(comparisons)}
+    if "doi" in mismatch_fields:
+        return True
+    return bool(mismatch_fields.intersection(_JOURNAL_LOCATOR_COMPARISON_FIELDS))
+
+
+def _is_actionable_fallback_result(result: VerificationResult) -> bool:
+    return (
+        result.selected_record is not None
+        or result.status == VerificationStatus.AMBIGUOUS_MATCH
+    )
 
 
 def _filter_title_matches(
@@ -459,6 +628,29 @@ def _record_identity(record: RegistryRecord) -> tuple[str, ...]:
     )
 
 
+def _record_has_metadata(record: RegistryRecord) -> bool:
+    return any(
+        value not in (None, "", [], {})
+        for value in [
+            record.source_record_url,
+            record.title,
+            record.authors,
+            record.year,
+            record.venue,
+            record.issn,
+            record.volume,
+            record.issue,
+            record.pages,
+            record.article_number,
+            record.doi,
+            record.arxiv_id,
+            record.pmid,
+            record.isbn,
+            record.url,
+        ]
+    )
+
+
 def _record_arxiv_identity(record: RegistryRecord) -> str | None:
     return normalize_arxiv_id(record.arxiv_id) or extract_arxiv_id(
         record.doi,
@@ -471,6 +663,34 @@ def _record_arxiv_identity(record: RegistryRecord) -> str | None:
 def _prefer_doi_bearing_records(records: list[RegistryRecord]) -> list[RegistryRecord]:
     doi_records = [record for record in records if record.doi]
     return doi_records if doi_records else records
+
+
+def _infer_aps_doi(locator: JournalLocator) -> str | None:
+    journal = normalize_journal(locator.venue)
+    stem = _APS_DOI_JOURNAL_STEMS.get(journal or "")
+    volume = _doi_part(locator.volume)
+    locator_number = _aps_locator_number(locator)
+    if not stem or not volume or not locator_number:
+        return None
+    return normalize_doi(f"10.1103/{stem}.{volume}.{locator_number}")
+
+
+def _aps_locator_number(locator: JournalLocator) -> str | None:
+    article_number = normalize_article_number(locator.article_number)
+    if article_number:
+        return _doi_part(article_number)
+    pages = normalize_pages(locator.pages)
+    if not pages:
+        return None
+    first_page = pages.split("-", maxsplit=1)[0]
+    return _doi_part(first_page)
+
+
+def _doi_part(value: str | None) -> str | None:
+    if not value:
+        return None
+    value = value.strip().strip(" .,")
+    return value or None
 
 
 def _filter_journal_locator_matches(
@@ -487,30 +707,65 @@ def _filter_journal_locator_matches(
         if (
             locator.venue
             and not locator.issn
-            and not venues_compatible(
-                locator.venue,
-                record.venue,
-                locator.volume,
-                record.volume,
+            and (
+                not record.venue
+                or not venues_compatible(
+                    locator.venue,
+                    record.venue,
+                    locator.volume,
+                    record.volume,
+                )
             )
         ):
             continue
-        if locator.year and record.year and locator.year != record.year:
-            continue
-        if locator.volume and record.volume and locator.volume != record.volume:
-            continue
-        if locator.issue and record.issue and locator.issue != record.issue:
-            continue
-        if (
-            locator.pages
-            and record.pages
-            and not pages_compatible(locator.pages, record.pages)
+        if locator.year and (
+            record.year is None or locator.year != record.year
         ):
             continue
-        if locator.article_number and record.article_number:
-            locator_article = normalize_article_number(locator.article_number)
-            record_article = normalize_article_number(record.article_number)
-            if locator_article != record_article:
-                continue
+        has_specific_locator_field = False
+        confirmed_specific_locator_field = False
+        if locator.volume:
+            has_specific_locator_field = True
+            if record.volume:
+                if locator.volume != record.volume:
+                    continue
+                confirmed_specific_locator_field = True
+        if locator.issue:
+            has_specific_locator_field = True
+            if record.issue:
+                if locator.issue != record.issue:
+                    continue
+                confirmed_specific_locator_field = True
+        if locator.pages:
+            has_specific_locator_field = True
+            if record.pages:
+                if not pages_compatible(locator.pages, record.pages):
+                    continue
+                confirmed_specific_locator_field = True
+            elif record.article_number:
+                locator_pages = normalize_pages(locator.pages)
+                record_article = normalize_article_number(record.article_number)
+                if locator_pages != record_article:
+                    continue
+                confirmed_specific_locator_field = True
+        if locator.article_number:
+            has_specific_locator_field = True
+            if record.article_number:
+                locator_article = normalize_article_number(locator.article_number)
+                record_article = normalize_article_number(record.article_number)
+                if locator_article != record_article:
+                    continue
+                confirmed_specific_locator_field = True
+            elif record.pages:
+                locator_article = normalize_article_number(locator.article_number)
+                record_pages = normalize_pages(record.pages)
+                if locator_article != record_pages:
+                    continue
+                confirmed_specific_locator_field = True
+        if (
+            not has_specific_locator_field
+            or not confirmed_specific_locator_field
+        ):
+            continue
         matches.append(record)
     return matches

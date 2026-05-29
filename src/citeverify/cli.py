@@ -47,17 +47,17 @@ class InputFormat(StrEnum):
 def verify(
     input_path: Path = typer.Argument(..., exists=True, readable=True),
     full_report: Path = typer.Option(
-        Path("citeverify_full_report.md"),
+        Path("reports/full_report.md"),
         "--full-report",
         help="Path for the full Markdown evidence report.",
     ),
     short_report: Path = typer.Option(
-        Path("citeverify_short_report.md"),
+        Path("reports/short_report.md"),
         "--short-report",
         help="Path for the short Markdown exception report.",
     ),
     json_report: Path = typer.Option(
-        Path("citeverify_report.json"),
+        Path("reports/report.json"),
         "--json-report",
         help="Path for the JSON report.",
     ),
@@ -122,6 +122,7 @@ def verify(
         )
     )
 
+    _ensure_report_parents([full_report, short_report, json_report])
     full_report.write_text(render_full_report(results), encoding="utf-8")
     short_report.write_text(render_short_report(results), encoding="utf-8")
     json_report.write_text(render_json_report(results, input_path), encoding="utf-8")
@@ -134,6 +135,11 @@ def verify(
     console.print(f"JSON report: {json_report}")
     if exception_count and fail_on_exceptions:
         raise typer.Exit(1)
+
+
+def _ensure_report_parents(paths: list[Path]) -> None:
+    for path in paths:
+        path.parent.mkdir(parents=True, exist_ok=True)
 
 
 def _parse_input(

@@ -159,11 +159,6 @@ def _best_article_url(result: VerificationResult) -> str | None:
             return record.source_record_url
     if result.identifier_used and result.identifier_used.kind.value == "url":
         return result.identifier_used.value
-    if result.lookup_records:
-        first_record = result.lookup_records[0]
-        if first_record.doi:
-            return f"https://doi.org/{first_record.doi}"
-        return first_record.url or first_record.source_record_url
     return None
 
 
@@ -171,14 +166,6 @@ def _best_article_label(result: VerificationResult) -> str:
     record = result.selected_record
     if record:
         return record.doi or record.source or record.title or "article"
-    if result.lookup_records:
-        first_record = result.lookup_records[0]
-        return (
-            first_record.doi
-            or first_record.source
-            or first_record.title
-            or "article"
-        )
     return "article"
 
 

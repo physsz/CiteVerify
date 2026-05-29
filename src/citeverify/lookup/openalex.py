@@ -86,14 +86,15 @@ class OpenAlexProvider(HttpLookupProvider):
             filters.append(f"publication_year:{locator.year}")
         if locator.issn:
             filters.append(f"primary_location.source.issn:{locator.issn[0]}")
-        params: dict[str, Any] = {"per-page": 20}
-        if locator.venue:
-            params["search"] = locator.venue
+        params: dict[str, Any] = {
+            "per-page": 50,
+            "search": _journal_locator_search(locator),
+        }
         if filters:
             params["filter"] = ",".join(filters)
         body, status_code, error = await self._get_json(
             query_kind="journal_locator",
-            normalized_query_value=locator.model_dump_json(),
+            normalized_query_value=_journal_locator_cache_key(locator),
             url=f"{self.api_base}/works",
             params=params,
         )
@@ -197,3 +198,22 @@ def _pages_from_biblio(biblio: dict[str, Any]) -> str | None:
     if first_page and last_page and first_page != last_page:
         return normalize_pages(f"{first_page}-{last_page}")
     return first_page or last_page
+
+
+def _journal_locator_search(locator: JournalLocator) -> str:
+    return " ".join(
+        value
+        for value in [
+            locator.venue,
+            str(locator.year) if locator.year else None,
+            locator.volume,
+            locator.issue,
+            locator.pages,
+            locator.article_number,
+        ]
+        if value
+    )
+
+
+def _journal_locator_cache_key(locator: JournalLocator) -> str:
+    return f"journal-locator-v3:{locator.model_dump_json()}"

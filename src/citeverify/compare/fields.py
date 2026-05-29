@@ -41,7 +41,11 @@ def compare_references(
         _compare_venue(input_reference, found_record),
         _compare_field("volume", input_reference.volume, found_record.volume, _clean),
         _compare_field("issue", input_reference.issue, found_record.issue, _clean),
-        _compare_pages(input_reference.pages, found_record.pages),
+        _compare_pages(
+            input_reference.pages,
+            found_record.pages,
+            found_record.article_number,
+        ),
         _compare_field(
             "article_number",
             input_reference.article_number,
@@ -162,7 +166,20 @@ def _compare_venue(
     )
 
 
-def _compare_pages(input_value: str | None, found_value: str | None) -> FieldComparison:
+def _compare_pages(
+    input_value: str | None,
+    found_pages: str | None,
+    found_article_number: str | None = None,
+) -> FieldComparison:
+    found_value = found_pages
+    found_is_article_number = False
+    if (
+        input_value not in (None, "")
+        and found_value in (None, "")
+        and found_article_number not in (None, "")
+    ):
+        found_value = found_article_number
+        found_is_article_number = True
     if input_value in (None, "") and found_value not in (None, ""):
         return FieldComparison(
             field="pages",
@@ -192,10 +209,16 @@ def _compare_pages(input_value: str | None, found_value: str | None) -> FieldCom
         found_value=found_value,
         result=ComparisonResult.MATCH if compatible else ComparisonResult.MISMATCH,
         note=(
-            "page range and first page are compatible"
+            "input pages matched found article number"
             if compatible
-            and normalize_pages(input_value) != normalize_pages(found_value)
-            else None
+            and found_is_article_number
+            and normalize_pages(input_value) == normalize_article_number(found_value)
+            else (
+                "page range and first page are compatible"
+                if compatible
+                and normalize_pages(input_value) != normalize_pages(found_value)
+                else None
+            )
         ),
     )
 

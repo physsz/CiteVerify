@@ -85,7 +85,10 @@ class CrossrefProvider(HttpLookupProvider):
         self, locator: JournalLocator
     ) -> LookupResponse:
         query_value = locator.model_dump_json()
-        params: dict[str, Any] = {"rows": 20}
+        params: dict[str, Any] = {
+            "query.bibliographic": _journal_locator_bibliographic_query(locator),
+            "rows": 50,
+        }
         filters: list[str] = []
         if locator.issn:
             filters.append(f"issn:{locator.issn[0]}")
@@ -104,7 +107,7 @@ class CrossrefProvider(HttpLookupProvider):
             params["mailto"] = self.mailto
         body, status_code, error = await self._get_json(
             query_kind="journal_locator",
-            normalized_query_value=query_value,
+            normalized_query_value=_journal_locator_cache_key(locator),
             url=f"{self.api_base}/works",
             params=params,
         )
@@ -190,6 +193,25 @@ def _crossref_year(item: dict[str, Any]) -> int | None:
             if isinstance(year, int):
                 return year
     return None
+
+
+def _journal_locator_bibliographic_query(locator: JournalLocator) -> str:
+    return " ".join(
+        value
+        for value in [
+            locator.venue,
+            str(locator.year) if locator.year else None,
+            locator.volume,
+            locator.issue,
+            locator.pages,
+            locator.article_number,
+        ]
+        if value
+    )
+
+
+def _journal_locator_cache_key(locator: JournalLocator) -> str:
+    return f"journal-locator-v3:{locator.model_dump_json()}"
 
 
 def _author_from_crossref(author: dict[str, Any], index: int) -> ParsedAuthor:

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import pytest
 
+from citeverify.compare.fields import mismatches
 from citeverify.compare.references import Verifier
 from citeverify.lookup.base import LookupResponse
 from citeverify.models import (
@@ -119,6 +120,42 @@ async def test_doi_title_mismatch() -> None:
 
 
 @pytest.mark.asyncio
+async def test_correct_doi_with_only_title_mismatch_keeps_doi_result() -> None:
+    verifier = Verifier(
+        [
+            FakeProvider(
+                [
+                    RegistryRecord(
+                        source="Fixture",
+                        doi="10.1000/example",
+                        title="Different Paper",
+                        venue="Physical Review Letters",
+                        year=2020,
+                        volume="1",
+                        pages="10",
+                    )
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="ref-1",
+            raw_text="raw",
+            doi="10.1000/example",
+            title="Input Paper",
+            venue="Physical Review Letters",
+            year=2020,
+            volume="1",
+            pages="10",
+        )
+    )
+    assert result.status == VerificationStatus.DOI_RESOLVES_TO_DIFFERENT_WORK
+    assert result.identifier_used is not None
+    assert result.identifier_used.kind.value == "doi"
+
+
+@pytest.mark.asyncio
 async def test_title_found_with_year_mismatch() -> None:
     verifier = Verifier(
         [
@@ -223,6 +260,398 @@ async def test_journal_locator_found() -> None:
         )
     )
     assert result.status == VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
+
+
+@pytest.mark.asyncio
+async def test_journal_locator_infers_aps_doi_from_pages() -> None:
+    class DoiOnlyProvider(FakeProvider):
+        async def search_by_journal_locator(
+            self, locator: JournalLocator
+        ) -> LookupResponse:
+            return LookupResponse(
+                source=self.name,
+                query_kind="journal_locator",
+                query_value=locator.model_dump_json(),
+                records=[],
+                raw_status_code=404,
+            )
+
+    verifier = Verifier(
+        [
+            DoiOnlyProvider(
+                [
+                    RegistryRecord(
+                        source="Fixture",
+                        doi="10.1103/physrevlett.114.090502",
+                        title=(
+                            "Simulating Hamiltonian Dynamics with a "
+                            "Truncated Taylor Series"
+                        ),
+                        venue="Physical Review Letters",
+                        year=2015,
+                        volume="114",
+                        issue="9",
+                        article_number="090502",
+                    )
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="aps-pages",
+            raw_text="raw",
+            venue="Physical Review Letters",
+            year=2015,
+            volume="114",
+            issue="9",
+            pages="090502",
+        )
+    )
+    assert result.status == VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
+    assert result.identifier_used is not None
+    assert result.identifier_used.kind.value == "journal_locator"
+    assert result.selected_record is not None
+    assert result.selected_record.doi == "10.1103/physrevlett.114.090502"
+
+
+@pytest.mark.asyncio
+async def test_journal_locator_infers_aps_doi_from_article_number() -> None:
+    class DoiOnlyProvider(FakeProvider):
+        async def search_by_journal_locator(
+            self, locator: JournalLocator
+        ) -> LookupResponse:
+            return LookupResponse(
+                source=self.name,
+                query_kind="journal_locator",
+                query_value=locator.model_dump_json(),
+                records=[],
+                raw_status_code=404,
+            )
+
+    verifier = Verifier(
+        [
+            DoiOnlyProvider(
+                [
+                    RegistryRecord(
+                        source="Fixture",
+                        doi="10.1103/physrevlett.114.090502",
+                        title=(
+                            "Simulating Hamiltonian Dynamics with a "
+                            "Truncated Taylor Series"
+                        ),
+                        venue="Physical Review Letters",
+                        year=2015,
+                        volume="114",
+                        issue="9",
+                        article_number="090502",
+                    )
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="aps-article-number",
+            raw_text="raw",
+            venue="Physical Review Letters",
+            year=2015,
+            volume="114",
+            issue="9",
+            article_number="090502",
+        )
+    )
+    assert result.status == VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
+    assert result.identifier_used is not None
+    assert result.identifier_used.kind.value == "journal_locator"
+    assert result.selected_record is not None
+    assert result.selected_record.doi == "10.1103/physrevlett.114.090502"
+
+
+@pytest.mark.asyncio
+async def test_journal_locator_matches_pages_to_found_article_number() -> None:
+    verifier = Verifier(
+        [
+            FakeProvider(
+                [
+                    RegistryRecord(
+                        source="Fixture",
+                        venue="Physical Review Letters",
+                        year=2015,
+                        volume="114",
+                        issue="9",
+                        article_number="090502",
+                    )
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="locator-pages",
+            raw_text="raw",
+            venue="Physical Review Letters",
+            year=2015,
+            volume="114",
+            issue="9",
+            pages="090502",
+        )
+    )
+    assert result.status == VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
+
+
+@pytest.mark.asyncio
+async def test_journal_locator_rejects_wrong_found_article_number() -> None:
+    verifier = Verifier(
+        [
+            FakeProvider(
+                [
+                    RegistryRecord(
+                        source="Fixture",
+                        venue="Physical Review Letters",
+                        year=2015,
+                        volume="114",
+                        issue="9",
+                        article_number="094101",
+                    )
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="wrong-article-number",
+            raw_text="raw",
+            venue="Physical Review Letters",
+            year=2015,
+            volume="114",
+            issue="9",
+            pages="090502",
+        )
+    )
+    assert result.status == VerificationStatus.JOURNAL_LOCATOR_NOT_FOUND
+
+
+@pytest.mark.asyncio
+async def test_wrong_doi_and_title_fall_back_to_inferred_aps_doi() -> None:
+    class DoiOnlyProvider(FakeProvider):
+        async def search_by_journal_locator(
+            self, locator: JournalLocator
+        ) -> LookupResponse:
+            return LookupResponse(
+                source=self.name,
+                query_kind="journal_locator",
+                query_value=locator.model_dump_json(),
+                records=[],
+                raw_status_code=404,
+            )
+
+    verifier = Verifier(
+        [
+            DoiOnlyProvider(
+                [
+                    RegistryRecord(
+                        source="Fixture",
+                        doi="10.1103/physrevlett.114.090502",
+                        title=(
+                            "Simulating Hamiltonian Dynamics with a "
+                            "Truncated Taylor Series"
+                        ),
+                        venue="Physical Review Letters",
+                        year=2015,
+                        volume="114",
+                        issue="9",
+                        article_number="090502",
+                    )
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="wrong-doi-title-aps",
+            raw_text="raw",
+            doi="10.9999/fake-aps",
+            title="Fabricated Dynamics with Imaginary Series",
+            venue="Physical Review Letters",
+            year=2015,
+            volume="114",
+            issue="9",
+            pages="090502",
+        )
+    )
+    assert result.status == (
+        VerificationStatus.JOURNAL_LOCATOR_FOUND_WITH_FIELD_MISMATCHES
+    )
+    assert result.identifier_used is not None
+    assert result.identifier_used.kind.value == "journal_locator"
+    assert result.selected_record is not None
+    assert result.selected_record.doi == "10.1103/physrevlett.114.090502"
+    assert {comparison.field for comparison in mismatches(result.comparisons)} == {
+        "doi",
+        "title",
+    }
+
+
+@pytest.mark.asyncio
+async def test_wrong_title_falls_back_to_journal_locator() -> None:
+    verifier = Verifier(
+        [
+            FakeProvider(
+                [
+                    RegistryRecord(
+                        source="Fixture",
+                        doi="10.1000/real",
+                        title="A Real Paper",
+                        venue="Physical Review Letters",
+                        year=2020,
+                        volume="1",
+                        pages="10",
+                    )
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="wrong-title",
+            raw_text="raw",
+            title="Fabricated Paper",
+            venue="Physical Review Letters",
+            year=2020,
+            volume="1",
+            pages="10",
+        )
+    )
+    assert result.status == (
+        VerificationStatus.JOURNAL_LOCATOR_FOUND_WITH_FIELD_MISMATCHES
+    )
+    assert result.identifier_used is not None
+    assert result.identifier_used.kind.value == "journal_locator"
+    assert {comparison.field for comparison in mismatches(result.comparisons)} == {
+        "title"
+    }
+
+
+@pytest.mark.asyncio
+async def test_unfound_doi_and_wrong_title_fall_back_to_journal_locator() -> None:
+    verifier = Verifier(
+        [
+            FakeProvider(
+                [
+                    RegistryRecord(
+                        source="Fixture",
+                        doi="10.1000/real",
+                        title="A Real Paper",
+                        venue="Physical Review Letters",
+                        year=2020,
+                        volume="1",
+                        pages="10",
+                    )
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="wrong-doi-title",
+            raw_text="raw",
+            doi="10.1000/fake",
+            title="Fabricated Paper",
+            venue="Physical Review Letters",
+            year=2020,
+            volume="1",
+            pages="10",
+        )
+    )
+    assert result.status == (
+        VerificationStatus.JOURNAL_LOCATOR_FOUND_WITH_FIELD_MISMATCHES
+    )
+    assert result.identifier_used is not None
+    assert result.identifier_used.kind.value == "journal_locator"
+    assert {comparison.field for comparison in mismatches(result.comparisons)} == {
+        "doi",
+        "title",
+    }
+
+
+@pytest.mark.asyncio
+async def test_journal_locator_fallback_reports_ambiguous_match() -> None:
+    verifier = Verifier(
+        [
+            FakeProvider(
+                [
+                    RegistryRecord(
+                        source="Fixture",
+                        doi="10.1000/first",
+                        title="First Real Paper",
+                        venue="Physical Review Letters",
+                        year=2020,
+                        volume="1",
+                        pages="10",
+                    ),
+                    RegistryRecord(
+                        source="Fixture",
+                        doi="10.1000/second",
+                        title="Second Real Paper",
+                        venue="Physical Review Letters",
+                        year=2020,
+                        volume="1",
+                        pages="10",
+                    ),
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="ambiguous-locator",
+            raw_text="raw",
+            title="Fabricated Paper",
+            venue="Physical Review Letters",
+            year=2020,
+            volume="1",
+            pages="10",
+        )
+    )
+    assert result.status == VerificationStatus.AMBIGUOUS_MATCH
+    assert result.identifier_used is not None
+    assert result.identifier_used.kind.value == "journal_locator"
+    assert result.selected_record is None
+
+
+@pytest.mark.asyncio
+async def test_journal_locator_fallback_rejects_sparse_locator_records() -> None:
+    verifier = Verifier(
+        [
+            FakeProvider(
+                [
+                    RegistryRecord(
+                        source="Fixture",
+                        doi="10.1000/unrelated",
+                        title="Unrelated Book",
+                        venue="Physical Review Letters",
+                        year=2020,
+                    )
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="sparse-locator",
+            raw_text="raw",
+            doi="10.1000/fake",
+            title="Fabricated Paper",
+            venue="Physical Review Letters",
+            year=2020,
+            volume="1",
+            pages="10",
+        )
+    )
+    assert result.status == VerificationStatus.DOI_NOT_FOUND
+    assert result.identifier_used is not None
+    assert result.identifier_used.kind.value == "doi"
 
 
 @pytest.mark.asyncio
@@ -411,3 +840,83 @@ async def test_title_uses_venue_with_embedded_volume_to_disambiguate() -> None:
     assert result.status == VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
     assert result.selected_record is not None
     assert result.selected_record.doi == "10.52202/068431-0340"
+
+
+@pytest.mark.asyncio
+async def test_unfound_doi_falls_back_to_title() -> None:
+    verifier = Verifier(
+        [
+            FakeProvider(
+                [
+                    RegistryRecord(
+                        source="Fixture",
+                        doi="10.1000/real",
+                        title="A Real Paper",
+                        authors=parse_author_list("Smith, John"),
+                        year=2020,
+                    )
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="wrong-doi",
+            raw_text="raw",
+            doi="10.1000/fake",
+            title="A Real Paper",
+            authors=parse_author_list("Smith, J."),
+            year=2020,
+        )
+    )
+    assert result.status == VerificationStatus.TITLE_FOUND_WITH_FIELD_MISMATCHES
+    assert result.identifier_used is not None
+    assert result.identifier_used.kind.value == "title"
+    assert {comparison.field for comparison in mismatches(result.comparisons)} == {
+        "doi"
+    }
+
+
+@pytest.mark.asyncio
+async def test_empty_doi_lookup_record_falls_back_to_title() -> None:
+    class EmptyDoiProvider(FakeProvider):
+        async def get_by_doi(self, doi: str) -> LookupResponse:
+            return LookupResponse(
+                source=self.name,
+                query_kind="doi",
+                query_value=doi,
+                records=[RegistryRecord(source=self.name)],
+                raw_status_code=200,
+            )
+
+    verifier = Verifier(
+        [
+            EmptyDoiProvider(
+                [
+                    RegistryRecord(
+                        source="Fixture",
+                        doi="10.1000/real",
+                        title="A Real Paper",
+                        authors=parse_author_list("Smith, John"),
+                        year=2020,
+                    )
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="empty-doi-record",
+            raw_text="raw",
+            doi="10.1000/fake",
+            title="A Real Paper",
+            authors=parse_author_list("Smith, J."),
+            year=2020,
+        )
+    )
+    assert result.status == VerificationStatus.TITLE_FOUND_WITH_FIELD_MISMATCHES
+    assert result.identifier_used is not None
+    assert result.identifier_used.kind.value == "title"
+    assert {comparison.field for comparison in mismatches(result.comparisons)} == {
+        "doi"
+    }
