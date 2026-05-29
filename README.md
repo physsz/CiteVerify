@@ -10,4 +10,6 @@ record was found, what metadata was returned, and which supplied fields
 mismatched.
 
 See [reference_verification_plan.md](reference_verification_plan.md) for the
-current verification design.
+current verification design and
+[technical_implementation_plan.md](technical_implementation_plan.md) for the
+implementation plan.
