@@ -58,7 +58,6 @@ None.
 - `arxiv_id`: `match` (input: `1905.13641`, found: `1905.13641`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/1905.13641`)
 
 ### Lookup Errors
 
@@ -119,7 +118,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/srep07482`)
 
 ## Reference garcia2015fermion
 
@@ -176,7 +174,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevlett.114.070502`)
 
 ## Reference haffner2005scalable
 
@@ -232,7 +229,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/nature04279`)
 
 ## Reference asaad2016independent
 
@@ -289,7 +285,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/npjqi.2016.29`)
 
 ## Reference zhang2017observation
 
@@ -346,7 +341,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/nature24654`)
 
 ## Reference weber2017coherent
 
@@ -403,7 +397,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevapplied.8.014004`)
 
 ## Reference saffman2016quantum
 
@@ -459,7 +452,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1088/0953-4075/49/20/202001`)
 
 ## Reference sim2019expressibility
 
@@ -516,7 +508,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1002/qute.201900070`)
 
 ## Reference schuld_petruccione_2021
 
@@ -570,7 +561,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1007/978-3-030-83098-4_7`)
 
 ## Reference abbas2021power
 
@@ -626,7 +616,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s43588-021-00084-1`)
 
 ## Reference Huang2021PowerOD
 
@@ -683,7 +672,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41467-021-22539-9`)
 
 ## Reference Liu2021ARA
 
@@ -743,7 +731,6 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41567-021-01287-z`)
 
 ## Reference Jumper2021HighlyAP
 
@@ -799,7 +786,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41586-021-03819-2`)
 
 ## Reference Degrave2022MagneticCO
 
@@ -857,7 +843,6 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41586-021-04301-9`)
 
 ## Reference Goodfellow2015DeepL
 
@@ -917,7 +902,6 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/nature14539`)
 
 ## Reference Arunachalam2017ASO
 
@@ -971,7 +955,6 @@ None.
 - `arxiv_id`: `additional_metadata` (input: `None`, found: `1701.06806`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.48550/arxiv.1701.06806`)
 
 ## Reference Biamonte2017QuantumML
 
@@ -1027,7 +1010,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/nature23474`)
 
 ## Reference Benedetti2019ParameterizedQC
 
@@ -1087,7 +1069,6 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1088/2058-9565/ab4eb5`)
 
 ## Reference Harrow2020SmallQC
 
@@ -1141,7 +1122,6 @@ None.
 - `arxiv_id`: `additional_metadata` (input: `None`, found: `2004.00026`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.48550/arxiv.2004.00026`)
 
 ## Reference tomesh2021coreset
 
@@ -1197,7 +1177,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.3390/electronics10141690`)
 
 ## Reference agarwal2005geometric
 
@@ -1253,7 +1232,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1017/9781009701259.002`)
 
 ## Reference bachem2017practical
 
@@ -1274,7 +1252,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 ### Lookup
 
 - Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
-- Records returned: `2`
+- Records returned: `3`
 
 ### Selected Record
 
@@ -1307,11 +1285,6 @@ None.
 - `arxiv_id`: `match` (input: `1703.06476`, found: `1703.06476`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/1703.06476`)
-
-### Lookup Errors
-
-- arXiv: provider returned HTTP 429
 
 ## Reference feldman2020introduction
 
@@ -1365,7 +1338,10 @@ None.
 - `arxiv_id`: `match` (input: `2011.09384`, found: `2011.09384`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2011.09384`)
+
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
 
 ## Reference tsang2005core
 
@@ -1428,7 +1404,6 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.5555/1046920.1058114`)
 
 ## Reference har2004coresets
 
@@ -1482,7 +1457,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1145/1007352.1007400`)
 
 ## Reference halevy2009unreasonable
 
@@ -1538,7 +1512,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1109/mis.2009.36`)
 
 ## Reference berlind2015active
 
@@ -1591,7 +1564,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://openalex.org/W1870462933`)
 
 ## Reference yang2001face
 
@@ -1647,7 +1619,6 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://openalex.org/W2153054748`)
 
 ## Reference jacot2018neural
 
@@ -1703,7 +1674,6 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `arxiv_id`: `additional_metadata` (input: `None`, found: `1806.07572`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.48550/arxiv.1806.07572`)
 
 ## Reference havlivcek2019supervised
 
@@ -1763,7 +1733,6 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41586-019-0980-2`)
 
 ## Reference yang2019experimental
 
@@ -1820,7 +1789,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevlett.123.190401`)
 
 ## Reference gross2009most
 
@@ -1877,7 +1845,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevlett.102.190501`)
 
 ## Reference bowles2016sufficient
 
@@ -1934,7 +1901,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physreva.93.022121`)
 
 ## Reference khatri2019quantum
 
@@ -1990,7 +1956,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.22331/q-2019-05-13-140`)
 
 ## Reference xiao2017fashion
 
@@ -2044,7 +2009,6 @@ None.
 - `arxiv_id`: `match` (input: `1708.07747`, found: `1708.07747`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/1708.07747`)
 
 ### Lookup Errors
 
@@ -2102,7 +2066,6 @@ None.
 - `arxiv_id`: `match` (input: `2206.07852`, found: `2206.07852`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2206.07852`)
 
 ## Reference sener2017active
 
@@ -2156,7 +2119,6 @@ None.
 - `arxiv_id`: `match` (input: `1708.00489`, found: `1708.00489`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/1708.00489`)
 
 ### Lookup Errors
 
@@ -2216,7 +2178,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.3390/electronics10202482`)
 
 ## Reference lloyd2014quantum
 
@@ -2272,7 +2233,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/nphys3029`)
 
 ## Reference perez2020data
 
@@ -2328,7 +2288,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.22331/q-2020-02-06-226`)
 
 ## Reference wang2021towards
 
@@ -2384,7 +2343,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.22331/q-2021-08-30-531`)
 
 ## Reference bilkis2021semi
 
@@ -2438,7 +2396,6 @@ None.
 - `arxiv_id`: `match` (input: `2103.06712`, found: `2103.06712`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2103.06712`)
 
 ## Reference zhang2022differentiable
 
@@ -2494,7 +2451,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1088/2058-9565/ac87cd`)
 
 ## Reference du2022quantum
 
@@ -2551,7 +2507,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41534-022-00570-y`)
 
 ## Reference J_ger_2023
 
@@ -2607,7 +2562,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41467-023-36144-5`)
 
 ## Reference cerezo2021variational
 
@@ -2663,7 +2617,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s42254-021-00348-9`)
 
 ## Reference preskill2018quantum
 
@@ -2719,7 +2672,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.22331/q-2018-08-06-79`)
 
 ## Reference bharti2021noisy
 
@@ -2776,7 +2728,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/revmodphys.94.015004`)
 
 ## Reference schuld2019evaluating
 
@@ -2833,7 +2784,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physreva.99.032331`)
 
 ## Reference farhi2018classification
 
@@ -2887,7 +2837,6 @@ None.
 - `arxiv_id`: `match` (input: `1802.06002`, found: `1802.06002`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `match` (input: `https://arxiv.org/abs/1802.06002`, found: `https://arxiv.org/abs/1802.06002`)
 
 ## Reference schuld2014quest
 
@@ -2943,8 +2892,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `match` (input: `https://link.springer.com/article/10.1007/s11128-014-0809-8`, found: `https://doi.org/10.1007/s11128-014-0809-8`)
-  - Note: both URLs contain the same DOI
 
 ## Reference cong2019quantum
 
@@ -3000,7 +2947,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41567-019-0648-8`)
 
 ## Reference schuld2019quantum
 
@@ -3057,7 +3003,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevlett.122.040504`)
 
 ## Reference jager2023universal
 
@@ -3114,7 +3059,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41467-023-36144-5`)
 
 ## Reference wu2023quantum
 
@@ -3170,7 +3114,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.22331/q-2023-04-17-981`)
 
 ## Reference du2022demystify
 
@@ -3229,7 +3172,6 @@ Status: `IDENTIFIER_CONFLICT`
 - `arxiv_id`: `match` (input: `2301.01597`, found: `2301.01597`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2301.01597`)
 
 ## Reference herrmann2022realizing
 
@@ -3286,7 +3228,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41467-022-31679-5`)
 
 ## Reference ren2022experimental
 
@@ -3342,7 +3283,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s43588-022-00351-9`)
 
 ## Reference huang2021experimental
 
@@ -3399,7 +3339,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevapplied.16.024051`)
 
 ## Reference pan2023deep
 
@@ -3456,7 +3395,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41467-023-39785-8`)
 
 ## Reference pan2023experimental
 
@@ -3513,7 +3451,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41534-023-00685-w`)
 
 ## Reference peters2021machine
 
@@ -3570,7 +3507,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41534-021-00498-9`)
 
 ## Reference stokes2020quantum
 
@@ -3626,7 +3562,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.22331/q-2020-05-25-269`)
 
 ## Reference bittel2021training
 
@@ -3683,7 +3618,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevlett.127.120502`)
 
 ## Reference verdon2019learning
 
@@ -3737,7 +3671,6 @@ None.
 - `arxiv_id`: `match` (input: `1907.05415`, found: `1907.05415`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/1907.05415`)
 
 ## Reference gacon2021simultaneous
 
@@ -3793,7 +3726,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.22331/q-2021-10-20-567`)
 
 ## Reference van2021measurement
 
@@ -3850,7 +3782,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/prxquantum.2.030324`)
 
 ## Reference volkoff2021large
 
@@ -3906,7 +3837,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1088/2058-9565/abd891`)
 
 ## Reference du2021learnability
 
@@ -3963,7 +3893,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/prxquantum.2.040337`)
 
 ## Reference sweke2020stochastic
 
@@ -4019,7 +3948,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.22331/q-2020-08-31-314`)
 
 ## Reference wilson2018quantum
 
@@ -4073,7 +4001,6 @@ None.
 - `arxiv_id`: `match` (input: `1806.08321`, found: `1806.08321`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/1806.08321`)
 
 ### Lookup Errors
 
@@ -4134,7 +4061,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1007/s42484-021-00061-x`)
 
 ## Reference bowles2023backpropagation
 
@@ -4188,11 +4114,6 @@ None.
 - `arxiv_id`: `match` (input: `2306.14962`, found: `2306.14962`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2306.14962`)
-
-### Lookup Errors
-
-- arXiv: provider returned HTTP 429
 
 ## Reference abbas2023quantum
 
@@ -4246,7 +4167,6 @@ None.
 - `arxiv_id`: `match` (input: `2305.13362`, found: `2305.13362`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2305.13362`)
 
 ### Lookup Errors
 
@@ -4307,7 +4227,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physreva.106.042431`)
 
 ## Reference thanasilp2022exponential
 
@@ -4363,7 +4282,6 @@ Status: `IDENTIFIER_CONFLICT`
 - `arxiv_id`: `match` (input: `2208.11060`, found: `2208.11060`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2208.11060`)
 
 ### Lookup Errors
 
@@ -4421,7 +4339,6 @@ None.
 - `arxiv_id`: `match` (input: `2105.03406`, found: `2105.03406`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2105.03406`)
 
 ### Lookup Errors
 
@@ -4479,11 +4396,6 @@ None.
 - `arxiv_id`: `match` (input: `2306.02826`, found: `2306.02826`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2306.02826`)
-
-### Lookup Errors
-
-- arXiv: provider returned HTTP 429
 
 ## Reference bishop2007
 
@@ -4522,9 +4434,6 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - year:
   - Input: `2007`
   - Found: `2006`
-- url:
-  - Input: `http://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738%3FSubscriptionId%3D13CT5CVB80YFWJEPWS02%26tag%3Dws%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0387310738`
-  - Found: `https://openalex.org/W1506806321`
 
 ### Field Comparisons
 
@@ -4541,7 +4450,6 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `0387310738`, found: `None`)
   - Note: lookup source did not return this field
-- `url`: `mismatch` (input: `http://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738%3FSubscriptionId%3D13CT5CVB80YFWJEPWS02%26tag%3Dws%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0387310738`, found: `https://openalex.org/W1506806321`)
 
 ## Reference lloyd2020quantum
 
@@ -4595,7 +4503,10 @@ None.
 - `arxiv_id`: `match` (input: `2001.03622`, found: `2001.03622`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2001.03622`)
+
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
 
 ## Reference larocca2022group
 
@@ -4652,7 +4563,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/prxquantum.3.030341`)
 
 ## Reference sauvage2022building
 
@@ -4706,7 +4616,6 @@ None.
 - `arxiv_id`: `match` (input: `2207.14413`, found: `2207.14413`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2207.14413`)
 
 ### Lookup Errors
 
@@ -4765,7 +4674,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1109/tqe.2022.3175267`)
 
 ## Reference gyurik2021structural
 
@@ -4821,7 +4729,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.22331/q-2023-01-13-893`)
 
 ## Reference du2022efficient
 
@@ -4878,7 +4785,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevlett.128.080506`)
 
 ## Reference caro2021encoding
 
@@ -4934,7 +4840,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.22331/q-2021-11-17-582`)
 
 ## Reference banchi2021generalization
 
@@ -4991,7 +4896,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/prxquantum.2.040321`)
 
 ## Reference caro2022generalization
 
@@ -5048,7 +4952,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41467-022-32550-3`)
 
 ## Reference farahani2009facility
 
@@ -5103,7 +5006,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://openalex.org/W3464401`)
 
 ## Reference jerbi2023quantum
 
@@ -5160,7 +5062,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41467-023-36159-y`)
 
 ## Reference schuld2021effect
 
@@ -5217,7 +5118,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physreva.103.032430`)
 
 ## Reference mohri2018foundations
 
@@ -5317,7 +5217,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevresearch.1.013006`)
 
 ## Reference georgescu2014quantum
 
@@ -5373,7 +5272,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/revmodphys.86.153`)
 
 ## Reference feynman2018simulating
 
@@ -5427,7 +5325,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1201/9780429500459-11`)
 
 ## Reference wu2016understanding
 
@@ -5484,7 +5381,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physreva.93.022332`)
 
 ## Reference daley2022practical
 
@@ -5540,7 +5436,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41586-022-04940-6`)
 
 ## Reference browaeys2020many
 
@@ -5596,7 +5491,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41567-019-0733-z`)
 
 ## Reference gross2017quantum
 
@@ -5652,7 +5546,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1126/science.aal3837`)
 
 ## Reference houck2012chip
 
@@ -5708,7 +5601,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/nphys2251`)
 
 ## Reference hartmann2016quantum
 
@@ -5764,7 +5656,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1088/2040-8978/18/10/104005`)
 
 ## Reference blatt2012quantum
 
@@ -5820,7 +5711,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/nphys2252`)
 
 ## Reference monroe2021programmable
 
@@ -5877,7 +5767,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/revmodphys.93.025001`)
 
 ## Reference aspuru2012photonic
 
@@ -5933,7 +5822,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/nphys2253`)
 
 ## Reference lloyd1996universal
 
@@ -5989,7 +5877,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1126/science.273.5278.1073`)
 
 ## Reference lanyon2011universal
 
@@ -6045,7 +5932,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1126/science.1208001`)
 
 ## Reference kamakari2022digital
 
@@ -6102,7 +5988,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/prxquantum.3.010320`)
 
 ## Reference fischer2026enabling
 
@@ -6156,7 +6041,6 @@ None.
 - `arxiv_id`: `match` (input: `2602.04719`, found: `2602.04719`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2602.04719`)
 
 ### Lookup Errors
 
@@ -6214,7 +6098,6 @@ None.
 - `arxiv_id`: `match` (input: `2508.19075`, found: `2508.19075`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2508.19075`)
 
 ### Lookup Errors
 
@@ -6272,7 +6155,6 @@ None.
 - `arxiv_id`: `match` (input: `2511.11404`, found: `2511.11404`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2511.11404`)
 
 ### Lookup Errors
 
@@ -6333,7 +6215,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41534-025-01001-4`)
 
 ## Reference gonzalez2021ditital
 
@@ -6390,8 +6271,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `match` (input: `https://link.aps.org/doi/10.1103/PRXQuantum.2.020328`, found: `https://doi.org/10.1103/prxquantum.2.020328`)
-  - Note: both URLs contain the same DOI
 
 ## Reference babukhin2020hybrid
 
@@ -6448,8 +6327,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `match` (input: `https://link.aps.org/doi/10.1103/PhysRevA.101.052337`, found: `https://doi.org/10.1103/physreva.101.052337`)
-  - Note: both URLs contain the same DOI
 
 ## Reference celeri2023digital
 
@@ -6506,7 +6383,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevapplied.19.064086`)
 
 ## Reference yuan2019theory
 
@@ -6562,7 +6438,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.22331/q-2019-10-07-191`)
 
 ## Reference endo2020variational
 
@@ -6619,7 +6494,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevlett.125.010501`)
 
 ## Reference mcardle2019variational
 
@@ -6676,7 +6550,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41534-019-0187-2`)
 
 ## Reference raab2000dirac
 
@@ -6732,7 +6605,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1016/s0009-2614(00)00200-1`)
 
 ## Reference kerman1976hamiltonian
 
@@ -6788,7 +6660,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1016/0003-4916(76)90065-8`)
 
 ## Reference li2017efficient
 
@@ -6845,7 +6716,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevx.7.021050`)
 
 ## Reference cirstoiu2020variational
 
@@ -6902,7 +6772,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41534-020-00302-0`)
 
 ## Reference heya2023subspace
 
@@ -6959,7 +6828,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevresearch.5.023078`)
 
 ## Reference yao2021adaptive
 
@@ -7016,7 +6884,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/prxquantum.2.030307`)
 
 ## Reference d2021introduction
 
@@ -7068,7 +6935,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1201/9781003051268`)
 
 ## Reference fradkin2013field
 
@@ -7120,7 +6986,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1017/cbo9781139015509`)
 
 ## Reference sun2025probing
 
@@ -7177,7 +7042,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41467-025-55955-2`)
 
 ## Reference fan2017out
 
@@ -7233,7 +7097,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1016/j.scib.2017.04.011`)
 
 ## Reference swingle2018unscrambling
 
@@ -7289,7 +7152,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41567-018-0295-5`)
 
 ## Reference garttner2017measuring
 
@@ -7345,7 +7207,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/nphys4119`)
 
 ## Reference meirom2023pansatz
 
@@ -7401,7 +7262,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.3389/frqst.2023.1273581`)
 
 ## Reference sherbert2025parametrization
 
@@ -7458,7 +7318,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevapplied.23.024036`)
 
 ## Reference liang2024napa
 
@@ -7514,7 +7373,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1109/tcad.2024.3355277`)
 
 ## Reference magann2021pulses
 
@@ -7571,7 +7429,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/prxquantum.2.010101`)
 
 ## Reference egger2023pulse
 
@@ -7628,7 +7485,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physrevresearch.5.033159`)
 
 ## Reference de2023pulse
 
@@ -7684,7 +7540,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.22331/q-2023-01-26-908`)
 
 ## Reference liang2024combining
 
@@ -7738,7 +7593,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1145/3649329.3656245`)
 
 ## Reference liang2023towards
 
@@ -7792,7 +7646,6 @@ None.
 - `arxiv_id`: `match` (input: `2304.09253`, found: `2304.09253`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2304.09253`)
 
 ### Lookup Errors
 
@@ -7850,7 +7703,6 @@ None.
 - `arxiv_id`: `match` (input: `2309.16756`, found: `2309.16756`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2309.16756`)
 
 ### Lookup Errors
 
@@ -7910,7 +7762,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.52202/068431-0340`)
 
 ## Reference wierichs2022general
 
@@ -7966,7 +7817,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.22331/q-2022-03-30-677`)
 
 ## Reference meyer2001global
 
@@ -8020,7 +7870,6 @@ None.
 - `arxiv_id`: `match` (input: `quant-ph/0108104`, found: `quant-ph/0108104`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/quant-ph/0108104`)
 
 ### Lookup Errors
 
@@ -8081,7 +7930,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/revmodphys.89.011004`)
 
 ## Reference altman2021quantum
 
@@ -8138,7 +7986,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/prxquantum.2.017003`)
 
 ## Reference di2024quantum
 
@@ -8195,7 +8042,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/prxquantum.5.037001`)
 
 ## Reference fauseweh2024quantum
 
@@ -8252,7 +8098,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41467-024-46402-9`)
 
 ## Reference miessen2023quantum
 
@@ -8310,7 +8155,6 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s43588-022-00374-2`)
 
 ## Reference mcardle2020quantum
 
@@ -8367,7 +8211,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/revmodphys.92.015003`)
 
 ## Reference yang2024resource
 
@@ -8424,7 +8267,6 @@ None.
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1103/physreva.109.052416`)
 
 ## Reference huang2026low
 
@@ -8478,7 +8320,6 @@ None.
 - `arxiv_id`: `match` (input: `2603.05475`, found: `2603.05475`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2603.05475`)
 
 ### Lookup Errors
 

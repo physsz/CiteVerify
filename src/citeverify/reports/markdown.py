@@ -26,8 +26,7 @@ def render_short_report(results: list[VerificationResult]) -> str:
             "were found."
         )
         return "\n".join(lines).rstrip() + "\n"
-    for result in exceptions:
-        lines.extend(_render_result(result, include_clean=False))
+    lines.extend(_render_short_exception_table(exceptions))
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -107,6 +106,121 @@ def _render_lookup_section(result: VerificationResult) -> list[str]:
             lines.append(f"{index}. `{record.source}`: {label}")
         lines.append("")
     return lines
+
+
+def _render_short_exception_table(results: list[VerificationResult]) -> list[str]:
+    lines = [
+        "## Exception References",
+        "",
+        "| Reference | Status | Identifier Used | Article Link | Mismatch Details |",
+        "|---|---|---|---|---|",
+    ]
+    for result in results:
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    _table_cell(f"`{result.reference_id}`"),
+                    _table_cell(f"`{result.status.value}`"),
+                    _table_cell(_short_identifier(result)),
+                    _table_cell(_article_link(result)),
+                    _table_cell(_short_mismatch_details(result)),
+                ]
+            )
+            + " |"
+        )
+    lines.append("")
+    return lines
+
+
+def _short_identifier(result: VerificationResult) -> str:
+    identifier = result.identifier_used
+    if identifier is None:
+        return "None"
+    return f"`{identifier.kind.value}`: {_inline_code(identifier.value)}"
+
+
+def _article_link(result: VerificationResult) -> str:
+    url = _best_article_url(result)
+    if not url:
+        return "None"
+    label = _best_article_label(result)
+    return f"[{_link_label(label)}]({url})"
+
+
+def _best_article_url(result: VerificationResult) -> str | None:
+    record = result.selected_record
+    if record:
+        if record.doi:
+            return f"https://doi.org/{record.doi}"
+        if record.url:
+            return record.url
+        if record.source_record_url:
+            return record.source_record_url
+    if result.identifier_used and result.identifier_used.kind.value == "url":
+        return result.identifier_used.value
+    if result.lookup_records:
+        first_record = result.lookup_records[0]
+        if first_record.doi:
+            return f"https://doi.org/{first_record.doi}"
+        return first_record.url or first_record.source_record_url
+    return None
+
+
+def _best_article_label(result: VerificationResult) -> str:
+    record = result.selected_record
+    if record:
+        return record.doi or record.source or record.title or "article"
+    if result.lookup_records:
+        first_record = result.lookup_records[0]
+        return (
+            first_record.doi
+            or first_record.source
+            or first_record.title
+            or "article"
+        )
+    return "article"
+
+
+def _short_mismatch_details(result: VerificationResult) -> str:
+    mismatches = [
+        comparison
+        for comparison in result.comparisons
+        if comparison.result == ComparisonResult.MISMATCH
+    ]
+    if not mismatches:
+        if result.selected_record is None:
+            if result.lookup_errors:
+                return "; ".join(
+                    f"lookup error: {error}" for error in result.lookup_errors
+                )
+            if result.lookup_records:
+                return "ambiguous or unselected lookup records"
+            return "identifier not found or insufficient metadata"
+        return "exception status without supplied-field mismatch"
+    details = []
+    for comparison in mismatches:
+        item = (
+            f"`{comparison.field}`: input {_inline_code(comparison.input_value)}; "
+            f"found {_inline_code(comparison.found_value)}"
+        )
+        if comparison.note:
+            item += f"; note: {comparison.note}"
+        details.append(item)
+    return "<br>".join(details)
+
+
+def _table_cell(value: str) -> str:
+    return value.replace("\n", " ").replace("|", r"\|")
+
+
+def _inline_code(value: object) -> str:
+    text = str(value).replace("`", "'").replace("\n", " ")
+    return f"`{text}`"
+
+
+def _link_label(value: str) -> str:
+    return value.replace("[", "(").replace("]", ")")
 
 
 def _render_record(record: RegistryRecord) -> list[str]:

@@ -2,7 +2,7 @@ from citeverify.models import ParsedReference, VerificationResult, VerificationS
 from citeverify.reports.markdown import render_short_report
 
 
-def test_short_report_omits_clean_references() -> None:
+def test_short_report_renders_exception_table_and_omits_clean_references() -> None:
     clean = VerificationResult(
         reference_id="ref-1",
         raw_reference="raw clean",
@@ -16,5 +16,11 @@ def test_short_report_omits_clean_references() -> None:
         status=VerificationStatus.TITLE_NOT_FOUND,
     )
     report = render_short_report([clean, exception])
-    assert "raw bad" in report
+    assert (
+        "| Reference | Status | Identifier Used | Article Link | Mismatch Details |"
+        in report
+    )
+    assert "`ref-2`" in report
+    assert "TITLE_NOT_FOUND" in report
+    assert "identifier not found or insufficient metadata" in report
     assert "raw clean" not in report
