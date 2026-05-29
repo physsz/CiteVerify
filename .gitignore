@@ -3,7 +3,15 @@ research_journal.md
 
 .env
 .env.*
+!.env.example
 .venv/
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
 .DS_Store
+
+# Generated live-run artifacts can be large and are reproducible from examples.
+examples/**/reports/*.sqlite
+examples/**/reports/report.json
