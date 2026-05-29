@@ -8,6 +8,7 @@ from citeverify.models import JournalLocator, ParsedAuthor, RegistryRecord
 from citeverify.normalize.arxiv import arxiv_doi, extract_arxiv_id
 from citeverify.normalize.author import parse_author
 from citeverify.normalize.doi import normalize_doi
+from citeverify.normalize.journal import canonical_journal_name
 from citeverify.normalize.title import normalize_title
 
 
@@ -77,10 +78,11 @@ class DataCiteProvider(HttpLookupProvider):
     async def search_by_journal_locator(
         self, locator: JournalLocator
     ) -> LookupResponse:
+        venue = canonical_journal_name(locator.venue) or locator.venue
         query_terms = " ".join(
             str(value)
             for value in [
-                locator.venue,
+                venue,
                 locator.year,
                 locator.volume,
                 locator.issue,

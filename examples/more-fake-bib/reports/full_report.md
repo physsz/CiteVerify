@@ -251,14 +251,14 @@ Status: `JOURNAL_LOCATOR_FOUND_WITH_FIELD_MISMATCHES`
 ### Raw Input
 
 ```text
-{'doi': '10.9999/fake-berry-taylor-series', 'pages': '090502', 'number': '9', 'volume': '114', 'journal': 'Physical Review Letters', 'year': '2015', 'author': 'Berry, Dominic W. and Childs, Andrew M. and Cleve, Richard and Kothari, Robin and Somma, Rolando D.', 'title': 'Simulating Hamiltonian Dynamics with a Fabricated Polynomial Recipe', 'ENTRYTYPE': 'article', 'ID': 'fakeBerryWrongDoiWrongTitleJournalCorrect'}
+{'doi': '10.9999/fake-berry-taylor-series', 'pages': '090502', 'number': '9', 'volume': '114', 'journal': 'Phys. Rev. Lett.', 'year': '2015', 'author': 'Berry, Dominic W. and Childs, Andrew M. and Cleve, Richard and Kothari, Robin and Somma, Rolando D.', 'title': 'Simulating Hamiltonian Dynamics with a Fabricated Polynomial Recipe', 'ENTRYTYPE': 'article', 'ID': 'fakeBerryWrongDoiWrongTitleJournalCorrect'}
 ```
 
 ### Identifier Used
 
 - Kind: `journal_locator`
-- Value: `{"venue":"Physical Review Letters","issn":[],"year":2015,"volume":"114","issue":"9","pages":"090502","article_number":null}`
-- Normalized: `{"venue":"Physical Review Letters","issn":[],"year":2015,"volume":"114","issue":"9","pages":"090502","article_number":null}`
+- Value: `{"venue":"Phys. Rev. Lett.","issn":[],"year":2015,"volume":"114","issue":"9","pages":"090502","article_number":null}`
+- Normalized: `{"venue":"Phys. Rev. Lett.","issn":[],"year":2015,"volume":"114","issue":"9","pages":"090502","article_number":null}`
 
 ### Lookup
 
@@ -295,7 +295,7 @@ Status: `JOURNAL_LOCATOR_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `mismatch` (input: `Simulating Hamiltonian Dynamics with a Fabricated Polynomial Recipe`, found: `Simulating Hamiltonian Dynamics with a Truncated Taylor Series`)
 - `authors`: `match` (input: `['Berry, Dominic W.', 'Childs, Andrew M.', 'Cleve, Richard', 'Kothari, Robin', 'Somma, Rolando D.']`, found: `['Berry, Dominic W.', 'Childs, Andrew M.', 'Cleve, Richard', 'Kothari, Robin', 'Somma, Rolando D.']`)
 - `year`: `match` (input: `2015`, found: `2015`)
-- `venue`: `match` (input: `Physical Review Letters`, found: `Physical Review Letters`)
+- `venue`: `match` (input: `Phys. Rev. Lett.`, found: `Physical Review Letters`)
 - `volume`: `match` (input: `114`, found: `114`)
 - `issue`: `match` (input: `9`, found: `9`)
 - `pages`: `match` (input: `090502`, found: `090502`)
@@ -312,14 +312,14 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 ### Raw Input
 
 ```text
-{'pages': '090502', 'number': '9', 'volume': '114', 'journal': 'Physical Review Letters', 'year': '2015', 'author': 'Berry, Dominic W. and Childs, Andrew M. and Cleve, Richard and Kothari, Robin and Somma, Rolando D.', 'ENTRYTYPE': 'article', 'ID': 'pdfStyleBerryJournalLocatorOnly'}
+{'pages': '090502', 'number': '9', 'volume': '114', 'journal': 'Phys. Rev. Lett.', 'year': '2015', 'author': 'Berry, Dominic W. and Childs, Andrew M. and Cleve, Richard and Kothari, Robin and Somma, Rolando D.', 'ENTRYTYPE': 'article', 'ID': 'pdfStyleBerryJournalLocatorOnly'}
 ```
 
 ### Identifier Used
 
 - Kind: `journal_locator`
-- Value: `{"venue":"Physical Review Letters","issn":[],"year":2015,"volume":"114","issue":"9","pages":"090502","article_number":null}`
-- Normalized: `{"venue":"Physical Review Letters","issn":[],"year":2015,"volume":"114","issue":"9","pages":"090502","article_number":null}`
+- Value: `{"venue":"Phys. Rev. Lett.","issn":[],"year":2015,"volume":"114","issue":"9","pages":"090502","article_number":null}`
+- Normalized: `{"venue":"Phys. Rev. Lett.","issn":[],"year":2015,"volume":"114","issue":"9","pages":"090502","article_number":null}`
 
 ### Lookup
 
@@ -351,7 +351,7 @@ None.
 - `title`: `additional_metadata` (input: `None`, found: `Simulating Hamiltonian Dynamics with a Truncated Taylor Series`)
 - `authors`: `match` (input: `['Berry, Dominic W.', 'Childs, Andrew M.', 'Cleve, Richard', 'Kothari, Robin', 'Somma, Rolando D.']`, found: `['Berry, Dominic W.', 'Childs, Andrew M.', 'Cleve, Richard', 'Kothari, Robin', 'Somma, Rolando D.']`)
 - `year`: `match` (input: `2015`, found: `2015`)
-- `venue`: `match` (input: `Physical Review Letters`, found: `Physical Review Letters`)
+- `venue`: `match` (input: `Phys. Rev. Lett.`, found: `Physical Review Letters`)
 - `volume`: `match` (input: `114`, found: `114`)
 - `issue`: `match` (input: `9`, found: `9`)
 - `pages`: `match` (input: `090502`, found: `090502`)
@@ -368,14 +368,14 @@ Status: `JOURNAL_LOCATOR_FOUND_WITH_FIELD_MISMATCHES`
 ### Raw Input
 
 ```text
-{'pages': '090502', 'number': '9', 'volume': '114', 'journal': 'Physical Review Letters', 'year': '2015', 'author': 'Berry, Dominic W. and Childs, Andrew M. and Cleve, Richard and Kothari, Robin and Somma, Rolando D.', 'title': 'Simulating Hamiltonian Dynamics with a Fabricated Polynomial Recipe', 'ENTRYTYPE': 'article', 'ID': 'pdfStyleBerryWrongTitleJournalLocator'}
+{'pages': '090502', 'number': '9', 'volume': '114', 'journal': 'Phys. Rev. Lett.', 'year': '2015', 'author': 'Berry, Dominic W. and Childs, Andrew M. and Cleve, Richard and Kothari, Robin and Somma, Rolando D.', 'title': 'Simulating Hamiltonian Dynamics with a Fabricated Polynomial Recipe', 'ENTRYTYPE': 'article', 'ID': 'pdfStyleBerryWrongTitleJournalLocator'}
 ```
 
 ### Identifier Used
 
 - Kind: `journal_locator`
-- Value: `{"venue":"Physical Review Letters","issn":[],"year":2015,"volume":"114","issue":"9","pages":"090502","article_number":null}`
-- Normalized: `{"venue":"Physical Review Letters","issn":[],"year":2015,"volume":"114","issue":"9","pages":"090502","article_number":null}`
+- Value: `{"venue":"Phys. Rev. Lett.","issn":[],"year":2015,"volume":"114","issue":"9","pages":"090502","article_number":null}`
+- Normalized: `{"venue":"Phys. Rev. Lett.","issn":[],"year":2015,"volume":"114","issue":"9","pages":"090502","article_number":null}`
 
 ### Lookup
 
@@ -409,7 +409,7 @@ Status: `JOURNAL_LOCATOR_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `mismatch` (input: `Simulating Hamiltonian Dynamics with a Fabricated Polynomial Recipe`, found: `Simulating Hamiltonian Dynamics with a Truncated Taylor Series`)
 - `authors`: `match` (input: `['Berry, Dominic W.', 'Childs, Andrew M.', 'Cleve, Richard', 'Kothari, Robin', 'Somma, Rolando D.']`, found: `['Berry, Dominic W.', 'Childs, Andrew M.', 'Cleve, Richard', 'Kothari, Robin', 'Somma, Rolando D.']`)
 - `year`: `match` (input: `2015`, found: `2015`)
-- `venue`: `match` (input: `Physical Review Letters`, found: `Physical Review Letters`)
+- `venue`: `match` (input: `Phys. Rev. Lett.`, found: `Physical Review Letters`)
 - `volume`: `match` (input: `114`, found: `114`)
 - `issue`: `match` (input: `9`, found: `9`)
 - `pages`: `match` (input: `090502`, found: `090502`)
@@ -481,14 +481,14 @@ Status: `JOURNAL_LOCATOR_FOUND_WITH_FIELD_MISMATCHES`
 ### Raw Input
 
 ```text
-{'doi': '10.9999/fake-abbas-qnn', 'pages': '403--409', 'number': '6', 'volume': '1', 'journal': 'Nature Computational Science', 'year': '2021', 'author': 'Abbas, Amira and Sutter, David and Zoufal, Christa and Lucchi, Aurelien and Figalli, Alessio and Woerner, Stefan', 'title': 'The power of fabricated neural recipes', 'ENTRYTYPE': 'article', 'ID': 'fakeAbbasWrongDoiWrongTitleJournalCorrect'}
+{'doi': '10.9999/fake-abbas-qnn', 'pages': '403--409', 'number': '6', 'volume': '1', 'journal': 'Nat. Comput. Sci.', 'year': '2021', 'author': 'Abbas, Amira and Sutter, David and Zoufal, Christa and Lucchi, Aurelien and Figalli, Alessio and Woerner, Stefan', 'title': 'The power of fabricated neural recipes', 'ENTRYTYPE': 'article', 'ID': 'fakeAbbasWrongDoiWrongTitleJournalCorrect'}
 ```
 
 ### Identifier Used
 
 - Kind: `journal_locator`
-- Value: `{"venue":"Nature Computational Science","issn":[],"year":2021,"volume":"1","issue":"6","pages":"403-409","article_number":null}`
-- Normalized: `{"venue":"Nature Computational Science","issn":[],"year":2021,"volume":"1","issue":"6","pages":"403-409","article_number":null}`
+- Value: `{"venue":"Nat. Comput. Sci.","issn":[],"year":2021,"volume":"1","issue":"6","pages":"403-409","article_number":null}`
+- Normalized: `{"venue":"Nat. Comput. Sci.","issn":[],"year":2021,"volume":"1","issue":"6","pages":"403-409","article_number":null}`
 
 ### Lookup
 
@@ -525,7 +525,7 @@ Status: `JOURNAL_LOCATOR_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `mismatch` (input: `The power of fabricated neural recipes`, found: `The power of quantum neural networks`)
 - `authors`: `match` (input: `['Abbas, Amira', 'Sutter, David', 'Zoufal, Christa', 'Lucchi, Aurelien', 'Figalli, Alessio', 'Woerner, Stefan']`, found: `['Abbas, Amira', 'Sutter, David', 'Zoufal, Christa', 'Lucchi, Aurelien', 'Figalli, Alessio', 'Woerner, Stefan']`)
 - `year`: `match` (input: `2021`, found: `2021`)
-- `venue`: `match` (input: `Nature Computational Science`, found: `Nature Computational Science`)
+- `venue`: `match` (input: `Nat. Comput. Sci.`, found: `Nature Computational Science`)
 - `volume`: `match` (input: `1`, found: `1`)
 - `issue`: `match` (input: `6`, found: `6`)
 - `pages`: `match` (input: `403-409`, found: `403-409`)
@@ -541,14 +541,14 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 ### Raw Input
 
 ```text
-{'pages': '403--409', 'number': '6', 'volume': '1', 'journal': 'Nature Computational Science', 'year': '2021', 'author': 'Abbas, Amira and Sutter, David and Zoufal, Christa and Lucchi, Aurelien and Figalli, Alessio and Woerner, Stefan', 'ENTRYTYPE': 'article', 'ID': 'pdfStyleAbbasJournalLocatorOnly'}
+{'pages': '403--409', 'number': '6', 'volume': '1', 'journal': 'Nat. Comput. Sci.', 'year': '2021', 'author': 'Abbas, Amira and Sutter, David and Zoufal, Christa and Lucchi, Aurelien and Figalli, Alessio and Woerner, Stefan', 'ENTRYTYPE': 'article', 'ID': 'pdfStyleAbbasJournalLocatorOnly'}
 ```
 
 ### Identifier Used
 
 - Kind: `journal_locator`
-- Value: `{"venue":"Nature Computational Science","issn":[],"year":2021,"volume":"1","issue":"6","pages":"403-409","article_number":null}`
-- Normalized: `{"venue":"Nature Computational Science","issn":[],"year":2021,"volume":"1","issue":"6","pages":"403-409","article_number":null}`
+- Value: `{"venue":"Nat. Comput. Sci.","issn":[],"year":2021,"volume":"1","issue":"6","pages":"403-409","article_number":null}`
+- Normalized: `{"venue":"Nat. Comput. Sci.","issn":[],"year":2021,"volume":"1","issue":"6","pages":"403-409","article_number":null}`
 
 ### Lookup
 
@@ -580,7 +580,7 @@ None.
 - `title`: `additional_metadata` (input: `None`, found: `The power of quantum neural networks`)
 - `authors`: `match` (input: `['Abbas, Amira', 'Sutter, David', 'Zoufal, Christa', 'Lucchi, Aurelien', 'Figalli, Alessio', 'Woerner, Stefan']`, found: `['Abbas, Amira', 'Sutter, David', 'Zoufal, Christa', 'Lucchi, Aurelien', 'Figalli, Alessio', 'Woerner, Stefan']`)
 - `year`: `match` (input: `2021`, found: `2021`)
-- `venue`: `match` (input: `Nature Computational Science`, found: `Nature Computational Science`)
+- `venue`: `match` (input: `Nat. Comput. Sci.`, found: `Nature Computational Science`)
 - `volume`: `match` (input: `1`, found: `1`)
 - `issue`: `match` (input: `6`, found: `6`)
 - `pages`: `match` (input: `403-409`, found: `403-409`)
@@ -596,14 +596,14 @@ Status: `JOURNAL_LOCATOR_FOUND_WITH_FIELD_MISMATCHES`
 ### Raw Input
 
 ```text
-{'pages': '403--409', 'number': '6', 'volume': '1', 'journal': 'Nature Computational Science', 'year': '2021', 'author': 'Abbas, Amira and Sutter, David and Zoufal, Christa and Lucchi, Aurelien and Figalli, Alessio and Woerner, Stefan', 'title': 'The power of fabricated neural recipes', 'ENTRYTYPE': 'article', 'ID': 'pdfStyleAbbasWrongTitleJournalLocator'}
+{'pages': '403--409', 'number': '6', 'volume': '1', 'journal': 'Nat. Comput. Sci.', 'year': '2021', 'author': 'Abbas, Amira and Sutter, David and Zoufal, Christa and Lucchi, Aurelien and Figalli, Alessio and Woerner, Stefan', 'title': 'The power of fabricated neural recipes', 'ENTRYTYPE': 'article', 'ID': 'pdfStyleAbbasWrongTitleJournalLocator'}
 ```
 
 ### Identifier Used
 
 - Kind: `journal_locator`
-- Value: `{"venue":"Nature Computational Science","issn":[],"year":2021,"volume":"1","issue":"6","pages":"403-409","article_number":null}`
-- Normalized: `{"venue":"Nature Computational Science","issn":[],"year":2021,"volume":"1","issue":"6","pages":"403-409","article_number":null}`
+- Value: `{"venue":"Nat. Comput. Sci.","issn":[],"year":2021,"volume":"1","issue":"6","pages":"403-409","article_number":null}`
+- Normalized: `{"venue":"Nat. Comput. Sci.","issn":[],"year":2021,"volume":"1","issue":"6","pages":"403-409","article_number":null}`
 
 ### Lookup
 
@@ -637,7 +637,7 @@ Status: `JOURNAL_LOCATOR_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `mismatch` (input: `The power of fabricated neural recipes`, found: `The power of quantum neural networks`)
 - `authors`: `match` (input: `['Abbas, Amira', 'Sutter, David', 'Zoufal, Christa', 'Lucchi, Aurelien', 'Figalli, Alessio', 'Woerner, Stefan']`, found: `['Abbas, Amira', 'Sutter, David', 'Zoufal, Christa', 'Lucchi, Aurelien', 'Figalli, Alessio', 'Woerner, Stefan']`)
 - `year`: `match` (input: `2021`, found: `2021`)
-- `venue`: `match` (input: `Nature Computational Science`, found: `Nature Computational Science`)
+- `venue`: `match` (input: `Nat. Comput. Sci.`, found: `Nature Computational Science`)
 - `volume`: `match` (input: `1`, found: `1`)
 - `issue`: `match` (input: `6`, found: `6`)
 - `pages`: `match` (input: `403-409`, found: `403-409`)

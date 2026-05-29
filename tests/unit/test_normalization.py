@@ -1,7 +1,11 @@
 from citeverify.normalize.arxiv import arxiv_doi, extract_arxiv_id, normalize_arxiv_id
 from citeverify.normalize.author import parse_author_list
 from citeverify.normalize.doi import extract_doi, normalize_doi
-from citeverify.normalize.journal import venues_compatible
+from citeverify.normalize.journal import (
+    canonical_journal_name,
+    normalize_journal,
+    venues_compatible,
+)
 from citeverify.normalize.text import normalize_basic_text
 from citeverify.normalize.title import normalize_title, titles_match
 
@@ -55,4 +59,30 @@ def test_venue_matches_when_found_venue_embeds_volume() -> None:
         "Advances in Neural Information Processing Systems",
         "Advances in Neural Information Processing Systems 35",
         input_volume="35",
+    )
+
+
+def test_journal_abbreviation_resolver_uses_seed_csv() -> None:
+    assert normalize_journal("Nat. Comput. Sci.") == "nature computational science"
+    assert normalize_journal("npj Quantum Inf.") == "npj quantum information"
+    assert normalize_journal("J. Phys. B") == (
+        "journal of physics b atomic molecular and optical physics"
+    )
+    assert normalize_journal("Proc. Natl. Acad. Sci. U.S.A.") == (
+        "proceedings of the national academy of sciences of the united states "
+        "of america"
+    )
+
+
+def test_canonical_journal_name_returns_full_query_name() -> None:
+    assert canonical_journal_name("Rev. Mod. Phys.") == "reviews of modern physics"
+    assert canonical_journal_name("Phys. Rev. X") == "physical review x"
+
+
+def test_venues_match_abbreviated_journal_names() -> None:
+    assert venues_compatible("Nat. Comput. Sci.", "Nature Computational Science")
+    assert venues_compatible("npj Quantum Inf.", "npj Quantum Information")
+    assert venues_compatible(
+        "J. Phys. B",
+        "Journal of Physics B: Atomic, Molecular and Optical Physics",
     )

@@ -9,7 +9,7 @@ from citeverify.models import JournalLocator, ParsedAuthor, RegistryRecord
 from citeverify.normalize.arxiv import arxiv_doi, extract_arxiv_id
 from citeverify.normalize.author import parse_author
 from citeverify.normalize.doi import normalize_doi
-from citeverify.normalize.journal import normalize_issn
+from citeverify.normalize.journal import canonical_journal_name, normalize_issn
 from citeverify.normalize.pages import normalize_article_number, normalize_pages
 from citeverify.normalize.title import normalize_title
 
@@ -93,7 +93,9 @@ class CrossrefProvider(HttpLookupProvider):
         if locator.issn:
             filters.append(f"issn:{locator.issn[0]}")
         elif locator.venue:
-            params["query.container-title"] = locator.venue
+            params["query.container-title"] = (
+                canonical_journal_name(locator.venue) or locator.venue
+            )
         if locator.year:
             filters.extend(
                 [
@@ -196,10 +198,11 @@ def _crossref_year(item: dict[str, Any]) -> int | None:
 
 
 def _journal_locator_bibliographic_query(locator: JournalLocator) -> str:
+    venue = canonical_journal_name(locator.venue) or locator.venue
     return " ".join(
         value
         for value in [
-            locator.venue,
+            venue,
             str(locator.year) if locator.year else None,
             locator.volume,
             locator.issue,

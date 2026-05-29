@@ -369,6 +369,56 @@ async def test_journal_locator_infers_aps_doi_from_article_number() -> None:
 
 
 @pytest.mark.asyncio
+async def test_journal_locator_infers_aps_doi_from_abbreviated_journal() -> None:
+    class DoiOnlyProvider(FakeProvider):
+        async def search_by_journal_locator(
+            self, locator: JournalLocator
+        ) -> LookupResponse:
+            return LookupResponse(
+                source=self.name,
+                query_kind="journal_locator",
+                query_value=locator.model_dump_json(),
+                records=[],
+                raw_status_code=404,
+            )
+
+    verifier = Verifier(
+        [
+            DoiOnlyProvider(
+                [
+                    RegistryRecord(
+                        source="Fixture",
+                        doi="10.1103/revmodphys.91.015006",
+                        title="Colloquium: Quantum sensing",
+                        venue="Reviews of Modern Physics",
+                        year=2019,
+                        volume="91",
+                        issue="1",
+                        article_number="015006",
+                    )
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="rmp-abbrev",
+            raw_text="raw",
+            venue="Rev. Mod. Phys.",
+            year=2019,
+            volume="91",
+            issue="1",
+            article_number="015006",
+        )
+    )
+    assert result.status == VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
+    assert result.identifier_used is not None
+    assert result.identifier_used.kind.value == "journal_locator"
+    assert result.selected_record is not None
+    assert result.selected_record.doi == "10.1103/revmodphys.91.015006"
+
+
+@pytest.mark.asyncio
 async def test_journal_locator_matches_pages_to_found_article_number() -> None:
     verifier = Verifier(
         [

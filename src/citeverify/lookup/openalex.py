@@ -8,7 +8,7 @@ from citeverify.models import JournalLocator, RegistryRecord
 from citeverify.normalize.arxiv import arxiv_doi, extract_arxiv_id
 from citeverify.normalize.author import parse_author
 from citeverify.normalize.doi import normalize_doi
-from citeverify.normalize.journal import normalize_issn
+from citeverify.normalize.journal import canonical_journal_name, normalize_issn
 from citeverify.normalize.pages import normalize_pages
 from citeverify.normalize.title import normalize_title
 
@@ -201,10 +201,11 @@ def _pages_from_biblio(biblio: dict[str, Any]) -> str | None:
 
 
 def _journal_locator_search(locator: JournalLocator) -> str:
+    venue = canonical_journal_name(locator.venue) or locator.venue
     return " ".join(
         value
         for value in [
-            locator.venue,
+            venue,
             str(locator.year) if locator.year else None,
             locator.volume,
             locator.issue,
