@@ -37,3 +37,41 @@ def normalize_journal(value: str | None) -> str | None:
     normalized = re.sub(r"\bjournal\b", "journal", normalized)
     normalized = normalized.strip()
     return JOURNAL_ALIASES.get(normalized, normalized) or None
+
+
+def venues_compatible(
+    input_venue: str | None,
+    found_venue: str | None,
+    input_volume: str | None = None,
+    found_volume: str | None = None,
+) -> bool:
+    normalized_input = normalize_journal(input_venue)
+    normalized_found = normalize_journal(found_venue)
+    if not normalized_input or not normalized_found:
+        return False
+    if normalized_input == normalized_found:
+        return True
+    for volume in _volume_variants(input_volume) | _volume_variants(found_volume):
+        if _strip_trailing_volume(normalized_input, volume) == normalized_found:
+            return True
+        if _strip_trailing_volume(normalized_found, volume) == normalized_input:
+            return True
+    return False
+
+
+def _volume_variants(value: str | None) -> set[str]:
+    if not value:
+        return set()
+    normalized = normalize_basic_text(str(value)).replace(".", "").strip()
+    if not normalized:
+        return set()
+    variants = {normalized}
+    if normalized.startswith("vol "):
+        variants.add(normalized.removeprefix("vol ").strip())
+    else:
+        variants.add(f"vol {normalized}")
+    return {variant for variant in variants if variant}
+
+
+def _strip_trailing_volume(value: str, volume: str) -> str:
+    return re.sub(rf"\s+{re.escape(volume)}$", "", value).strip()

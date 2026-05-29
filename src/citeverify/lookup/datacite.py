@@ -5,6 +5,7 @@ from urllib.parse import quote
 
 from citeverify.lookup.base import HttpLookupProvider, LookupResponse
 from citeverify.models import JournalLocator, ParsedAuthor, RegistryRecord
+from citeverify.normalize.arxiv import arxiv_doi, extract_arxiv_id
 from citeverify.normalize.author import parse_author
 from citeverify.normalize.doi import normalize_doi
 from citeverify.normalize.title import normalize_title
@@ -36,6 +37,20 @@ class DataCiteProvider(HttpLookupProvider):
             records=records,
             error=error,
             raw_status_code=status_code,
+        )
+
+    async def get_by_arxiv_id(self, arxiv_id: str) -> LookupResponse:
+        doi = arxiv_doi(arxiv_id)
+        if not doi:
+            return LookupResponse(
+                source=self.name,
+                query_kind="arxiv_id",
+                query_value=arxiv_id,
+                error="invalid arXiv ID",
+            )
+        response = await self.get_by_doi(doi)
+        return response.model_copy(
+            update={"query_kind": "arxiv_id", "query_value": arxiv_id}
         )
 
     async def search_by_title(self, title: str) -> LookupResponse:
@@ -112,6 +127,7 @@ class DataCiteProvider(HttpLookupProvider):
             year=attributes.get("publicationYear"),
             venue=attributes.get("publisher"),
             doi=doi,
+            arxiv_id=extract_arxiv_id(doi, attributes.get("url")),
             url=attributes.get("url"),
             record_type=(attributes.get("types") or {}).get("resourceTypeGeneral"),
             raw_response=item,

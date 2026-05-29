@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 
 from citeverify.models import ParsedReference, SourceFormat
+from citeverify.normalize.arxiv import extract_arxiv_id
 from citeverify.normalize.author import parse_author_list
 from citeverify.normalize.doi import extract_doi
 
@@ -71,6 +72,7 @@ def parse_raw_text(text: str) -> list[ParsedReference]:
                 authors=parse_author_list(author_prefix),
                 year=_extract_year(raw_reference),
                 doi=extract_doi(raw_reference),
+                arxiv_id=extract_arxiv_id(raw_reference),
                 source_format=SourceFormat.RAW_TEXT,
             )
         )

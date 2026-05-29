@@ -12,6 +12,8 @@ from citeverify.models import (
 )
 from citeverify.normalize.author import parse_author_list
 
+LOW_DEPTH_TITLE = "Low-depth amplitude estimation via statistical eigengap estimation"
+
 
 class FakeProvider:
     name = "Fixture"
@@ -25,6 +27,16 @@ class FakeProvider:
             source=self.name,
             query_kind="doi",
             query_value=doi,
+            records=matches,
+            raw_status_code=200 if matches else 404,
+        )
+
+    async def get_by_arxiv_id(self, arxiv_id: str) -> LookupResponse:
+        matches = [record for record in self.records if record.arxiv_id == arxiv_id]
+        return LookupResponse(
+            source=self.name,
+            query_kind="arxiv_id",
+            query_value=arxiv_id,
             records=matches,
             raw_status_code=200 if matches else 404,
         )
@@ -211,3 +223,191 @@ async def test_journal_locator_found() -> None:
         )
     )
     assert result.status == VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
+
+
+@pytest.mark.asyncio
+async def test_arxiv_id_collapses_duplicate_records() -> None:
+    verifier = Verifier(
+        [
+            FakeProvider(
+                [
+                    RegistryRecord(
+                        source="DataCite",
+                        doi="10.48550/arxiv.2603.05475",
+                        arxiv_id="2603.05475",
+                        title=LOW_DEPTH_TITLE,
+                        authors=parse_author_list("Huang, Po-Wei; Koczor, Bálint"),
+                        year=2026,
+                        venue="arXiv",
+                    ),
+                    RegistryRecord(
+                        source="OpenAlex",
+                        arxiv_id="2603.05475",
+                        title=LOW_DEPTH_TITLE,
+                        authors=parse_author_list("Po-Wei Huang; Bálint Koczor"),
+                        year=2026,
+                        venue="ArXiv.org",
+                    ),
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="huang2026low",
+            raw_text="raw",
+            title=LOW_DEPTH_TITLE,
+            authors=parse_author_list("Huang, Po-Wei; Koczor, B{\\'a}lint"),
+            year=2026,
+            venue="arXiv preprint arXiv:2603.05475",
+            arxiv_id="2603.05475",
+        )
+    )
+    assert result.status == VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
+
+
+@pytest.mark.asyncio
+async def test_title_prefers_exact_title_over_near_title() -> None:
+    verifier = Verifier(
+        [
+            FakeProvider(
+                [
+                    RegistryRecord(
+                        source="Crossref",
+                        doi="10.1145/3406325.3465355",
+                        title=(
+                            "Neural tangent kernel: convergence and "
+                            "generalization in neural networks (invited paper)"
+                        ),
+                        year=2021,
+                    ),
+                    RegistryRecord(
+                        source="OpenAlex",
+                        doi="10.48550/arxiv.1806.07572",
+                        arxiv_id="1806.07572",
+                        title=(
+                            "Neural Tangent Kernel: Convergence and "
+                            "Generalization in Neural Networks"
+                        ),
+                        year=2018,
+                    ),
+                    RegistryRecord(
+                        source="OpenAlex",
+                        title=(
+                            "Neural Tangent Kernel: Convergence and "
+                            "Generalization in Neural Networks"
+                        ),
+                        year=2018,
+                    ),
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="jacot2018neural",
+            raw_text="raw",
+            title=(
+                "Neural tangent kernel: Convergence and generalization "
+                "in neural networks"
+            ),
+            year=2018,
+        )
+    )
+    assert result.status == VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
+    assert result.selected_record is not None
+    assert result.selected_record.doi == "10.48550/arxiv.1806.07572"
+
+
+@pytest.mark.asyncio
+async def test_title_uses_doi_embedded_in_url_to_disambiguate() -> None:
+    verifier = Verifier(
+        [
+            FakeProvider(
+                [
+                    RegistryRecord(
+                        source="Crossref",
+                        doi="10.1007/s11128-014-0809-8",
+                        title="The quest for a Quantum Neural Network",
+                        year=2014,
+                        venue="Quantum Information Processing",
+                        volume="13",
+                        issue="11",
+                        pages="2567-2586",
+                        url="https://doi.org/10.1007/s11128-014-0809-8",
+                    ),
+                    RegistryRecord(
+                        source="OpenAlex",
+                        doi="10.5555/2684509.2684546",
+                        title="The quest for a Quantum Neural Network",
+                        year=2014,
+                        venue="Quantum Information Processing",
+                    ),
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="schuld2014quest",
+            raw_text="raw",
+            title="The quest for a quantum neural network",
+            year=2014,
+            venue="Quantum Information Processing",
+            url="https://link.springer.com/article/10.1007/s11128-014-0809-8",
+        )
+    )
+    assert result.status == VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
+    assert result.selected_record is not None
+    assert result.selected_record.doi == "10.1007/s11128-014-0809-8"
+
+
+@pytest.mark.asyncio
+async def test_title_uses_venue_with_embedded_volume_to_disambiguate() -> None:
+    verifier = Verifier(
+        [
+            FakeProvider(
+                [
+                    RegistryRecord(
+                        source="OpenAlex",
+                        doi="10.48550/arxiv.2210.15812",
+                        arxiv_id="2210.15812",
+                        title=(
+                            "Differentiable Analog Quantum Computing for "
+                            "Optimization and Control"
+                        ),
+                        year=2022,
+                        venue="arXiv (Cornell University)",
+                    ),
+                    RegistryRecord(
+                        source="Crossref",
+                        doi="10.52202/068431-0340",
+                        title=(
+                            "Differentiable Analog Quantum Computing for "
+                            "Optimization and Control"
+                        ),
+                        year=2022,
+                        venue="Advances in Neural Information Processing Systems 35",
+                        pages="4707-4721",
+                    ),
+                ]
+            )
+        ]
+    )
+    result = await verifier.verify_one(
+        ParsedReference(
+            reference_id="leng2022differentiable",
+            raw_text="raw",
+            title=(
+                "Differentiable analog quantum computing for optimization "
+                "and control"
+            ),
+            year=2022,
+            venue="Advances in Neural Information Processing Systems",
+            volume="35",
+            pages="4707-4721",
+        )
+    )
+    assert result.status == VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
+    assert result.selected_record is not None
+    assert result.selected_record.doi == "10.52202/068431-0340"

@@ -11,7 +11,12 @@ from citeverify.cache import ResponseCache
 from citeverify.compare import verify_references
 from citeverify.config import CiteVerifyConfig
 from citeverify.errors import UnsupportedInputError
-from citeverify.lookup import CrossrefProvider, DataCiteProvider, OpenAlexProvider
+from citeverify.lookup import (
+    ArxivProvider,
+    CrossrefProvider,
+    DataCiteProvider,
+    OpenAlexProvider,
+)
 from citeverify.lookup.base import HttpLookupProvider, LookupProvider
 from citeverify.models import ParsedReference, VerificationResult
 from citeverify.parsers import parse_bibtex, parse_raw_text
@@ -105,6 +110,7 @@ def verify(
     providers: list[LookupProvider] = [
         CrossrefProvider(config, cache=cache),
         DataCiteProvider(config, cache=cache),
+        ArxivProvider(config, cache=cache),
         OpenAlexProvider(config, cache=cache),
     ]
 

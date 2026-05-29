@@ -3,12 +3,12 @@
 ## Summary
 
 - Total references: `150`
-- Clean references: `97`
-- Exception references: `53`
+- Clean references: `137`
+- Exception references: `13`
 
 ## Reference kjaergaard2019superconducting
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -18,51 +18,51 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Superconducting Qubits: Current State of Play`
-- Normalized: `superconducting qubits current state of play`
+- Kind: `arxiv_id`
+- Value: `1905.13641`
+- Normalized: `1905.13641`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `7`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
-- Source: `OpenAlex`
-- Source URL: `https://openalex.org/W2947902637`
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.1905.13641`
 - Title: `Superconducting Qubits: Current State of Play`
-- Authors: `Morten Kjaergaard; Mollie E. Schwartz; Jochen Braumüller; Philip Krantz; Joel I.-J. Wang; Simon Gustavsson; William D. Oliver`
-- Venue: `Annual Review of Condensed Matter Physics`
+- Authors: `Kjaergaard, Morten; Schwartz, Mollie E.; Braumüller, Jochen; Krantz, Philip; Wang, Joel I-Jan; Gustavsson, Simon; Oliver, William D.`
+- Venue: `arXiv`
 - Year: `2019`
-- Volume: `11`
-- Issue: `1`
-- Pages: `369`
-- DOI: `10.1146/annurev-conmatphys-031119-050605`
-- URL: `https://doi.org/10.1146/annurev-conmatphys-031119-050605`
-- Type: `article`
+- DOI: `10.48550/arxiv.1905.13641`
+- URL: `https://arxiv.org/abs/1905.13641`
+- Type: `Text`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv preprint arXiv:1905.13641`
-  - Found: `Annual Review of Condensed Matter Physics`
+None.
 
 ### Field Comparisons
 
-- `doi`: `additional_metadata` (input: `None`, found: `10.1146/annurev-conmatphys-031119-050605`)
+- `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.1905.13641`)
 - `title`: `match` (input: `Superconducting Qubits: Current State of Play`, found: `Superconducting Qubits: Current State of Play`)
-- `authors`: `match` (input: `['Kjaergaard, Morten', 'Schwartz, Mollie E', 'Braum{\\"u}ller, Jochen', 'Krantz, Philip', 'Wang, Joel I-Jan', 'Gustavsson, Simon', 'Oliver, William D']`, found: `['Morten Kjaergaard', 'Mollie E. Schwartz', 'Jochen Braumüller', 'Philip Krantz', 'Joel I.-J. Wang', 'Simon Gustavsson', 'William D. Oliver']`)
+- `authors`: `match` (input: `['Kjaergaard, Morten', 'Schwartz, Mollie E', 'Braum{\\"u}ller, Jochen', 'Krantz, Philip', 'Wang, Joel I-Jan', 'Gustavsson, Simon', 'Oliver, William D']`, found: `['Kjaergaard, Morten', 'Schwartz, Mollie E.', 'Braumüller, Jochen', 'Krantz, Philip', 'Wang, Joel I-Jan', 'Gustavsson, Simon', 'Oliver, William D.']`)
 - `year`: `match` (input: `2019`, found: `2019`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:1905.13641`, found: `Annual Review of Condensed Matter Physics`)
-- `volume`: `additional_metadata` (input: `None`, found: `11`)
-- `issue`: `additional_metadata` (input: `None`, found: `1`)
-- `pages`: `additional_metadata` (input: `None`, found: `369`)
+- `venue`: `match` (input: `arXiv preprint arXiv:1905.13641`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
+- `volume`: `not_checked` (input: `None`, found: `None`)
+- `issue`: `not_checked` (input: `None`, found: `None`)
+- `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `1905.13641`, found: `1905.13641`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1146/annurev-conmatphys-031119-050605`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/1905.13641`)
+
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
 
 ## Reference mezzacapo2014digital
 
@@ -82,7 +82,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `7`
 
 ### Selected Record
@@ -139,7 +139,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `7`
 
 ### Selected Record
@@ -180,7 +180,7 @@ None.
 
 ## Reference haffner2005scalable
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -196,7 +196,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `7`
 
 ### Selected Record
@@ -216,17 +216,13 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- authors:
-  - Input: `['H{\\"a}ffner, Hartmut', 'H{\\"a}nsel, Wolfgang', 'Roos, CF', 'Benhelm, Jan', 'Chwalla, Michael', 'K{\\"o}rber, Timo', 'Rapol, UD', 'Riebe, Mark', 'Schmidt, PO', 'Becher, Christoph', 'et al.']`
-  - Found: `['Häffner, H.', 'Hänsel, W.', 'Roos, C. F.', 'Benhelm, J.', 'Chek-al-kar, D.', 'Chwalla, M.', 'Körber, T.', 'Rapol, U. D.', 'Riebe, M.', 'Schmidt, P. O.', 'Becher, C.', 'Gühne, O.', 'Dür, W.', 'Blatt, R.']`
-  - Note: Chwalla, Michael != Chek-al-kar, D.; K{\"o}rber, Timo != Chwalla, M.; Rapol, UD != Körber, T.; Riebe, Mark != Rapol, U. D.; Schmidt, PO != Riebe, M.; Becher, Christoph != Schmidt, P. O.
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.1038/nature04279`)
 - `title`: `match` (input: `Scalable multiparticle entanglement of trapped ions`, found: `Scalable multiparticle entanglement of trapped ions`)
-- `authors`: `mismatch` (input: `['H{\\"a}ffner, Hartmut', 'H{\\"a}nsel, Wolfgang', 'Roos, CF', 'Benhelm, Jan', 'Chwalla, Michael', 'K{\\"o}rber, Timo', 'Rapol, UD', 'Riebe, Mark', 'Schmidt, PO', 'Becher, Christoph', 'et al.']`, found: `['Häffner, H.', 'Hänsel, W.', 'Roos, C. F.', 'Benhelm, J.', 'Chek-al-kar, D.', 'Chwalla, M.', 'Körber, T.', 'Rapol, U. D.', 'Riebe, M.', 'Schmidt, P. O.', 'Becher, C.', 'Gühne, O.', 'Dür, W.', 'Blatt, R.']`)
-  - Note: Chwalla, Michael != Chek-al-kar, D.; K{\"o}rber, Timo != Chwalla, M.; Rapol, UD != Körber, T.; Riebe, Mark != Rapol, U. D.; Schmidt, PO != Riebe, M.; Becher, Christoph != Schmidt, P. O.
+- `authors`: `match` (input: `['H{\\"a}ffner, Hartmut', 'H{\\"a}nsel, Wolfgang', 'Roos, CF', 'Benhelm, Jan', 'Chwalla, Michael', 'K{\\"o}rber, Timo', 'Rapol, UD', 'Riebe, Mark', 'Schmidt, PO', 'Becher, Christoph', 'et al.']`, found: `['Häffner, H.', 'Hänsel, W.', 'Roos, C. F.', 'Benhelm, J.', 'Chek-al-kar, D.', 'Chwalla, M.', 'Körber, T.', 'Rapol, U. D.', 'Riebe, M.', 'Schmidt, P. O.', 'Becher, C.', 'Gühne, O.', 'Dür, W.', 'Blatt, R.']`)
 - `year`: `match` (input: `2005`, found: `2005`)
 - `venue`: `match` (input: `Nature`, found: `Nature`)
 - `volume`: `match` (input: `438`, found: `438`)
@@ -256,7 +252,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `10`
 
 ### Selected Record
@@ -297,7 +293,7 @@ None.
 
 ## Reference zhang2017observation
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -313,7 +309,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -333,9 +329,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- pages:
-  - Input: `601`
-  - Found: `601-604`
+None.
 
 ### Field Comparisons
 
@@ -346,7 +340,8 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `venue`: `match` (input: `Nature`, found: `Nature`)
 - `volume`: `match` (input: `551`, found: `551`)
 - `issue`: `match` (input: `7682`, found: `7682`)
-- `pages`: `mismatch` (input: `601`, found: `601-604`)
+- `pages`: `match` (input: `601`, found: `601-604`)
+  - Note: page range and first page are compatible
 - `article_number`: `not_checked` (input: `None`, found: `None`)
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
@@ -371,7 +366,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -428,7 +423,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `6`
 
 ### Selected Record
@@ -484,7 +479,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -541,7 +536,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `2`
 
 ### Selected Record
@@ -595,7 +590,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `2`
 
 ### Selected Record
@@ -651,7 +646,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -708,7 +703,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -731,9 +726,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - venue:
   - Input: `ArXiv`
   - Found: `Nature Physics`
-- volume:
-  - Input: `abs/2010.02174`
-  - Found: `17`
+  - Note: input venue is arXiv/preprint; found venue is a publication venue
 
 ### Field Comparisons
 
@@ -742,7 +735,8 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `authors`: `match` (input: `['Yunchao Liu', 'Srinivasan Arunachalam', 'Kristan Temme']`, found: `['Liu, Yunchao', 'Arunachalam, Srinivasan', 'Temme, Kristan']`)
 - `year`: `match` (input: `2021`, found: `2021`)
 - `venue`: `mismatch` (input: `ArXiv`, found: `Nature Physics`)
-- `volume`: `mismatch` (input: `abs/2010.02174`, found: `17`)
+  - Note: input venue is arXiv/preprint; found venue is a publication venue
+- `volume`: `additional_metadata` (input: `None`, found: `17`)
 - `issue`: `additional_metadata` (input: `None`, found: `9`)
 - `pages`: `additional_metadata` (input: `None`, found: `1013-1017`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
@@ -753,7 +747,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ## Reference Jumper2021HighlyAP
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -769,54 +763,43 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `10`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `15`
 
 ### Selected Record
 
-- Source: `OpenAlex`
-- Source URL: `https://openalex.org/W3177828909`
+- Source: `Crossref`
+- Source URL: `https://doi.org/10.1038/s41586-021-03819-2`
 - Title: `Highly accurate protein structure prediction with AlphaFold`
-- Authors: `John Jumper; Richard Evans; Alexander Pritzel; Tim Green; Michael Figurnov; Olaf Ronneberger; Kathryn Tunyasuvunakool; Russ Bates; Augustin Žídek; Anna Potapenko; Alex Bridgland; Clemens Meyer; Simon Köhl; Andrew J. Ballard; Andrew Cowie; Bernardino Romera‐Paredes; Stanislav Nikolov; Rishub Jain; Jonas Adler; Trevor Back; Stig Petersen; David Reiman; Ellen Clancy; Michał Zieliński; Martin Steinegger; Michalina Pacholska; Tamas Berghammer; Sebastian W. Bodenstein; David Silver; Oriol Vinyals; Andrew Senior; Koray Kavukcuoglu; Pushmeet Kohli; Demis Hassabis`
+- Authors: `Jumper, John; Evans, Richard; Pritzel, Alexander; Green, Tim; Figurnov, Michael; Ronneberger, Olaf; Tunyasuvunakool, Kathryn; Bates, Russ; Žídek, Augustin; Potapenko, Anna; Bridgland, Alex; Meyer, Clemens; Kohl, Simon A. A.; Ballard, Andrew J.; Cowie, Andrew; Romera-Paredes, Bernardino; Nikolov, Stanislav; Jain, Rishub; Adler, Jonas; Back, Trevor; Petersen, Stig; Reiman, David; Clancy, Ellen; Zielinski, Michal; Steinegger, Martin; Pacholska, Michalina; Berghammer, Tamas; Bodenstein, Sebastian; Silver, David; Vinyals, Oriol; Senior, Andrew W.; Kavukcuoglu, Koray; Kohli, Pushmeet; Hassabis, Demis`
 - Venue: `Nature`
 - Year: `2021`
 - Volume: `596`
 - Issue: `7873`
-- Pages: `583`
+- Pages: `583-589`
 - DOI: `10.1038/s41586-021-03819-2`
 - URL: `https://doi.org/10.1038/s41586-021-03819-2`
-- Type: `article`
+- Type: `journal-article`
 
 ### Mismatches
 
-- authors:
-  - Input: `['John M. Jumper', 'Richard Evans', 'Alexander Pritzel', 'Tim Green', 'Michael Figurnov', 'Olaf Ronneberger', 'Kathryn Tunyasuvunakool', 'Russ Bates', "Augustin Z{\\'i}dek", 'Anna Potapenko', 'Alex Bridgland', 'Clemens Meyer', 'Simon A A Kohl', 'Andy Ballard', 'Andrew Cowie', 'Bernardino Romera-Paredes', 'Stanislav Nikolov', 'Rishub Jain', 'Jonas Adler', 'Trevor Back', 'Stig Petersen', 'David A. Reiman', 'Ellen Clancy', 'Michal Zielinski', 'Martin Steinegger', 'Michalina Pacholska', 'Tamas Berghammer', 'Sebastian Bodenstein', 'David Silver', 'Oriol Vinyals', 'Andrew W. Senior', 'Koray Kavukcuoglu', 'Pushmeet Kohli', 'Demis Hassabis']`
-  - Found: `['John Jumper', 'Richard Evans', 'Alexander Pritzel', 'Tim Green', 'Michael Figurnov', 'Olaf Ronneberger', 'Kathryn Tunyasuvunakool', 'Russ Bates', 'Augustin Žídek', 'Anna Potapenko', 'Alex Bridgland', 'Clemens Meyer', 'Simon Köhl', 'Andrew J. Ballard', 'Andrew Cowie', 'Bernardino Romera‐Paredes', 'Stanislav Nikolov', 'Rishub Jain', 'Jonas Adler', 'Trevor Back', 'Stig Petersen', 'David Reiman', 'Ellen Clancy', 'Michał Zieliński', 'Martin Steinegger', 'Michalina Pacholska', 'Tamas Berghammer', 'Sebastian W. Bodenstein', 'David Silver', 'Oriol Vinyals', 'Andrew Senior', 'Koray Kavukcuoglu', 'Pushmeet Kohli', 'Demis Hassabis']`
-  - Note: John M. Jumper != John Jumper; Simon A A Kohl != Simon Köhl; David A. Reiman != David Reiman; Andrew W. Senior != Andrew Senior
-- pages:
-  - Input: `583-589`
-  - Found: `583`
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.1038/s41586-021-03819-2`)
 - `title`: `match` (input: `Highly accurate protein structure prediction with AlphaFold`, found: `Highly accurate protein structure prediction with AlphaFold`)
-- `authors`: `mismatch` (input: `['John M. Jumper', 'Richard Evans', 'Alexander Pritzel', 'Tim Green', 'Michael Figurnov', 'Olaf Ronneberger', 'Kathryn Tunyasuvunakool', 'Russ Bates', "Augustin Z{\\'i}dek", 'Anna Potapenko', 'Alex Bridgland', 'Clemens Meyer', 'Simon A A Kohl', 'Andy Ballard', 'Andrew Cowie', 'Bernardino Romera-Paredes', 'Stanislav Nikolov', 'Rishub Jain', 'Jonas Adler', 'Trevor Back', 'Stig Petersen', 'David A. Reiman', 'Ellen Clancy', 'Michal Zielinski', 'Martin Steinegger', 'Michalina Pacholska', 'Tamas Berghammer', 'Sebastian Bodenstein', 'David Silver', 'Oriol Vinyals', 'Andrew W. Senior', 'Koray Kavukcuoglu', 'Pushmeet Kohli', 'Demis Hassabis']`, found: `['John Jumper', 'Richard Evans', 'Alexander Pritzel', 'Tim Green', 'Michael Figurnov', 'Olaf Ronneberger', 'Kathryn Tunyasuvunakool', 'Russ Bates', 'Augustin Žídek', 'Anna Potapenko', 'Alex Bridgland', 'Clemens Meyer', 'Simon Köhl', 'Andrew J. Ballard', 'Andrew Cowie', 'Bernardino Romera‐Paredes', 'Stanislav Nikolov', 'Rishub Jain', 'Jonas Adler', 'Trevor Back', 'Stig Petersen', 'David Reiman', 'Ellen Clancy', 'Michał Zieliński', 'Martin Steinegger', 'Michalina Pacholska', 'Tamas Berghammer', 'Sebastian W. Bodenstein', 'David Silver', 'Oriol Vinyals', 'Andrew Senior', 'Koray Kavukcuoglu', 'Pushmeet Kohli', 'Demis Hassabis']`)
-  - Note: John M. Jumper != John Jumper; Simon A A Kohl != Simon Köhl; David A. Reiman != David Reiman; Andrew W. Senior != Andrew Senior
+- `authors`: `match` (input: `['John M. Jumper', 'Richard Evans', 'Alexander Pritzel', 'Tim Green', 'Michael Figurnov', 'Olaf Ronneberger', 'Kathryn Tunyasuvunakool', 'Russ Bates', "Augustin Z{\\'i}dek", 'Anna Potapenko', 'Alex Bridgland', 'Clemens Meyer', 'Simon A A Kohl', 'Andy Ballard', 'Andrew Cowie', 'Bernardino Romera-Paredes', 'Stanislav Nikolov', 'Rishub Jain', 'Jonas Adler', 'Trevor Back', 'Stig Petersen', 'David A. Reiman', 'Ellen Clancy', 'Michal Zielinski', 'Martin Steinegger', 'Michalina Pacholska', 'Tamas Berghammer', 'Sebastian Bodenstein', 'David Silver', 'Oriol Vinyals', 'Andrew W. Senior', 'Koray Kavukcuoglu', 'Pushmeet Kohli', 'Demis Hassabis']`, found: `['Jumper, John', 'Evans, Richard', 'Pritzel, Alexander', 'Green, Tim', 'Figurnov, Michael', 'Ronneberger, Olaf', 'Tunyasuvunakool, Kathryn', 'Bates, Russ', 'Žídek, Augustin', 'Potapenko, Anna', 'Bridgland, Alex', 'Meyer, Clemens', 'Kohl, Simon A. A.', 'Ballard, Andrew J.', 'Cowie, Andrew', 'Romera-Paredes, Bernardino', 'Nikolov, Stanislav', 'Jain, Rishub', 'Adler, Jonas', 'Back, Trevor', 'Petersen, Stig', 'Reiman, David', 'Clancy, Ellen', 'Zielinski, Michal', 'Steinegger, Martin', 'Pacholska, Michalina', 'Berghammer, Tamas', 'Bodenstein, Sebastian', 'Silver, David', 'Vinyals, Oriol', 'Senior, Andrew W.', 'Kavukcuoglu, Koray', 'Kohli, Pushmeet', 'Hassabis, Demis']`)
 - `year`: `match` (input: `2021`, found: `2021`)
 - `venue`: `match` (input: `Nature`, found: `Nature`)
 - `volume`: `match` (input: `596`, found: `596`)
 - `issue`: `additional_metadata` (input: `None`, found: `7873`)
-- `pages`: `mismatch` (input: `583-589`, found: `583`)
+- `pages`: `match` (input: `583-589`, found: `583-589`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
 - `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41586-021-03819-2`)
-
-### Lookup Errors
-
-- Crossref: provider returned non-JSON response
 
 ## Reference Degrave2022MagneticCO
 
@@ -836,7 +819,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `9`
 
 ### Selected Record
@@ -856,10 +839,6 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- authors:
-  - Input: `['Jonas Degrave', 'Federico Felici', 'Jonas Buchli', 'Michael Neunert', 'Brendan D. Tracey', 'Francesco Carpanese', 'Timo Ewalds', 'Roland Hafner', 'Abbas Abdolmaleki', 'Diego de Las Casas', 'Craig Donner', 'Leslie Fritz', 'Cristian Galperti', 'Andrea Huber', 'James Keeling', 'Maria Tsimpoukelli', 'Jackie Kay', 'Antoine Merle', 'J-M. Moret', 'Seb Noury', 'Federico Pesamosca', 'David G. Pfau', 'Olivier Sauter', 'Cristian Sommariva', 'Stefano Coda', 'B. Duval', 'Ambrogio Fasoli', 'Pushmeet Kohli', 'Koray Kavukcuoglu', 'Demis Hassabis', 'Martin A. Riedmiller']`
-  - Found: `['Degrave, Jonas', 'Felici, Federico', 'Buchli, Jonas', 'Neunert, Michael', 'Tracey, Brendan', 'Carpanese, Francesco', 'Ewalds, Timo', 'Hafner, Roland', 'Abdolmaleki, Abbas', 'de las Casas, Diego', 'Donner, Craig', 'Fritz, Leslie', 'Galperti, Cristian', 'Huber, Andrea', 'Keeling, James', 'Tsimpoukelli, Maria', 'Kay, Jackie', 'Merle, Antoine', 'Moret, Jean-Marc', 'Noury, Seb', 'Pesamosca, Federico', 'Pfau, David', 'Sauter, Olivier', 'Sommariva, Cristian', 'Coda, Stefano', 'Duval, Basil', 'Fasoli, Ambrogio', 'Kohli, Pushmeet', 'Kavukcuoglu, Koray', 'Hassabis, Demis', 'Riedmiller, Martin']`
-  - Note: Brendan D. Tracey != Tracey, Brendan; Diego de Las Casas != de las Casas, Diego; David G. Pfau != Pfau, David; Martin A. Riedmiller != Riedmiller, Martin
 - volume:
   - Input: `602 7897`
   - Found: `602`
@@ -868,8 +847,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.1038/s41586-021-04301-9`)
 - `title`: `match` (input: `Magnetic control of tokamak plasmas through deep reinforcement learning.`, found: `Magnetic control of tokamak plasmas through deep reinforcement learning`)
-- `authors`: `mismatch` (input: `['Jonas Degrave', 'Federico Felici', 'Jonas Buchli', 'Michael Neunert', 'Brendan D. Tracey', 'Francesco Carpanese', 'Timo Ewalds', 'Roland Hafner', 'Abbas Abdolmaleki', 'Diego de Las Casas', 'Craig Donner', 'Leslie Fritz', 'Cristian Galperti', 'Andrea Huber', 'James Keeling', 'Maria Tsimpoukelli', 'Jackie Kay', 'Antoine Merle', 'J-M. Moret', 'Seb Noury', 'Federico Pesamosca', 'David G. Pfau', 'Olivier Sauter', 'Cristian Sommariva', 'Stefano Coda', 'B. Duval', 'Ambrogio Fasoli', 'Pushmeet Kohli', 'Koray Kavukcuoglu', 'Demis Hassabis', 'Martin A. Riedmiller']`, found: `['Degrave, Jonas', 'Felici, Federico', 'Buchli, Jonas', 'Neunert, Michael', 'Tracey, Brendan', 'Carpanese, Francesco', 'Ewalds, Timo', 'Hafner, Roland', 'Abdolmaleki, Abbas', 'de las Casas, Diego', 'Donner, Craig', 'Fritz, Leslie', 'Galperti, Cristian', 'Huber, Andrea', 'Keeling, James', 'Tsimpoukelli, Maria', 'Kay, Jackie', 'Merle, Antoine', 'Moret, Jean-Marc', 'Noury, Seb', 'Pesamosca, Federico', 'Pfau, David', 'Sauter, Olivier', 'Sommariva, Cristian', 'Coda, Stefano', 'Duval, Basil', 'Fasoli, Ambrogio', 'Kohli, Pushmeet', 'Kavukcuoglu, Koray', 'Hassabis, Demis', 'Riedmiller, Martin']`)
-  - Note: Brendan D. Tracey != Tracey, Brendan; Diego de Las Casas != de las Casas, Diego; David G. Pfau != Pfau, David; Martin A. Riedmiller != Riedmiller, Martin
+- `authors`: `match` (input: `['Jonas Degrave', 'Federico Felici', 'Jonas Buchli', 'Michael Neunert', 'Brendan D. Tracey', 'Francesco Carpanese', 'Timo Ewalds', 'Roland Hafner', 'Abbas Abdolmaleki', 'Diego de Las Casas', 'Craig Donner', 'Leslie Fritz', 'Cristian Galperti', 'Andrea Huber', 'James Keeling', 'Maria Tsimpoukelli', 'Jackie Kay', 'Antoine Merle', 'J-M. Moret', 'Seb Noury', 'Federico Pesamosca', 'David G. Pfau', 'Olivier Sauter', 'Cristian Sommariva', 'Stefano Coda', 'B. Duval', 'Ambrogio Fasoli', 'Pushmeet Kohli', 'Koray Kavukcuoglu', 'Demis Hassabis', 'Martin A. Riedmiller']`, found: `['Degrave, Jonas', 'Felici, Federico', 'Buchli, Jonas', 'Neunert, Michael', 'Tracey, Brendan', 'Carpanese, Francesco', 'Ewalds, Timo', 'Hafner, Roland', 'Abdolmaleki, Abbas', 'de las Casas, Diego', 'Donner, Craig', 'Fritz, Leslie', 'Galperti, Cristian', 'Huber, Andrea', 'Keeling, James', 'Tsimpoukelli, Maria', 'Kay, Jackie', 'Merle, Antoine', 'Moret, Jean-Marc', 'Noury, Seb', 'Pesamosca, Federico', 'Pfau, David', 'Sauter, Olivier', 'Sommariva, Cristian', 'Coda, Stefano', 'Duval, Basil', 'Fasoli, Ambrogio', 'Kohli, Pushmeet', 'Kavukcuoglu, Koray', 'Hassabis, Demis', 'Riedmiller, Martin']`)
 - `year`: `match` (input: `2022`, found: `2022`)
 - `venue`: `match` (input: `Nature`, found: `Nature`)
 - `volume`: `mismatch` (input: `602 7897`, found: `602`)
@@ -899,7 +877,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -912,7 +890,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - Year: `2015`
 - Volume: `521`
 - Issue: `7553`
-- Pages: `436`
+- Pages: `436-444`
 - DOI: `10.1038/nature14539`
 - URL: `https://doi.org/10.1038/nature14539`
 - Type: `review`
@@ -922,22 +900,19 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - authors:
   - Input: `['Ian J. Goodfellow', 'Yoshua Bengio', 'Aaron C. Courville']`
   - Found: `['Yann LeCun', 'Yoshua Bengio', 'Geoffrey E. Hinton']`
-  - Note: Ian J. Goodfellow != Yann LeCun; Aaron C. Courville != Geoffrey E. Hinton
-- pages:
-  - Input: `436-444`
-  - Found: `436`
+  - Note: Ian J. Goodfellow: no compatible author found; Aaron C. Courville: no compatible author found
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.1038/nature14539`)
 - `title`: `match` (input: `Deep Learning`, found: `Deep learning`)
 - `authors`: `mismatch` (input: `['Ian J. Goodfellow', 'Yoshua Bengio', 'Aaron C. Courville']`, found: `['Yann LeCun', 'Yoshua Bengio', 'Geoffrey E. Hinton']`)
-  - Note: Ian J. Goodfellow != Yann LeCun; Aaron C. Courville != Geoffrey E. Hinton
+  - Note: Ian J. Goodfellow: no compatible author found; Aaron C. Courville: no compatible author found
 - `year`: `match` (input: `2015`, found: `2015`)
 - `venue`: `match` (input: `Nature`, found: `Nature`)
 - `volume`: `match` (input: `521`, found: `521`)
 - `issue`: `additional_metadata` (input: `None`, found: `7553`)
-- `pages`: `mismatch` (input: `436-444`, found: `436`)
+- `pages`: `match` (input: `436-444`, found: `436-444`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
@@ -946,7 +921,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ## Reference Arunachalam2017ASO
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -962,7 +937,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
 ### Selected Record
@@ -979,9 +954,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- venue:
-  - Input: `ArXiv`
-  - Found: `arXiv (Cornell University)`
+None.
 
 ### Field Comparisons
 
@@ -989,20 +962,20 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `match` (input: `A Survey of Quantum Learning Theory`, found: `A Survey of Quantum Learning Theory`)
 - `authors`: `match` (input: `['Srinivasan Arunachalam', 'Ronald de Wolf']`, found: `['Srinivasan Arunachalam', 'Ronald de Wolf']`)
 - `year`: `match` (input: `2017`, found: `2017`)
-- `venue`: `mismatch` (input: `ArXiv`, found: `arXiv (Cornell University)`)
-- `volume`: `not_checked` (input: `abs/1701.06806`, found: `None`)
-  - Note: lookup source did not return this field
+- `venue`: `match` (input: `ArXiv`, found: `arXiv (Cornell University)`)
+  - Note: both records identify an arXiv/preprint venue
+- `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `additional_metadata` (input: `None`, found: `1701.06806`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
 - `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.48550/arxiv.1701.06806`)
 
 ## Reference Biamonte2017QuantumML
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -1018,7 +991,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -1031,32 +1004,25 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - Year: `2017`
 - Volume: `549`
 - Issue: `7671`
-- Pages: `195`
+- Pages: `195-202`
 - DOI: `10.1038/nature23474`
 - URL: `https://doi.org/10.1038/nature23474`
 - Type: `article`
 
 ### Mismatches
 
-- authors:
-  - Input: `['Jacob D. Biamonte', 'Peter Wittek', 'Nicola Pancotti', 'Patrick Rebentrost', 'Nathan Wiebe', 'Seth Lloyd']`
-  - Found: `['Jacob Biamonte', 'Péter Wittek', 'Nicola Pancotti', 'Patrick Rebentrost', 'Nathan Wiebe', 'Seth Lloyd']`
-  - Note: Jacob D. Biamonte != Jacob Biamonte
-- pages:
-  - Input: `195-202`
-  - Found: `195`
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.1038/nature23474`)
 - `title`: `match` (input: `Quantum machine learning`, found: `Quantum machine learning`)
-- `authors`: `mismatch` (input: `['Jacob D. Biamonte', 'Peter Wittek', 'Nicola Pancotti', 'Patrick Rebentrost', 'Nathan Wiebe', 'Seth Lloyd']`, found: `['Jacob Biamonte', 'Péter Wittek', 'Nicola Pancotti', 'Patrick Rebentrost', 'Nathan Wiebe', 'Seth Lloyd']`)
-  - Note: Jacob D. Biamonte != Jacob Biamonte
+- `authors`: `match` (input: `['Jacob D. Biamonte', 'Peter Wittek', 'Nicola Pancotti', 'Patrick Rebentrost', 'Nathan Wiebe', 'Seth Lloyd']`, found: `['Jacob Biamonte', 'Péter Wittek', 'Nicola Pancotti', 'Patrick Rebentrost', 'Nathan Wiebe', 'Seth Lloyd']`)
 - `year`: `match` (input: `2017`, found: `2017`)
 - `venue`: `match` (input: `Nature`, found: `Nature`)
 - `volume`: `match` (input: `549`, found: `549`)
 - `issue`: `additional_metadata` (input: `None`, found: `7671`)
-- `pages`: `mismatch` (input: `195-202`, found: `195`)
+- `pages`: `match` (input: `195-202`, found: `195-202`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
@@ -1081,7 +1047,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
 ### Selected Record
@@ -1101,26 +1067,20 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- authors:
-  - Input: `['Marcello Benedetti', 'Erika Lloyd', 'Stefan H. Sack']`
-  - Found: `['Benedetti, Marcello', 'Lloyd, Erika', 'Sack, Stefan', 'Fiorentini, Mattia']`
-  - Note: Stefan H. Sack != Sack, Stefan
 - venue:
   - Input: `ArXiv`
   - Found: `Quantum Science and Technology`
-- volume:
-  - Input: `abs/1906.07682`
-  - Found: `4`
+  - Note: input venue is arXiv/preprint; found venue is a publication venue
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.1088/2058-9565/ab4eb5`)
 - `title`: `match` (input: `Parameterized quantum circuits as machine learning models`, found: `Parameterized quantum circuits as machine learning models`)
-- `authors`: `mismatch` (input: `['Marcello Benedetti', 'Erika Lloyd', 'Stefan H. Sack']`, found: `['Benedetti, Marcello', 'Lloyd, Erika', 'Sack, Stefan', 'Fiorentini, Mattia']`)
-  - Note: Stefan H. Sack != Sack, Stefan
+- `authors`: `match` (input: `['Marcello Benedetti', 'Erika Lloyd', 'Stefan H. Sack']`, found: `['Benedetti, Marcello', 'Lloyd, Erika', 'Sack, Stefan', 'Fiorentini, Mattia']`)
 - `year`: `match` (input: `2019`, found: `2019`)
 - `venue`: `mismatch` (input: `ArXiv`, found: `Quantum Science and Technology`)
-- `volume`: `mismatch` (input: `abs/1906.07682`, found: `4`)
+  - Note: input venue is arXiv/preprint; found venue is a publication venue
+- `volume`: `additional_metadata` (input: `None`, found: `4`)
 - `issue`: `additional_metadata` (input: `None`, found: `4`)
 - `pages`: `additional_metadata` (input: `None`, found: `043001`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
@@ -1131,7 +1091,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ## Reference Harrow2020SmallQC
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -1147,7 +1107,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -1164,9 +1124,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv: Quantum Physics`
-  - Found: `arXiv (Cornell University)`
+None.
 
 ### Field Comparisons
 
@@ -1174,12 +1132,13 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `match` (input: `Small quantum computers and large classical data sets`, found: `Small quantum computers and large classical data sets`)
 - `authors`: `match` (input: `['Aram Wettroth Harrow']`, found: `['Aram W. Harrow']`)
 - `year`: `match` (input: `2020`, found: `2020`)
-- `venue`: `mismatch` (input: `arXiv: Quantum Physics`, found: `arXiv (Cornell University)`)
+- `venue`: `match` (input: `arXiv: Quantum Physics`, found: `arXiv (Cornell University)`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `additional_metadata` (input: `None`, found: `2004.00026`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
 - `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.48550/arxiv.2004.00026`)
@@ -1202,7 +1161,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `9`
 
 ### Selected Record
@@ -1258,7 +1217,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `10`
 
 ### Selected Record
@@ -1298,7 +1257,7 @@ None.
 
 ## Reference bachem2017practical
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -1308,14 +1267,14 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Practical coreset constructions for machine learning`
-- Normalized: `practical coreset constructions for machine learning`
+- Kind: `arxiv_id`
+- Value: `1703.06476`
+- Normalized: `1703.06476`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `10`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
@@ -1331,9 +1290,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv preprint arXiv:1703.06476`
-  - Found: `arXiv`
+None.
 
 ### Field Comparisons
 
@@ -1341,19 +1298,24 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `match` (input: `Practical coreset constructions for machine learning`, found: `Practical Coreset Constructions for Machine Learning`)
 - `authors`: `match` (input: `['Bachem, Olivier', 'Lucic, Mario', 'Krause, Andreas']`, found: `['Bachem, Olivier', 'Lucic, Mario', 'Krause, Andreas']`)
 - `year`: `match` (input: `2017`, found: `2017`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:1703.06476`, found: `arXiv`)
+- `venue`: `match` (input: `arXiv preprint arXiv:1703.06476`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `1703.06476`, found: `1703.06476`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
 - `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/1703.06476`)
 
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
+
 ## Reference feldman2020introduction
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -1363,48 +1325,47 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Introduction to core-sets: an updated survey`
-- Normalized: `introduction to core-sets an updated survey`
+- Kind: `arxiv_id`
+- Value: `2011.09384`
+- Normalized: `2011.09384`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `6`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
-- Source: `OpenAlex`
-- Source URL: `https://openalex.org/W3098758181`
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.2011.09384`
 - Title: `Introduction to Core-sets: an Updated Survey`
-- Authors: `Dan Feldman`
-- Venue: `DROPS (Schloss Dagstuhl – Leibniz Center for Informatics)`
+- Authors: `Feldman, Dan`
+- Venue: `arXiv`
 - Year: `2020`
-- DOI: `10.4230/lipics.icalp.2022.51`
-- URL: `https://doi.org/10.4230/lipics.icalp.2022.51`
-- Type: `preprint`
+- DOI: `10.48550/arxiv.2011.09384`
+- URL: `https://arxiv.org/abs/2011.09384`
+- Type: `Preprint`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv preprint arXiv:2011.09384`
-  - Found: `DROPS (Schloss Dagstuhl – Leibniz Center for Informatics)`
+None.
 
 ### Field Comparisons
 
-- `doi`: `additional_metadata` (input: `None`, found: `10.4230/lipics.icalp.2022.51`)
+- `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.2011.09384`)
 - `title`: `match` (input: `Introduction to core-sets: an updated survey`, found: `Introduction to Core-sets: an Updated Survey`)
-- `authors`: `match` (input: `['Feldman, Dan']`, found: `['Dan Feldman']`)
+- `authors`: `match` (input: `['Feldman, Dan']`, found: `['Feldman, Dan']`)
 - `year`: `match` (input: `2020`, found: `2020`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:2011.09384`, found: `DROPS (Schloss Dagstuhl – Leibniz Center for Informatics)`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2011.09384`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2011.09384`, found: `2011.09384`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.4230/lipics.icalp.2022.51`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2011.09384`)
 
 ## Reference tsang2005core
 
@@ -1424,7 +1385,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `8`
 
 ### Selected Record
@@ -1433,10 +1394,11 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - Source URL: `https://openalex.org/W2155319834`
 - Title: `Core Vector Machines: Fast SVM Training on Very Large Data Sets`
 - Authors: `Ivor W. Tsang; James T. Kwok; Pak-Ming Cheung`
+- Venue: `Journal of Machine Learning Research`
 - Year: `2005`
 - Volume: `6`
 - Issue: `13`
-- Pages: `363`
+- Pages: `363-392`
 - DOI: `10.5555/1046920.1058114`
 - URL: `https://doi.org/10.5555/1046920.1058114`
 - Type: `article`
@@ -1446,7 +1408,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - authors:
   - Input: `['Tsang, Ivor W', 'Kwok, James T', 'Cheung, Pak-Ming', 'Cristianini, Nello']`
   - Found: `['Ivor W. Tsang', 'James T. Kwok', 'Pak-Ming Cheung']`
-  - Note: Cristianini, Nello: no corresponding author found
+  - Note: Cristianini, Nello: no compatible author found
 - issue:
   - Input: `4`
   - Found: `13`
@@ -1456,13 +1418,12 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `doi`: `additional_metadata` (input: `None`, found: `10.5555/1046920.1058114`)
 - `title`: `match` (input: `Core vector machines: Fast SVM training on very large data sets.`, found: `Core Vector Machines: Fast SVM Training on Very Large Data Sets`)
 - `authors`: `mismatch` (input: `['Tsang, Ivor W', 'Kwok, James T', 'Cheung, Pak-Ming', 'Cristianini, Nello']`, found: `['Ivor W. Tsang', 'James T. Kwok', 'Pak-Ming Cheung']`)
-  - Note: Cristianini, Nello: no corresponding author found
+  - Note: Cristianini, Nello: no compatible author found
 - `year`: `match` (input: `2005`, found: `2005`)
-- `venue`: `not_checked` (input: `Journal of Machine Learning Research`, found: `None`)
-  - Note: lookup source did not return this field
+- `venue`: `match` (input: `Journal of Machine Learning Research`, found: `Journal of Machine Learning Research`)
 - `volume`: `match` (input: `6`, found: `6`)
 - `issue`: `mismatch` (input: `4`, found: `13`)
-- `pages`: `additional_metadata` (input: `None`, found: `363`)
+- `pages`: `additional_metadata` (input: `None`, found: `363-392`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
@@ -1487,7 +1448,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -1541,7 +1502,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -1581,7 +1542,7 @@ None.
 
 ## Reference berlind2015active
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -1597,7 +1558,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -1606,20 +1567,15 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - Source URL: `https://openalex.org/W1870462933`
 - Title: `Active Nearest Neighbors in Changing Environments`
 - Authors: `Christopher G. Berlind; Ruth Urner`
-- Venue: `MPG.PuRe (Max Planck Society)`
+- Venue: `International Conference on Machine Learning`
 - Year: `2015`
-- Pages: `1870`
+- Pages: `1870-1879`
 - URL: `https://openalex.org/W1870462933`
 - Type: `article`
 
 ### Mismatches
 
-- venue:
-  - Input: `International conference on machine learning`
-  - Found: `MPG.PuRe (Max Planck Society)`
-- pages:
-  - Input: `1870-1879`
-  - Found: `1870`
+None.
 
 ### Field Comparisons
 
@@ -1627,10 +1583,10 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `match` (input: `Active nearest neighbors in changing environments`, found: `Active Nearest Neighbors in Changing Environments`)
 - `authors`: `match` (input: `['Berlind, Christopher', 'Urner, Ruth']`, found: `['Christopher G. Berlind', 'Ruth Urner']`)
 - `year`: `match` (input: `2015`, found: `2015`)
-- `venue`: `mismatch` (input: `International conference on machine learning`, found: `MPG.PuRe (Max Planck Society)`)
+- `venue`: `match` (input: `International conference on machine learning`, found: `International Conference on Machine Learning`)
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
-- `pages`: `mismatch` (input: `1870-1879`, found: `1870`)
+- `pages`: `match` (input: `1870-1879`, found: `1870-1879`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
@@ -1655,7 +1611,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -1664,31 +1620,29 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - Source URL: `https://openalex.org/W2153054748`
 - Title: `Face Recognition Using Kernel Methods`
 - Authors: `Ming–Hsuan Yang`
+- Venue: `Neural Information Processing Systems`
 - Year: `2001`
 - Volume: `14`
-- Pages: `1457`
+- Pages: `1457-1464`
 - URL: `https://openalex.org/W2153054748`
 - Type: `article`
 
 ### Mismatches
 
-- authors:
-  - Input: `['Yang, Ming-Hsuan']`
-  - Found: `['Ming–Hsuan Yang']`
-  - Note: Yang, Ming-Hsuan != Ming–Hsuan Yang
+- venue:
+  - Input: `Advances in neural information processing systems`
+  - Found: `Neural Information Processing Systems`
 
 ### Field Comparisons
 
 - `doi`: `not_checked` (input: `None`, found: `None`)
 - `title`: `match` (input: `Face recognition using kernel methods`, found: `Face Recognition Using Kernel Methods`)
-- `authors`: `mismatch` (input: `['Yang, Ming-Hsuan']`, found: `['Ming–Hsuan Yang']`)
-  - Note: Yang, Ming-Hsuan != Ming–Hsuan Yang
+- `authors`: `match` (input: `['Yang, Ming-Hsuan']`, found: `['Ming–Hsuan Yang']`)
 - `year`: `match` (input: `2001`, found: `2001`)
-- `venue`: `not_checked` (input: `Advances in neural information processing systems`, found: `None`)
-  - Note: lookup source did not return this field
+- `venue`: `mismatch` (input: `Advances in neural information processing systems`, found: `Neural Information Processing Systems`)
 - `volume`: `match` (input: `14`, found: `14`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
-- `pages`: `additional_metadata` (input: `None`, found: `1457`)
+- `pages`: `additional_metadata` (input: `None`, found: `1457-1464`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
@@ -1697,7 +1651,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ## Reference jacot2018neural
 
-Status: `AMBIGUOUS_MATCH`
+Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Raw Input
 
@@ -1713,24 +1667,43 @@ Status: `AMBIGUOUS_MATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `9`
 
-### Candidate Records
+### Selected Record
 
-1. `Crossref`: Neural tangent kernel: convergence and generalization in neural networks (invited paper)
-2. `Crossref`: Neural (Tangent Kernel) Collapse
-3. `Crossref`: Quantum-classical hybrid neural networks in the neural tangent kernel regime
-4. `Crossref`: Characterizing Trainability, Expressivity and Generalization of Neural Architecture with Metrics from Neural Tangent Kernel
-5. `Crossref`: The neural tangent kernel regime
-6. `OpenAlex`: Neural Tangent Kernel: Convergence and Generalization in Neural Networks
-7. `OpenAlex`: Neural tangent kernel: convergence and generalization in neural networks (invited paper)
-8. `OpenAlex`: Neural Tangent Kernel: Convergence and Generalization in Neural Networks
-9. `OpenAlex`: 5分で分かる!? 有名論文ナナメ読み：Jacot, Arthor, Gabriel, Franck and Hongler, Clement : Neural Tangent Kernel : Convergence and Generalization in Neural Networks
+- Source: `OpenAlex`
+- Source URL: `https://openalex.org/W2809090039`
+- Title: `Neural Tangent Kernel: Convergence and Generalization in Neural Networks`
+- Authors: `Arthur Paul Jacot; Franck Gabriel; Clément Hongler`
+- Venue: `arXiv (Cornell University)`
+- Year: `2018`
+- DOI: `10.48550/arxiv.1806.07572`
+- URL: `https://doi.org/10.48550/arxiv.1806.07572`
+- Type: `preprint`
 
 ### Mismatches
 
-None.
+- venue:
+  - Input: `Advances in neural information processing systems`
+  - Found: `arXiv (Cornell University)`
+
+### Field Comparisons
+
+- `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.1806.07572`)
+- `title`: `match` (input: `Neural tangent kernel: Convergence and generalization in neural networks`, found: `Neural Tangent Kernel: Convergence and Generalization in Neural Networks`)
+- `authors`: `match` (input: `['Jacot, Arthur', 'Gabriel, Franck', "Hongler, Cl{\\'e}ment"]`, found: `['Arthur Paul Jacot', 'Franck Gabriel', 'Clément Hongler']`)
+- `year`: `match` (input: `2018`, found: `2018`)
+- `venue`: `mismatch` (input: `Advances in neural information processing systems`, found: `arXiv (Cornell University)`)
+- `volume`: `not_checked` (input: `31`, found: `None`)
+  - Note: lookup source did not return this field
+- `issue`: `not_checked` (input: `None`, found: `None`)
+- `pages`: `not_checked` (input: `None`, found: `None`)
+- `article_number`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `additional_metadata` (input: `None`, found: `1806.07572`)
+- `pmid`: `not_checked` (input: `None`, found: `None`)
+- `isbn`: `not_checked` (input: `None`, found: `None`)
+- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.48550/arxiv.1806.07572`)
 
 ## Reference havlivcek2019supervised
 
@@ -1750,7 +1723,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -1773,14 +1746,14 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - authors:
   - Input: `["Havl{\\'\\i}{\\v{c}}ek, Vojt{\\v{e}}ch", "C{\\'o}rcoles, Antonio D", 'Temme, Kristan', 'Harrow, Aram W', 'Kandala, Abhinav', 'Chow, Jerry M', 'Gambetta, Jay M']`
   - Found: `['Havlíček, Vojtěch', 'Córcoles, Antonio D.', 'Temme, Kristan', 'Harrow, Aram W.', 'Kandala, Abhinav', 'Chow, Jerry M.', 'Gambetta, Jay M.']`
-  - Note: Havl{\'\i}{\v{c}}ek, Vojt{\v{e}}ch != Havlíček, Vojtěch
+  - Note: Havl{\'\i}{\v{c}}ek, Vojt{\v{e}}ch: no compatible author found
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.1038/s41586-019-0980-2`)
 - `title`: `match` (input: `Supervised learning with quantum-enhanced feature spaces`, found: `Supervised learning with quantum-enhanced feature spaces`)
 - `authors`: `mismatch` (input: `["Havl{\\'\\i}{\\v{c}}ek, Vojt{\\v{e}}ch", "C{\\'o}rcoles, Antonio D", 'Temme, Kristan', 'Harrow, Aram W', 'Kandala, Abhinav', 'Chow, Jerry M', 'Gambetta, Jay M']`, found: `['Havlíček, Vojtěch', 'Córcoles, Antonio D.', 'Temme, Kristan', 'Harrow, Aram W.', 'Kandala, Abhinav', 'Chow, Jerry M.', 'Gambetta, Jay M.']`)
-  - Note: Havl{\'\i}{\v{c}}ek, Vojt{\v{e}}ch != Havlíček, Vojtěch
+  - Note: Havl{\'\i}{\v{c}}ek, Vojt{\v{e}}ch: no compatible author found
 - `year`: `match` (input: `2019`, found: `2019`)
 - `venue`: `match` (input: `Nature`, found: `Nature`)
 - `volume`: `match` (input: `567`, found: `567`)
@@ -1810,7 +1783,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `8`
 
 ### Selected Record
@@ -1867,7 +1840,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -1924,7 +1897,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `7`
 
 ### Selected Record
@@ -1981,7 +1954,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `13`
 
 ### Selected Record
@@ -2021,7 +1994,7 @@ None.
 
 ## Reference xiao2017fashion
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -2031,52 +2004,55 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Fashion-mnist: a novel image dataset for benchmarking machine learning algorithms`
-- Normalized: `fashion-mnist a novel image dataset for benchmarking machine learning algorithms`
+- Kind: `arxiv_id`
+- Value: `1708.07747`
+- Normalized: `1708.07747`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `6`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
-- Source: `OpenAlex`
-- Source URL: `https://openalex.org/W2750384547`
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.1708.07747`
 - Title: `Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms`
-- Authors: `Xiao, Han; Kashif Rasul; Roland Vollgraf`
-- Venue: `arXiv (Cornell University)`
+- Authors: `Xiao, Han; Rasul, Kashif; Vollgraf, Roland`
+- Venue: `arXiv`
 - Year: `2017`
 - DOI: `10.48550/arxiv.1708.07747`
-- URL: `https://doi.org/10.48550/arxiv.1708.07747`
-- Type: `preprint`
+- URL: `https://arxiv.org/abs/1708.07747`
+- Type: `Preprint`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv preprint arXiv:1708.07747`
-  - Found: `arXiv (Cornell University)`
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.1708.07747`)
 - `title`: `match` (input: `Fashion-mnist: a novel image dataset for benchmarking machine learning algorithms`, found: `Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms`)
-- `authors`: `match` (input: `['Xiao, Han', 'Rasul, Kashif', 'Vollgraf, Roland']`, found: `['Xiao, Han', 'Kashif Rasul', 'Roland Vollgraf']`)
+- `authors`: `match` (input: `['Xiao, Han', 'Rasul, Kashif', 'Vollgraf, Roland']`, found: `['Xiao, Han', 'Rasul, Kashif', 'Vollgraf, Roland']`)
 - `year`: `match` (input: `2017`, found: `2017`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:1708.07747`, found: `arXiv (Cornell University)`)
+- `venue`: `match` (input: `arXiv preprint arXiv:1708.07747`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `1708.07747`, found: `1708.07747`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.48550/arxiv.1708.07747`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/1708.07747`)
+
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
 
 ## Reference qu2022performance
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -2086,14 +2062,14 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Performance analysis of coreset selection for quantum implementation of K-Means clustering algorithm`
-- Normalized: `performance analysis of coreset selection for quantum implementation of k-means clustering algorithm`
+- Kind: `arxiv_id`
+- Value: `2206.07852`
+- Normalized: `2206.07852`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `7`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `3`
 
 ### Selected Record
 
@@ -2109,9 +2085,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv preprint arXiv:2206.07852`
-  - Found: `arXiv`
+None.
 
 ### Field Comparisons
 
@@ -2119,19 +2093,20 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `match` (input: `Performance analysis of coreset selection for quantum implementation of K-Means clustering algorithm`, found: `Performance analysis of coreset selection for quantum implementation of K-Means clustering algorithm`)
 - `authors`: `match` (input: `['Qu, Fanzhe', 'Erfani, Sarah M', 'Usman, Muhammad']`, found: `['Qu, Fanzhe', 'Erfani, Sarah M.', 'Usman, Muhammad']`)
 - `year`: `match` (input: `2022`, found: `2022`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:2206.07852`, found: `arXiv`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2206.07852`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2206.07852`, found: `2206.07852`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
 - `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2206.07852`)
 
 ## Reference sener2017active
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -2141,48 +2116,51 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Active learning for convolutional neural networks: A core-set approach`
-- Normalized: `active learning for convolutional neural networks a core-set approach`
+- Kind: `arxiv_id`
+- Value: `1708.00489`
+- Normalized: `1708.00489`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `7`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
-- Source: `OpenAlex`
-- Source URL: `https://openalex.org/W2774918944`
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.1708.00489`
 - Title: `Active Learning for Convolutional Neural Networks: A Core-Set Approach`
-- Authors: `Ozan Şener; Silvio Savarese`
-- Venue: `arXiv (Cornell University)`
+- Authors: `Sener, Ozan; Savarese, Silvio`
+- Venue: `arXiv`
 - Year: `2017`
 - DOI: `10.48550/arxiv.1708.00489`
-- URL: `https://doi.org/10.48550/arxiv.1708.00489`
-- Type: `preprint`
+- URL: `https://arxiv.org/abs/1708.00489`
+- Type: `Preprint`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv preprint arXiv:1708.00489`
-  - Found: `arXiv (Cornell University)`
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.1708.00489`)
 - `title`: `match` (input: `Active learning for convolutional neural networks: A core-set approach`, found: `Active Learning for Convolutional Neural Networks: A Core-Set Approach`)
-- `authors`: `match` (input: `['Sener, Ozan', 'Savarese, Silvio']`, found: `['Ozan Şener', 'Silvio Savarese']`)
+- `authors`: `match` (input: `['Sener, Ozan', 'Savarese, Silvio']`, found: `['Sener, Ozan', 'Savarese, Silvio']`)
 - `year`: `match` (input: `2017`, found: `2017`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:1708.00489`, found: `arXiv (Cornell University)`)
+- `venue`: `match` (input: `arXiv preprint arXiv:1708.00489`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `1708.00489`, found: `1708.00489`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.48550/arxiv.1708.00489`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/1708.00489`)
+
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
 
 ## Reference otgonbaatar2021assembly
 
@@ -2202,7 +2180,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `6`
 
 ### Selected Record
@@ -2242,7 +2220,7 @@ None.
 
 ## Reference lloyd2014quantum
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -2258,49 +2236,43 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `10`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `15`
 
 ### Selected Record
 
-- Source: `OpenAlex`
-- Source URL: `https://openalex.org/W1988369744`
+- Source: `Crossref`
+- Source URL: `https://doi.org/10.1038/nphys3029`
 - Title: `Quantum principal component analysis`
-- Authors: `Seth Lloyd; Masoud Mohseni; Patrick Rebentrost`
+- Authors: `Lloyd, Seth; Mohseni, Masoud; Rebentrost, Patrick`
 - Venue: `Nature Physics`
 - Year: `2014`
 - Volume: `10`
 - Issue: `9`
-- Pages: `631`
+- Pages: `631-633`
 - DOI: `10.1038/nphys3029`
 - URL: `https://doi.org/10.1038/nphys3029`
-- Type: `article`
+- Type: `journal-article`
 
 ### Mismatches
 
-- pages:
-  - Input: `631-633`
-  - Found: `631`
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.1038/nphys3029`)
 - `title`: `match` (input: `Quantum principal component analysis`, found: `Quantum principal component analysis`)
-- `authors`: `match` (input: `['Lloyd, Seth', 'Mohseni, Masoud', 'Rebentrost, Patrick']`, found: `['Seth Lloyd', 'Masoud Mohseni', 'Patrick Rebentrost']`)
+- `authors`: `match` (input: `['Lloyd, Seth', 'Mohseni, Masoud', 'Rebentrost, Patrick']`, found: `['Lloyd, Seth', 'Mohseni, Masoud', 'Rebentrost, Patrick']`)
 - `year`: `match` (input: `2014`, found: `2014`)
 - `venue`: `match` (input: `Nature Physics`, found: `Nature Physics`)
 - `volume`: `match` (input: `10`, found: `10`)
 - `issue`: `match` (input: `9`, found: `9`)
-- `pages`: `mismatch` (input: `631-633`, found: `631`)
+- `pages`: `match` (input: `631-633`, found: `631-633`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
 - `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/nphys3029`)
-
-### Lookup Errors
-
-- Crossref: provider returned non-JSON response
 
 ## Reference perez2020data
 
@@ -2320,7 +2292,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
 ### Selected Record
@@ -2376,7 +2348,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `7`
 
 ### Selected Record
@@ -2416,7 +2388,7 @@ None.
 
 ## Reference bilkis2021semi
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -2426,14 +2398,14 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `A semi-agnostic ansatz with variable structure for quantum machine learning`
-- Normalized: `a semi-agnostic ansatz with variable structure for quantum machine learning`
+- Kind: `arxiv_id`
+- Value: `2103.06712`
+- Normalized: `2103.06712`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `7`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `3`
 
 ### Selected Record
 
@@ -2449,9 +2421,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv preprint arXiv:2103.06712`
-  - Found: `arXiv`
+None.
 
 ### Field Comparisons
 
@@ -2459,12 +2429,13 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `match` (input: `A semi-agnostic ansatz with variable structure for quantum machine learning`, found: `A semi-agnostic ansatz with variable structure for quantum machine learning`)
 - `authors`: `match` (input: `['Bilkis, M', "Cerezo, Mar{\\'\\i}a", 'Verdon, Guillaume', 'Coles, Patrick J', 'Cincio, Lukasz']`, found: `['Bilkis, M.', 'Cerezo, M.', 'Verdon, Guillaume', 'Coles, Patrick J.', 'Cincio, Lukasz']`)
 - `year`: `match` (input: `2021`, found: `2021`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:2103.06712`, found: `arXiv`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2103.06712`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2103.06712`, found: `2103.06712`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
 - `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2103.06712`)
@@ -2487,7 +2458,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -2543,7 +2514,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -2600,7 +2571,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `8`
 
 ### Selected Record
@@ -2656,7 +2627,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -2712,7 +2683,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `13`
 
 ### Selected Record
@@ -2768,7 +2739,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -2825,7 +2796,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -2866,7 +2837,7 @@ None.
 
 ## Reference farhi2018classification
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -2876,55 +2847,51 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Classification with quantum neural networks on near term processors`
-- Normalized: `classification with quantum neural networks on near term processors`
+- Kind: `arxiv_id`
+- Value: `1802.06002`
+- Normalized: `1802.06002`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `11`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `3`
 
 ### Selected Record
 
-- Source: `Crossref`
-- Source URL: `https://doi.org/10.37686/qrl.v1i2.80`
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.1802.06002`
 - Title: `Classification with Quantum Neural Networks on Near Term Processors`
 - Authors: `Farhi, Edward; Neven, Hartmut`
-- Year: `2020`
-- DOI: `10.37686/qrl.v1i2.80`
-- URL: `https://doi.org/10.37686/qrl.v1i2.80`
-- Type: `report`
+- Venue: `arXiv`
+- Year: `2018`
+- DOI: `10.48550/arxiv.1802.06002`
+- URL: `https://arxiv.org/abs/1802.06002`
+- Type: `Preprint`
 
 ### Mismatches
 
-- year:
-  - Input: `2018`
-  - Found: `2020`
-- url:
-  - Input: `https://arxiv.org/abs/1802.06002`
-  - Found: `https://doi.org/10.37686/qrl.v1i2.80`
+None.
 
 ### Field Comparisons
 
-- `doi`: `additional_metadata` (input: `None`, found: `10.37686/qrl.v1i2.80`)
+- `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.1802.06002`)
 - `title`: `match` (input: `Classification with quantum neural networks on near term processors`, found: `Classification with Quantum Neural Networks on Near Term Processors`)
 - `authors`: `match` (input: `['Farhi, Edward', 'Neven, Hartmut']`, found: `['Farhi, Edward', 'Neven, Hartmut']`)
-- `year`: `mismatch` (input: `2018`, found: `2020`)
-- `venue`: `not_checked` (input: `arXiv preprint arXiv:1802.06002`, found: `None`)
-  - Note: lookup source did not return this field
+- `year`: `match` (input: `2018`, found: `2018`)
+- `venue`: `match` (input: `arXiv preprint arXiv:1802.06002`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `1802.06002`, found: `1802.06002`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `mismatch` (input: `https://arxiv.org/abs/1802.06002`, found: `https://doi.org/10.37686/qrl.v1i2.80`)
+- `url`: `match` (input: `https://arxiv.org/abs/1802.06002`, found: `https://arxiv.org/abs/1802.06002`)
 
 ## Reference schuld2014quest
 
-Status: `AMBIGUOUS_MATCH`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -2934,33 +2901,50 @@ Status: `AMBIGUOUS_MATCH`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `The quest for a quantum neural network`
-- Normalized: `the quest for a quantum neural network`
+- Kind: `doi`
+- Value: `10.1007/s11128-014-0809-8`
+- Normalized: `10.1007/s11128-014-0809-8`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `12`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
-### Candidate Records
+### Selected Record
 
-1. `Crossref`: The quest for a Quantum Neural Network
-2. `Crossref`: Quantum Neural Network for Quantum Neural Computing
-3. `Crossref`: Quantum neural network
-4. `Crossref`: Quantum neural network quantum state
-5. `Crossref`: Entangled Quantum Neural Network
-6. `DataCite`: New Renaissance i = E = MC² — Art, Consciousness, Architecture and Holistic Information Theory as a Model of Evolutionary Peace Culture
-7. `DataCite`: New Renaissance i = E = MC² — Art, Consciousness, Architecture and Holistic Information Theory as a Model of Evolutionary Peace Culture
-8. `DataCite`: Topological Asymmetry and Non-Orientable Dynamics: From Pre-Metric Spacetime to Macroscopic Fluidic Diodicity
-9. `DataCite`: Topological Asymmetry and Non-Orientable Dynamics: From Pre-Metric Spacetime to Macroscopic Fluidic Diodicity
-10. `DataCite`: The Nexus Recursive Harmonic Framework   ## Reality as Unbounded, Observerless Computation (SILR / RHA / CST)
-11. `OpenAlex`: The quest for a Quantum Neural Network
-12. `OpenAlex`: The quest for a Quantum Neural Network
+- Source: `Crossref`
+- Source URL: `https://doi.org/10.1007/s11128-014-0809-8`
+- Title: `The quest for a Quantum Neural Network`
+- Authors: `Schuld, Maria; Sinayskiy, Ilya; Petruccione, Francesco`
+- Venue: `Quantum Information Processing`
+- Year: `2014`
+- Volume: `13`
+- Issue: `11`
+- Pages: `2567-2586`
+- DOI: `10.1007/s11128-014-0809-8`
+- URL: `https://doi.org/10.1007/s11128-014-0809-8`
+- Type: `journal-article`
 
 ### Mismatches
 
 None.
+
+### Field Comparisons
+
+- `doi`: `match` (input: `10.1007/s11128-014-0809-8`, found: `10.1007/s11128-014-0809-8`)
+- `title`: `match` (input: `The quest for a quantum neural network`, found: `The quest for a Quantum Neural Network`)
+- `authors`: `match` (input: `['Schuld, Maria', 'Sinayskiy, Ilya', 'Petruccione, Francesco']`, found: `['Schuld, Maria', 'Sinayskiy, Ilya', 'Petruccione, Francesco']`)
+- `year`: `match` (input: `2014`, found: `2014`)
+- `venue`: `match` (input: `Quantum Information Processing`, found: `Quantum Information Processing`)
+- `volume`: `match` (input: `13`, found: `13`)
+- `issue`: `match` (input: `11`, found: `11`)
+- `pages`: `match` (input: `2567-2586`, found: `2567-2586`)
+- `article_number`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `pmid`: `not_checked` (input: `None`, found: `None`)
+- `isbn`: `not_checked` (input: `None`, found: `None`)
+- `url`: `match` (input: `https://link.springer.com/article/10.1007/s11128-014-0809-8`, found: `https://doi.org/10.1007/s11128-014-0809-8`)
+  - Note: both URLs contain the same DOI
 
 ## Reference cong2019quantum
 
@@ -2980,7 +2964,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -3036,7 +3020,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -3093,7 +3077,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `8`
 
 ### Selected Record
@@ -3150,7 +3134,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
 ### Selected Record
@@ -3190,7 +3174,7 @@ None.
 
 ## Reference du2022demystify
 
-Status: `TITLE_NOT_FOUND`
+Status: `IDENTIFIER_CONFLICT`
 
 ### Raw Input
 
@@ -3200,26 +3184,52 @@ Status: `TITLE_NOT_FOUND`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Demystify problem-dependent power of quantum neural networks on multi-class classification`
-- Normalized: `demystify problem-dependent power of quantum neural networks on multi-class classification`
+- Kind: `arxiv_id`
+- Value: `2301.01597`
+- Normalized: `2301.01597`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `5`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `3`
 
-### Candidate Records
+### Selected Record
 
-1. `Crossref`: Problem-Dependent Power of Quantum Neural Networks on Multiclass Classification
-2. `Crossref`: Multi-Class Quantum Convolutional Neural Networks
-3. `Crossref`: Multi-class pattern classification using neural networks
-4. `Crossref`: Multi Class Image Classification Using Machine Learning and Deep Quantum Neural Networks
-5. `Crossref`: Deep Neural Networks for Multi-class Sentiment Classification
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.2301.01597`
+- Title: `Problem-Dependent Power of Quantum Neural Networks on Multi-Class Classification`
+- Authors: `Du, Yuxuan; Yang, Yibo; Tao, Dacheng; Hsieh, Min-Hsiu`
+- Venue: `arXiv`
+- Year: `2023`
+- DOI: `10.48550/arxiv.2301.01597`
+- URL: `https://arxiv.org/abs/2301.01597`
+- Type: `Text`
 
 ### Mismatches
 
-None.
+- title:
+  - Input: `Demystify problem-dependent power of quantum neural networks on multi-class classification`
+  - Found: `Problem-Dependent Power of Quantum Neural Networks on Multi-Class Classification`
+- year:
+  - Input: `2022`
+  - Found: `2023`
+
+### Field Comparisons
+
+- `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.2301.01597`)
+- `title`: `mismatch` (input: `Demystify problem-dependent power of quantum neural networks on multi-class classification`, found: `Problem-Dependent Power of Quantum Neural Networks on Multi-Class Classification`)
+- `authors`: `match` (input: `['Du, Yuxuan', 'Yang, Yibo', 'Tao, Dacheng', 'Hsieh, Min-Hsiu']`, found: `['Du, Yuxuan', 'Yang, Yibo', 'Tao, Dacheng', 'Hsieh, Min-Hsiu']`)
+- `year`: `mismatch` (input: `2022`, found: `2023`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2301.01597`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
+- `volume`: `not_checked` (input: `None`, found: `None`)
+- `issue`: `not_checked` (input: `None`, found: `None`)
+- `pages`: `not_checked` (input: `None`, found: `None`)
+- `article_number`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2301.01597`, found: `2301.01597`)
+- `pmid`: `not_checked` (input: `None`, found: `None`)
+- `isbn`: `not_checked` (input: `None`, found: `None`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2301.01597`)
 
 ## Reference herrmann2022realizing
 
@@ -3239,7 +3249,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `9`
 
 ### Selected Record
@@ -3296,7 +3306,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `9`
 
 ### Selected Record
@@ -3352,7 +3362,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -3409,7 +3419,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `13`
 
 ### Selected Record
@@ -3466,7 +3476,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
 ### Selected Record
@@ -3523,7 +3533,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -3580,7 +3590,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -3636,7 +3646,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
 ### Selected Record
@@ -3677,7 +3687,7 @@ None.
 
 ## Reference verdon2019learning
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -3687,57 +3697,47 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Learning to learn with quantum neural networks via classical neural networks`
-- Normalized: `learning to learn with quantum neural networks via classical neural networks`
+- Kind: `arxiv_id`
+- Value: `1907.05415`
+- Normalized: `1907.05415`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `7`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `3`
 
 ### Selected Record
 
-- Source: `OpenAlex`
-- Source URL: `https://openalex.org/W2958921151`
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.1907.05415`
 - Title: `Learning to learn with quantum neural networks via classical neural networks`
-- Authors: `Guillaume Verdon; Michael Broughton; Jarrod R. McClean; Kevin J. Sung; Ryan Babbush; Jiang Zhang; Hartmut Neven; Masoud Mohseni`
-- Venue: `arXiv (Cornell University)`
+- Authors: `Verdon, Guillaume; Broughton, Michael; McClean, Jarrod R.; Sung, Kevin J.; Babbush, Ryan; Jiang, Zhang; Neven, Hartmut; Mohseni, Masoud`
+- Venue: `arXiv`
 - Year: `2019`
 - DOI: `10.48550/arxiv.1907.05415`
-- URL: `https://doi.org/10.48550/arxiv.1907.05415`
-- Type: `preprint`
+- URL: `https://arxiv.org/abs/1907.05415`
+- Type: `Preprint`
 
 ### Mismatches
 
-- authors:
-  - Input: `['Verdon, Guillaume', 'Broughton, Michael', 'McClean, Jarrod R', 'Sung, Kevin J', 'Babbush, Ryan', 'Jiang, Zhang', 'Neven, Hartmut', 'Mohseni, Masoud']`
-  - Found: `['Guillaume Verdon', 'Michael Broughton', 'Jarrod R. McClean', 'Kevin J. Sung', 'Ryan Babbush', 'Jiang Zhang', 'Hartmut Neven', 'Masoud Mohseni']`
-  - Note: Jiang, Zhang != Jiang Zhang
-- venue:
-  - Input: `arXiv preprint arXiv:1907.05415`
-  - Found: `arXiv (Cornell University)`
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.1907.05415`)
 - `title`: `match` (input: `Learning to learn with quantum neural networks via classical neural networks`, found: `Learning to learn with quantum neural networks via classical neural networks`)
-- `authors`: `mismatch` (input: `['Verdon, Guillaume', 'Broughton, Michael', 'McClean, Jarrod R', 'Sung, Kevin J', 'Babbush, Ryan', 'Jiang, Zhang', 'Neven, Hartmut', 'Mohseni, Masoud']`, found: `['Guillaume Verdon', 'Michael Broughton', 'Jarrod R. McClean', 'Kevin J. Sung', 'Ryan Babbush', 'Jiang Zhang', 'Hartmut Neven', 'Masoud Mohseni']`)
-  - Note: Jiang, Zhang != Jiang Zhang
+- `authors`: `match` (input: `['Verdon, Guillaume', 'Broughton, Michael', 'McClean, Jarrod R', 'Sung, Kevin J', 'Babbush, Ryan', 'Jiang, Zhang', 'Neven, Hartmut', 'Mohseni, Masoud']`, found: `['Verdon, Guillaume', 'Broughton, Michael', 'McClean, Jarrod R.', 'Sung, Kevin J.', 'Babbush, Ryan', 'Jiang, Zhang', 'Neven, Hartmut', 'Mohseni, Masoud']`)
 - `year`: `match` (input: `2019`, found: `2019`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:1907.05415`, found: `arXiv (Cornell University)`)
+- `venue`: `match` (input: `arXiv preprint arXiv:1907.05415`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `1907.05415`, found: `1907.05415`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.48550/arxiv.1907.05415`)
-
-### Lookup Errors
-
-- Crossref: provider returned non-JSON response
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/1907.05415`)
 
 ## Reference gacon2021simultaneous
 
@@ -3757,7 +3757,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -3813,7 +3813,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -3870,7 +3870,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -3926,7 +3926,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -3967,7 +3967,7 @@ None.
 
 ## Reference sweke2020stochastic
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -3983,7 +3983,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `13`
 
 ### Selected Record
@@ -4003,17 +4003,13 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- authors:
-  - Input: `['Sweke, Ryan', 'Wilde, Frederik', 'Meyer, Johannes', 'Schuld, Maria', 'F{\\"a}hrmann, Paul K', "Meynard-Piganeau, Barth{\\'e}l{\\'e}my", 'Eisert, Jens']`
-  - Found: `['Sweke, Ryan', 'Wilde, Frederik', 'Meyer, Johannes', 'Schuld, Maria', 'Faehrmann, Paul K.', 'Meynard-Piganeau, Barthélémy', 'Eisert, Jens']`
-  - Note: F{\"a}hrmann, Paul K != Faehrmann, Paul K.
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.22331/q-2020-08-31-314`)
 - `title`: `match` (input: `Stochastic gradient descent for hybrid quantum-classical optimization`, found: `Stochastic gradient descent for hybrid quantum-classical optimization`)
-- `authors`: `mismatch` (input: `['Sweke, Ryan', 'Wilde, Frederik', 'Meyer, Johannes', 'Schuld, Maria', 'F{\\"a}hrmann, Paul K', "Meynard-Piganeau, Barth{\\'e}l{\\'e}my", 'Eisert, Jens']`, found: `['Sweke, Ryan', 'Wilde, Frederik', 'Meyer, Johannes', 'Schuld, Maria', 'Faehrmann, Paul K.', 'Meynard-Piganeau, Barthélémy', 'Eisert, Jens']`)
-  - Note: F{\"a}hrmann, Paul K != Faehrmann, Paul K.
+- `authors`: `match` (input: `['Sweke, Ryan', 'Wilde, Frederik', 'Meyer, Johannes', 'Schuld, Maria', 'F{\\"a}hrmann, Paul K', "Meynard-Piganeau, Barth{\\'e}l{\\'e}my", 'Eisert, Jens']`, found: `['Sweke, Ryan', 'Wilde, Frederik', 'Meyer, Johannes', 'Schuld, Maria', 'Faehrmann, Paul K.', 'Meynard-Piganeau, Barthélémy', 'Eisert, Jens']`)
 - `year`: `match` (input: `2020`, found: `2020`)
 - `venue`: `match` (input: `Quantum`, found: `Quantum`)
 - `volume`: `match` (input: `4`, found: `4`)
@@ -4027,7 +4023,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ## Reference wilson2018quantum
 
-Status: `AMBIGUOUS_MATCH`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -4037,27 +4033,51 @@ Status: `AMBIGUOUS_MATCH`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Quantum kitchen sinks: An algorithm for machine learning on near-term quantum computers`
-- Normalized: `quantum kitchen sinks an algorithm for machine learning on near-term quantum computers`
+- Kind: `arxiv_id`
+- Value: `1806.08321`
+- Normalized: `1806.08321`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `2`
 
-### Candidate Records
+### Selected Record
 
-1. `OpenAlex`: Quantum Kitchen Sinks: An algorithm for machine learning on near-term quantum computers
-2. `OpenAlex`: Quantum Kitchen Sinks: An algorithm for machine learning on near-term quantum computers
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.1806.08321`
+- Title: `Quantum Kitchen Sinks: An algorithm for machine learning on near-term quantum computers`
+- Authors: `Wilson, C. M.; Otterbach, J. S.; Tezak, N.; Smith, R. S.; Polloreno, A. M.; Karalekas, Peter J.; Heidel, S.; Alam, M. Sohaib; Crooks, G. E.; da Silva, M. P.`
+- Venue: `arXiv`
+- Year: `2018`
+- DOI: `10.48550/arxiv.1806.08321`
+- URL: `https://arxiv.org/abs/1806.08321`
+- Type: `Preprint`
 
 ### Mismatches
 
 None.
 
+### Field Comparisons
+
+- `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.1806.08321`)
+- `title`: `match` (input: `Quantum kitchen sinks: An algorithm for machine learning on near-term quantum computers`, found: `Quantum Kitchen Sinks: An algorithm for machine learning on near-term quantum computers`)
+- `authors`: `match` (input: `['Wilson, CM', 'Otterbach, JS', 'Tezak, Nikolas', 'Smith, RS', 'Polloreno, AM', 'Karalekas, Peter J', 'Heidel, S', 'Alam, M Sohaib', 'Crooks, GE', 'da Silva, MP']`, found: `['Wilson, C. M.', 'Otterbach, J. S.', 'Tezak, N.', 'Smith, R. S.', 'Polloreno, A. M.', 'Karalekas, Peter J.', 'Heidel, S.', 'Alam, M. Sohaib', 'Crooks, G. E.', 'da Silva, M. P.']`)
+- `year`: `match` (input: `2018`, found: `2018`)
+- `venue`: `match` (input: `arXiv preprint arXiv:1806.08321`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
+- `volume`: `not_checked` (input: `None`, found: `None`)
+- `issue`: `not_checked` (input: `None`, found: `None`)
+- `pages`: `not_checked` (input: `None`, found: `None`)
+- `article_number`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `1806.08321`, found: `1806.08321`)
+- `pmid`: `not_checked` (input: `None`, found: `None`)
+- `isbn`: `not_checked` (input: `None`, found: `None`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/1806.08321`)
+
 ### Lookup Errors
 
-- Crossref: provider returned non-JSON response
+- arXiv: provider returned HTTP 429
 
 ## Reference hur2022quantum
 
@@ -4077,7 +4097,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -4118,7 +4138,7 @@ None.
 
 ## Reference bowles2023backpropagation
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -4128,14 +4148,14 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Backpropagation scaling in parameterised quantum circuits`
-- Normalized: `backpropagation scaling in parameterised quantum circuits`
+- Kind: `arxiv_id`
+- Value: `2306.14962`
+- Normalized: `2306.14962`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `9`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
@@ -4151,9 +4171,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv preprint arXiv:2306.14962`
-  - Found: `arXiv`
+None.
 
 ### Field Comparisons
 
@@ -4161,19 +4179,24 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `match` (input: `Backpropagation scaling in parameterised quantum circuits`, found: `Backpropagation scaling in parameterised quantum circuits`)
 - `authors`: `match` (input: `['Bowles, Joseph', 'Wierichs, David', 'Park, Chae-Yeun']`, found: `['Bowles, Joseph', 'Wierichs, David', 'Park, Chae-Yeun']`)
 - `year`: `match` (input: `2023`, found: `2023`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:2306.14962`, found: `arXiv`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2306.14962`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2306.14962`, found: `2306.14962`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
 - `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2306.14962`)
 
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
+
 ## Reference abbas2023quantum
 
-Status: `AMBIGUOUS_MATCH`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -4183,29 +4206,51 @@ Status: `AMBIGUOUS_MATCH`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `On quantum backpropagation, information reuse, and cheating measurement collapse`
-- Normalized: `on quantum backpropagation information reuse and cheating measurement collapse`
+- Kind: `arxiv_id`
+- Value: `2305.13362`
+- Normalized: `2305.13362`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `8`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
-### Candidate Records
+### Selected Record
 
-1. `Crossref`: On quantum backpropagation, information reuse, and cheating measurement collapse
-2. `Crossref`: ReSprop: Reuse Sparsified Backpropagation
-3. `Crossref`: Post-Quantum Cheating Detectable Private Information Retrieval
-4. `Crossref`: Information-Induced Quantum Measurement: A Complete Physical Theory of Wavefunction Collapse
-5. `Crossref`: Integrated Information-Induced Quantum Collapse
-6. `DataCite`: On quantum backpropagation, information reuse, and cheating measurement collapse
-7. `OpenAlex`: On quantum backpropagation, information reuse, and cheating measurement collapse
-8. `OpenAlex`: On quantum backpropagation, information reuse, and cheating measurement collapse
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.2305.13362`
+- Title: `On quantum backpropagation, information reuse, and cheating measurement collapse`
+- Authors: `Abbas, Amira; King, Robbie; Huang, Hsin-Yuan; Huggins, William J.; Movassagh, Ramis; Gilboa, Dar; McClean, Jarrod R.`
+- Venue: `arXiv`
+- Year: `2023`
+- DOI: `10.48550/arxiv.2305.13362`
+- URL: `https://arxiv.org/abs/2305.13362`
+- Type: `Text`
 
 ### Mismatches
 
 None.
+
+### Field Comparisons
+
+- `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.2305.13362`)
+- `title`: `match` (input: `On quantum backpropagation, information reuse, and cheating measurement collapse`, found: `On quantum backpropagation, information reuse, and cheating measurement collapse`)
+- `authors`: `match` (input: `['Abbas, Amira', 'King, Robbie', 'Huang, Hsin-Yuan', 'Huggins, William J', 'Movassagh, Ramis', 'Gilboa, Dar', 'McClean, Jarrod R']`, found: `['Abbas, Amira', 'King, Robbie', 'Huang, Hsin-Yuan', 'Huggins, William J.', 'Movassagh, Ramis', 'Gilboa, Dar', 'McClean, Jarrod R.']`)
+- `year`: `match` (input: `2023`, found: `2023`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2305.13362`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
+- `volume`: `not_checked` (input: `None`, found: `None`)
+- `issue`: `not_checked` (input: `None`, found: `None`)
+- `pages`: `not_checked` (input: `None`, found: `None`)
+- `article_number`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2305.13362`, found: `2305.13362`)
+- `pmid`: `not_checked` (input: `None`, found: `None`)
+- `isbn`: `not_checked` (input: `None`, found: `None`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2305.13362`)
+
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
 
 ## Reference hubregtsen2022training
 
@@ -4225,7 +4270,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
 ### Selected Record
@@ -4266,7 +4311,7 @@ None.
 
 ## Reference thanasilp2022exponential
 
-Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
+Status: `IDENTIFIER_CONFLICT`
 
 ### Raw Input
 
@@ -4276,50 +4321,57 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Exponential concentration and untrainability in quantum kernel methods`
-- Normalized: `exponential concentration and untrainability in quantum kernel methods`
+- Kind: `arxiv_id`
+- Value: `2208.11060`
+- Normalized: `2208.11060`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `6`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
-- Source: `Crossref`
-- Source URL: `https://doi.org/10.21203/rs.3.rs-2296310/v1`
-- Title: `Exponential concentration and untrainability in quantum kernel methods`
-- Authors: `Thanasilp, Supanut; Wang, Samson; Cerezo, Marco; Holmes, Zoë`
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.2208.11060`
+- Title: `Exponential concentration in quantum kernel methods`
+- Authors: `Thanasilp, Supanut; Wang, Samson; Cerezo, M.; Holmes, Zoë`
+- Venue: `arXiv`
 - Year: `2022`
-- DOI: `10.21203/rs.3.rs-2296310/v1`
-- URL: `https://doi.org/10.21203/rs.3.rs-2296310/v1`
-- Type: `posted-content`
+- DOI: `10.48550/arxiv.2208.11060`
+- URL: `https://arxiv.org/abs/2208.11060`
+- Type: `Preprint`
 
 ### Mismatches
 
-None.
+- title:
+  - Input: `Exponential concentration and untrainability in quantum kernel methods`
+  - Found: `Exponential concentration in quantum kernel methods`
 
 ### Field Comparisons
 
-- `doi`: `additional_metadata` (input: `None`, found: `10.21203/rs.3.rs-2296310/v1`)
-- `title`: `match` (input: `Exponential concentration and untrainability in quantum kernel methods`, found: `Exponential concentration and untrainability in quantum kernel methods`)
-- `authors`: `match` (input: `['Thanasilp, Supanut', 'Wang, Samson', 'Cerezo, Marco', 'Holmes, Zo{\\"e}']`, found: `['Thanasilp, Supanut', 'Wang, Samson', 'Cerezo, Marco', 'Holmes, Zoë']`)
+- `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.2208.11060`)
+- `title`: `mismatch` (input: `Exponential concentration and untrainability in quantum kernel methods`, found: `Exponential concentration in quantum kernel methods`)
+- `authors`: `match` (input: `['Thanasilp, Supanut', 'Wang, Samson', 'Cerezo, Marco', 'Holmes, Zo{\\"e}']`, found: `['Thanasilp, Supanut', 'Wang, Samson', 'Cerezo, M.', 'Holmes, Zoë']`)
 - `year`: `match` (input: `2022`, found: `2022`)
-- `venue`: `not_checked` (input: `arXiv preprint arXiv:2208.11060`, found: `None`)
-  - Note: lookup source did not return this field
+- `venue`: `match` (input: `arXiv preprint arXiv:2208.11060`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2208.11060`, found: `2208.11060`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.21203/rs.3.rs-2296310/v1`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2208.11060`)
+
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
 
 ## Reference glick2021covariant
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -4329,57 +4381,55 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Covariant quantum kernels for data with group structure`
-- Normalized: `covariant quantum kernels for data with group structure`
+- Kind: `arxiv_id`
+- Value: `2105.03406`
+- Normalized: `2105.03406`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `12`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
-- Source: `OpenAlex`
-- Source URL: `https://openalex.org/W4287184090`
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.2105.03406`
 - Title: `Covariant quantum kernels for data with group structure`
-- Authors: `Jennifer R. Glick; Tanvi P. Gujarati; Antonio Córcoles; Young‐Seok Kim; Abhinav Kandala; Jay Gambetta; Kristan Temme`
-- Venue: `arXiv (Cornell University)`
+- Authors: `Glick, Jennifer R.; Gujarati, Tanvi P.; Corcoles, Antonio D.; Kim, Youngseok; Kandala, Abhinav; Gambetta, Jay M.; Temme, Kristan`
+- Venue: `arXiv`
 - Year: `2021`
 - DOI: `10.48550/arxiv.2105.03406`
-- URL: `https://doi.org/10.48550/arxiv.2105.03406`
-- Type: `preprint`
+- URL: `https://arxiv.org/abs/2105.03406`
+- Type: `Text`
 
 ### Mismatches
 
-- authors:
-  - Input: `['Glick, Jennifer R', 'Gujarati, Tanvi P', 'Corcoles, Antonio D', 'Kim, Youngseok', 'Kandala, Abhinav', 'Gambetta, Jay M', 'Temme, Kristan']`
-  - Found: `['Jennifer R. Glick', 'Tanvi P. Gujarati', 'Antonio Córcoles', 'Young‐Seok Kim', 'Abhinav Kandala', 'Jay Gambetta', 'Kristan Temme']`
-  - Note: Corcoles, Antonio D != Antonio Córcoles; Gambetta, Jay M != Jay Gambetta
-- venue:
-  - Input: `arXiv preprint arXiv:2105.03406`
-  - Found: `arXiv (Cornell University)`
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.2105.03406`)
 - `title`: `match` (input: `Covariant quantum kernels for data with group structure`, found: `Covariant quantum kernels for data with group structure`)
-- `authors`: `mismatch` (input: `['Glick, Jennifer R', 'Gujarati, Tanvi P', 'Corcoles, Antonio D', 'Kim, Youngseok', 'Kandala, Abhinav', 'Gambetta, Jay M', 'Temme, Kristan']`, found: `['Jennifer R. Glick', 'Tanvi P. Gujarati', 'Antonio Córcoles', 'Young‐Seok Kim', 'Abhinav Kandala', 'Jay Gambetta', 'Kristan Temme']`)
-  - Note: Corcoles, Antonio D != Antonio Córcoles; Gambetta, Jay M != Jay Gambetta
+- `authors`: `match` (input: `['Glick, Jennifer R', 'Gujarati, Tanvi P', 'Corcoles, Antonio D', 'Kim, Youngseok', 'Kandala, Abhinav', 'Gambetta, Jay M', 'Temme, Kristan']`, found: `['Glick, Jennifer R.', 'Gujarati, Tanvi P.', 'Corcoles, Antonio D.', 'Kim, Youngseok', 'Kandala, Abhinav', 'Gambetta, Jay M.', 'Temme, Kristan']`)
 - `year`: `match` (input: `2021`, found: `2021`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:2105.03406`, found: `arXiv (Cornell University)`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2105.03406`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2105.03406`, found: `2105.03406`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.48550/arxiv.2105.03406`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2105.03406`)
+
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
 
 ## Reference xue2023near
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -4389,14 +4439,14 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Near-Optimal Quantum Coreset Construction Algorithms for Clustering`
-- Normalized: `near-optimal quantum coreset construction algorithms for clustering`
+- Kind: `arxiv_id`
+- Value: `2306.02826`
+- Normalized: `2306.02826`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `7`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
@@ -4412,9 +4462,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv preprint arXiv:2306.02826`
-  - Found: `arXiv`
+None.
 
 ### Field Comparisons
 
@@ -4422,15 +4470,20 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `match` (input: `Near-Optimal Quantum Coreset Construction Algorithms for Clustering`, found: `Near-Optimal Quantum Coreset Construction Algorithms for Clustering`)
 - `authors`: `match` (input: `['Xue, Yecheng', 'Chen, Xiaoyu', 'Li, Tongyang', 'Jiang, Shaofeng H-C']`, found: `['Xue, Yecheng', 'Chen, Xiaoyu', 'Li, Tongyang', 'Jiang, Shaofeng H. -C.']`)
 - `year`: `match` (input: `2023`, found: `2023`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:2306.02826`, found: `arXiv`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2306.02826`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2306.02826`, found: `2306.02826`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
 - `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2306.02826`)
+
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
 
 ## Reference bishop2007
 
@@ -4450,7 +4503,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
 ### Selected Record
@@ -4466,10 +4519,6 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- authors:
-  - Input: `['Bishop, Christopher M.']`
-  - Found: `['Chris Bishop']`
-  - Note: Bishop, Christopher M. != Chris Bishop
 - year:
   - Input: `2007`
   - Found: `2006`
@@ -4481,8 +4530,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 - `doi`: `not_checked` (input: `None`, found: `None`)
 - `title`: `match` (input: `Pattern Recognition and Machine Learning (Information Science and Statistics)`, found: `Pattern Recognition and Machine Learning (Information Science and Statistics)`)
-- `authors`: `mismatch` (input: `['Bishop, Christopher M.']`, found: `['Chris Bishop']`)
-  - Note: Bishop, Christopher M. != Chris Bishop
+- `authors`: `match` (input: `['Bishop, Christopher M.']`, found: `['Chris Bishop']`)
 - `year`: `mismatch` (input: `2007`, found: `2006`)
 - `venue`: `additional_metadata` (input: `None`, found: `Springer eBooks`)
 - `volume`: `not_checked` (input: `None`, found: `None`)
@@ -4497,7 +4545,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ## Reference lloyd2020quantum
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -4507,48 +4555,47 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Quantum embeddings for machine learning`
-- Normalized: `quantum embeddings for machine learning`
+- Kind: `arxiv_id`
+- Value: `2001.03622`
+- Normalized: `2001.03622`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `15`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
-- Source: `OpenAlex`
-- Source URL: `https://openalex.org/W2998932335`
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.2001.03622`
 - Title: `Quantum embeddings for machine learning`
-- Authors: `Seth Lloyd; Maria Schuld; Aroosa Ijaz; Josh Izaac; Nathan Killoran`
-- Venue: `arXiv (Cornell University)`
+- Authors: `Lloyd, Seth; Schuld, Maria; Ijaz, Aroosa; Izaac, Josh; Killoran, Nathan`
+- Venue: `arXiv`
 - Year: `2020`
 - DOI: `10.48550/arxiv.2001.03622`
-- URL: `https://doi.org/10.48550/arxiv.2001.03622`
-- Type: `preprint`
+- URL: `https://arxiv.org/abs/2001.03622`
+- Type: `Preprint`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv preprint arXiv:2001.03622`
-  - Found: `arXiv (Cornell University)`
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.2001.03622`)
 - `title`: `match` (input: `Quantum embeddings for machine learning`, found: `Quantum embeddings for machine learning`)
-- `authors`: `match` (input: `['Lloyd, Seth', 'Schuld, Maria', 'Ijaz, Aroosa', 'Izaac, Josh', 'Killoran, Nathan']`, found: `['Seth Lloyd', 'Maria Schuld', 'Aroosa Ijaz', 'Josh Izaac', 'Nathan Killoran']`)
+- `authors`: `match` (input: `['Lloyd, Seth', 'Schuld, Maria', 'Ijaz, Aroosa', 'Izaac, Josh', 'Killoran, Nathan']`, found: `['Lloyd, Seth', 'Schuld, Maria', 'Ijaz, Aroosa', 'Izaac, Josh', 'Killoran, Nathan']`)
 - `year`: `match` (input: `2020`, found: `2020`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:2001.03622`, found: `arXiv (Cornell University)`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2001.03622`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2001.03622`, found: `2001.03622`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.48550/arxiv.2001.03622`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2001.03622`)
 
 ## Reference larocca2022group
 
@@ -4568,7 +4615,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -4609,7 +4656,7 @@ None.
 
 ## Reference sauvage2022building
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -4619,48 +4666,51 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Building spatial symmetries into parameterized quantum circuits for faster training`
-- Normalized: `building spatial symmetries into parameterized quantum circuits for faster training`
+- Kind: `arxiv_id`
+- Value: `2207.14413`
+- Normalized: `2207.14413`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `13`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
-- Source: `OpenAlex`
-- Source URL: `https://openalex.org/W4289447052`
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.2207.14413`
 - Title: `Building spatial symmetries into parameterized quantum circuits for faster training`
-- Authors: `Frédéric Sauvage; Martín Larocca; Patrick J. Coles; M. Cerezo`
-- Venue: `arXiv (Cornell University)`
+- Authors: `Sauvage, Frederic; Larocca, Martin; Coles, Patrick J.; Cerezo, M.`
+- Venue: `arXiv`
 - Year: `2022`
 - DOI: `10.48550/arxiv.2207.14413`
-- URL: `https://doi.org/10.48550/arxiv.2207.14413`
-- Type: `preprint`
+- URL: `https://arxiv.org/abs/2207.14413`
+- Type: `Text`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv preprint arXiv:2207.14413`
-  - Found: `arXiv (Cornell University)`
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.2207.14413`)
 - `title`: `match` (input: `Building spatial symmetries into parameterized quantum circuits for faster training`, found: `Building spatial symmetries into parameterized quantum circuits for faster training`)
-- `authors`: `match` (input: `['Sauvage, Frederic', 'Larocca, Martin', 'Coles, Patrick J', 'Cerezo, M']`, found: `['Frédéric Sauvage', 'Martín Larocca', 'Patrick J. Coles', 'M. Cerezo']`)
+- `authors`: `match` (input: `['Sauvage, Frederic', 'Larocca, Martin', 'Coles, Patrick J', 'Cerezo, M']`, found: `['Sauvage, Frederic', 'Larocca, Martin', 'Coles, Patrick J.', 'Cerezo, M.']`)
 - `year`: `match` (input: `2022`, found: `2022`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:2207.14413`, found: `arXiv (Cornell University)`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2207.14413`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2207.14413`, found: `2207.14413`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.48550/arxiv.2207.14413`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2207.14413`)
+
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
 
 ## Reference du2022distributed
 
@@ -4680,7 +4730,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -4719,7 +4769,7 @@ None.
 
 ## Reference gyurik2021structural
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -4735,7 +4785,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
 ### Selected Record
@@ -4755,17 +4805,13 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- authors:
-  - Input: `['Gyurik, Casper', 'Dunjko, Vedran', 'et al.']`
-  - Found: `['Gyurik, Casper', 'Vreumingen, van, Dyon', 'Dunjko, Vedran']`
-  - Note: Dunjko, Vedran != Vreumingen, van, Dyon
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.22331/q-2023-01-13-893`)
 - `title`: `match` (input: `Structural risk minimization for quantum linear classifiers`, found: `Structural risk minimization for quantum linear classifiers`)
-- `authors`: `mismatch` (input: `['Gyurik, Casper', 'Dunjko, Vedran', 'et al.']`, found: `['Gyurik, Casper', 'Vreumingen, van, Dyon', 'Dunjko, Vedran']`)
-  - Note: Dunjko, Vedran != Vreumingen, van, Dyon
+- `authors`: `match` (input: `['Gyurik, Casper', 'Dunjko, Vedran', 'et al.']`, found: `['Gyurik, Casper', 'Vreumingen, van, Dyon', 'Dunjko, Vedran']`)
 - `year`: `match` (input: `2023`, found: `2023`)
 - `venue`: `match` (input: `Quantum`, found: `Quantum`)
 - `volume`: `match` (input: `7`, found: `7`)
@@ -4795,7 +4841,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `7`
 
 ### Selected Record
@@ -4852,7 +4898,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -4908,7 +4954,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `6`
 
 ### Selected Record
@@ -4965,7 +5011,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `13`
 
 ### Selected Record
@@ -5022,7 +5068,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `7`
 
 ### Selected Record
@@ -5035,7 +5081,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 - Year: `2009`
 - Volume: `41`
 - Issue: `8`
-- Pages: `751`
+- Pages: `751-4`
 - URL: `https://openalex.org/W3464401`
 - Type: `book`
 
@@ -5052,7 +5098,7 @@ None.
 - `venue`: `additional_metadata` (input: `None`, found: `Medical Entomology and Zoology`)
 - `volume`: `additional_metadata` (input: `None`, found: `41`)
 - `issue`: `additional_metadata` (input: `None`, found: `8`)
-- `pages`: `additional_metadata` (input: `None`, found: `751`)
+- `pages`: `additional_metadata` (input: `None`, found: `751-4`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
@@ -5077,7 +5123,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `13`
 
 ### Selected Record
@@ -5134,7 +5180,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -5191,7 +5237,7 @@ Status: `AMBIGUOUS_MATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Candidate Records
@@ -5234,7 +5280,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -5275,7 +5321,7 @@ None.
 
 ## Reference georgescu2014quantum
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -5291,7 +5337,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -5304,32 +5350,25 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - Year: `2014`
 - Volume: `86`
 - Issue: `1`
-- Pages: `153`
+- Pages: `153-185`
 - DOI: `10.1103/revmodphys.86.153`
 - URL: `https://doi.org/10.1103/revmodphys.86.153`
 - Type: `article`
 
 ### Mismatches
 
-- authors:
-  - Input: `['Georgescu, Iulia M', 'Ashhab, Sahel', 'Nori, Franco']`
-  - Found: `['Iulia Georgescu', 'Sahel Ashhab', 'Franco Nori']`
-  - Note: Georgescu, Iulia M != Iulia Georgescu
-- pages:
-  - Input: `153-185`
-  - Found: `153`
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.1103/revmodphys.86.153`)
 - `title`: `match` (input: `Quantum simulation`, found: `Quantum simulation`)
-- `authors`: `mismatch` (input: `['Georgescu, Iulia M', 'Ashhab, Sahel', 'Nori, Franco']`, found: `['Iulia Georgescu', 'Sahel Ashhab', 'Franco Nori']`)
-  - Note: Georgescu, Iulia M != Iulia Georgescu
+- `authors`: `match` (input: `['Georgescu, Iulia M', 'Ashhab, Sahel', 'Nori, Franco']`, found: `['Iulia Georgescu', 'Sahel Ashhab', 'Franco Nori']`)
 - `year`: `match` (input: `2014`, found: `2014`)
 - `venue`: `match` (input: `Reviews of Modern Physics`, found: `Reviews of Modern Physics`)
 - `volume`: `match` (input: `86`, found: `86`)
 - `issue`: `match` (input: `1`, found: `1`)
-- `pages`: `mismatch` (input: `153-185`, found: `153`)
+- `pages`: `match` (input: `153-185`, found: `153-185`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
@@ -5338,7 +5377,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ## Reference feynman2018simulating
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -5354,7 +5393,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -5363,17 +5402,16 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - Source URL: `https://openalex.org/W4242275969`
 - Title: `Simulating Physics with Computers`
 - Authors: `Richard P. Feynman`
+- Venue: `Feynman and Computation`
 - Year: `2018`
-- Pages: `133`
+- Pages: `133-153`
 - DOI: `10.1201/9780429500459-11`
 - URL: `https://doi.org/10.1201/9780429500459-11`
 - Type: `book-chapter`
 
 ### Mismatches
 
-- pages:
-  - Input: `133-153`
-  - Found: `133`
+None.
 
 ### Field Comparisons
 
@@ -5381,11 +5419,10 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `match` (input: `Simulating physics with computers`, found: `Simulating Physics with Computers`)
 - `authors`: `match` (input: `['Feynman, Richard P']`, found: `['Richard P. Feynman']`)
 - `year`: `match` (input: `2018`, found: `2018`)
-- `venue`: `not_checked` (input: `Feynman and computation`, found: `None`)
-  - Note: lookup source did not return this field
+- `venue`: `match` (input: `Feynman and computation`, found: `Feynman and Computation`)
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
-- `pages`: `mismatch` (input: `133-153`, found: `133`)
+- `pages`: `match` (input: `133-153`, found: `133-153`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
@@ -5410,7 +5447,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -5467,7 +5504,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -5507,7 +5544,7 @@ None.
 
 ## Reference browaeys2020many
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -5523,49 +5560,43 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `3`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `8`
 
 ### Selected Record
 
-- Source: `OpenAlex`
-- Source URL: `https://openalex.org/W2999029452`
+- Source: `Crossref`
+- Source URL: `https://doi.org/10.1038/s41567-019-0733-z`
 - Title: `Many-body physics with individually controlled Rydberg atoms`
-- Authors: `Antoine Browaeys; Thierry Lahaye`
+- Authors: `Browaeys, Antoine; Lahaye, Thierry`
 - Venue: `Nature Physics`
 - Year: `2020`
 - Volume: `16`
 - Issue: `2`
-- Pages: `132`
+- Pages: `132-142`
 - DOI: `10.1038/s41567-019-0733-z`
 - URL: `https://doi.org/10.1038/s41567-019-0733-z`
-- Type: `article`
+- Type: `journal-article`
 
 ### Mismatches
 
-- pages:
-  - Input: `132-142`
-  - Found: `132`
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.1038/s41567-019-0733-z`)
 - `title`: `match` (input: `Many-body physics with individually controlled Rydberg atoms`, found: `Many-body physics with individually controlled Rydberg atoms`)
-- `authors`: `match` (input: `['Browaeys, Antoine', 'Lahaye, Thierry']`, found: `['Antoine Browaeys', 'Thierry Lahaye']`)
+- `authors`: `match` (input: `['Browaeys, Antoine', 'Lahaye, Thierry']`, found: `['Browaeys, Antoine', 'Lahaye, Thierry']`)
 - `year`: `match` (input: `2020`, found: `2020`)
 - `venue`: `match` (input: `Nature Physics`, found: `Nature Physics`)
 - `volume`: `match` (input: `16`, found: `16`)
 - `issue`: `match` (input: `2`, found: `2`)
-- `pages`: `mismatch` (input: `132-142`, found: `132`)
+- `pages`: `match` (input: `132-142`, found: `132-142`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
 - `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.1038/s41567-019-0733-z`)
-
-### Lookup Errors
-
-- Crossref: provider returned non-JSON response
 
 ## Reference gross2017quantum
 
@@ -5585,7 +5616,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -5641,7 +5672,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -5697,7 +5728,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -5753,7 +5784,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -5809,7 +5840,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -5866,7 +5897,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -5922,7 +5953,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -5978,7 +6009,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -6034,7 +6065,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
 ### Selected Record
@@ -6075,7 +6106,7 @@ None.
 
 ## Reference fischer2026enabling
 
-Status: `AMBIGUOUS_MATCH`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -6085,37 +6116,55 @@ Status: `AMBIGUOUS_MATCH`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Enabling large-scale digital quantum simulations with superconducting qubits`
-- Normalized: `enabling large-scale digital quantum simulations with superconducting qubits`
+- Kind: `arxiv_id`
+- Value: `2602.04719`
+- Normalized: `2602.04719`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `12`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
-### Candidate Records
+### Selected Record
 
-1. `Crossref`: Simulations of superconducting quantum gates by digital flux tuner for qubits
-2. `Crossref`: Adiabatic quantum simulations with driven superconducting qubits
-3. `Crossref`: Enabling Classical-Quantum Interface Using Digital SFQ for Pulse-Phase Driven Control for Superconducting Qubits
-4. `Crossref`: Enabling Large-Scale Simulations of Quantum Transport with Manycore Computing
-5. `Crossref`: A Grid Computing Environment for Enabling Large Scale Quantum Mechanical Simulations
-6. `DataCite`: FatherTimeSDKP mathematical framework and principles unifying physics
-7. `DataCite`: FatherTimeSDKP mathematical framework and principles unifying physics
-8. `DataCite`: Recursive Harmonic Architecture: Shaped Vacuums, Glyphic Ontology, and Costless Instantiation – A Cross-Disciplinary Synthesis
-9. `DataCite`: FatherTimeSDKP mathematical framework and principles unifying physics
-10. `DataCite`: The Final Union of the 4 Fundamental Forces (Gravity, Electromagnetism, the Strong Nuclear Force, and the Weak Nuclear Force). Strong Gravitational–Electromagnetism Information and Weak Nuclear Forces, with 1155-Dimensional Tensor Mechanics of the Hamzah Equation.
-11. `OpenAlex`: Enabling large-scale digital quantum simulations with superconducting qubits
-12. `OpenAlex`: Enabling large-scale digital quantum simulations with superconducting qubits
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.2602.04719`
+- Title: `Enabling large-scale digital quantum simulations with superconducting qubits`
+- Authors: `Fischer, Laurin E.`
+- Venue: `arXiv`
+- Year: `2026`
+- DOI: `10.48550/arxiv.2602.04719`
+- URL: `https://arxiv.org/abs/2602.04719`
+- Type: `Preprint`
 
 ### Mismatches
 
 None.
 
+### Field Comparisons
+
+- `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.2602.04719`)
+- `title`: `match` (input: `Enabling large-scale digital quantum simulations with superconducting qubits`, found: `Enabling large-scale digital quantum simulations with superconducting qubits`)
+- `authors`: `match` (input: `['Fischer, Laurin E']`, found: `['Fischer, Laurin E.']`)
+- `year`: `match` (input: `2026`, found: `2026`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2602.04719`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
+- `volume`: `not_checked` (input: `None`, found: `None`)
+- `issue`: `not_checked` (input: `None`, found: `None`)
+- `pages`: `not_checked` (input: `None`, found: `None`)
+- `article_number`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2602.04719`, found: `2602.04719`)
+- `pmid`: `not_checked` (input: `None`, found: `None`)
+- `isbn`: `not_checked` (input: `None`, found: `None`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2602.04719`)
+
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
+
 ## Reference hu2025universal
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -6125,14 +6174,14 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Universal dynamics with globally controlled analog quantum simulators`
-- Normalized: `universal dynamics with globally controlled analog quantum simulators`
+- Kind: `arxiv_id`
+- Value: `2508.19075`
+- Normalized: `2508.19075`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `10`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
@@ -6148,9 +6197,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv preprint arXiv:2508.19075`
-  - Found: `arXiv`
+None.
 
 ### Field Comparisons
 
@@ -6158,19 +6205,24 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `match` (input: `Universal dynamics with globally controlled analog quantum simulators`, found: `Universal Dynamics with Globally Controlled Analog Quantum Simulators`)
 - `authors`: `match` (input: `['Hu, Hong-Ye', 'Gomez, Abigail McClain', 'Chen, Liyuan', 'Trowbridge, Aaron', 'Goldschmidt, Andy J', 'Manchester, Zachary', 'Chong, Frederic T', 'Jaffe, Arthur', 'Yelin, Susanne F']`, found: `['Hu, Hong-Ye', 'Gomez, Abigail McClain', 'Chen, Liyuan', 'Trowbridge, Aaron', 'Goldschmidt, Andy J.', 'Manchester, Zachary', 'Chong, Frederic T.', 'Jaffe, Arthur', 'Yelin, Susanne F.']`)
 - `year`: `match` (input: `2025`, found: `2025`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:2508.19075`, found: `arXiv`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2508.19075`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2508.19075`, found: `2508.19075`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
 - `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2508.19075`)
 
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
+
 ## Reference garcia2025hamiltonian
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -6180,53 +6232,51 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Hamiltonian simulation with explicit formulas for Digital-Analog Quantum Computing`
-- Normalized: `hamiltonian simulation with explicit formulas for digital-analog quantum computing`
+- Kind: `arxiv_id`
+- Value: `2511.11404`
+- Normalized: `2511.11404`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `12`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
-- Source: `OpenAlex`
-- Source URL: `https://openalex.org/W4416344473`
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.2511.11404`
 - Title: `Hamiltonian simulation with explicit formulas for Digital-Analog Quantum Computing`
-- Authors: `Mikel Garcia de Andoin; Thorge Müller; Gonzalo García Camacho`
-- Venue: `elib (German Aerospace Center)`
+- Authors: `Garcia-de-Andoin, Mikel; Müller, Thorge; Camacho, Gonzalo`
+- Venue: `arXiv`
 - Year: `2025`
 - DOI: `10.48550/arxiv.2511.11404`
-- URL: `https://doi.org/10.48550/arxiv.2511.11404`
-- Type: `preprint`
+- URL: `https://arxiv.org/abs/2511.11404`
+- Type: `Preprint`
 
 ### Mismatches
 
-- authors:
-  - Input: `['Garcia-de-Andoin, Mikel', 'M{\\"u}ller, Thorge', 'Camacho, Gonzalo']`
-  - Found: `['Mikel Garcia de Andoin', 'Thorge Müller', 'Gonzalo García Camacho']`
-  - Note: Garcia-de-Andoin, Mikel != Mikel Garcia de Andoin
-- venue:
-  - Input: `arXiv preprint arXiv:2511.11404`
-  - Found: `elib (German Aerospace Center)`
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.2511.11404`)
 - `title`: `match` (input: `Hamiltonian simulation with explicit formulas for Digital-Analog Quantum Computing`, found: `Hamiltonian simulation with explicit formulas for Digital-Analog Quantum Computing`)
-- `authors`: `mismatch` (input: `['Garcia-de-Andoin, Mikel', 'M{\\"u}ller, Thorge', 'Camacho, Gonzalo']`, found: `['Mikel Garcia de Andoin', 'Thorge Müller', 'Gonzalo García Camacho']`)
-  - Note: Garcia-de-Andoin, Mikel != Mikel Garcia de Andoin
+- `authors`: `match` (input: `['Garcia-de-Andoin, Mikel', 'M{\\"u}ller, Thorge', 'Camacho, Gonzalo']`, found: `['Garcia-de-Andoin, Mikel', 'Müller, Thorge', 'Camacho, Gonzalo']`)
 - `year`: `match` (input: `2025`, found: `2025`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:2511.11404`, found: `elib (German Aerospace Center)`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2511.11404`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2511.11404`, found: `2511.11404`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.48550/arxiv.2511.11404`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2511.11404`)
+
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
 
 ## Reference kumar2025digital
 
@@ -6246,7 +6296,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `9`
 
 ### Selected Record
@@ -6287,7 +6337,7 @@ None.
 
 ## Reference gonzalez2021ditital
 
-Status: `IDENTIFIER_CONFLICT`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -6303,7 +6353,7 @@ Status: `IDENTIFIER_CONFLICT`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `2`
 
 ### Selected Record
@@ -6323,9 +6373,7 @@ Status: `IDENTIFIER_CONFLICT`
 
 ### Mismatches
 
-- url:
-  - Input: `https://link.aps.org/doi/10.1103/PRXQuantum.2.020328`
-  - Found: `https://doi.org/10.1103/prxquantum.2.020328`
+None.
 
 ### Field Comparisons
 
@@ -6342,11 +6390,12 @@ Status: `IDENTIFIER_CONFLICT`
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `mismatch` (input: `https://link.aps.org/doi/10.1103/PRXQuantum.2.020328`, found: `https://doi.org/10.1103/prxquantum.2.020328`)
+- `url`: `match` (input: `https://link.aps.org/doi/10.1103/PRXQuantum.2.020328`, found: `https://doi.org/10.1103/prxquantum.2.020328`)
+  - Note: both URLs contain the same DOI
 
 ## Reference babukhin2020hybrid
 
-Status: `IDENTIFIER_CONFLICT`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -6362,7 +6411,7 @@ Status: `IDENTIFIER_CONFLICT`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `2`
 
 ### Selected Record
@@ -6382,9 +6431,7 @@ Status: `IDENTIFIER_CONFLICT`
 
 ### Mismatches
 
-- url:
-  - Input: `https://link.aps.org/doi/10.1103/PhysRevA.101.052337`
-  - Found: `https://doi.org/10.1103/physreva.101.052337`
+None.
 
 ### Field Comparisons
 
@@ -6401,7 +6448,8 @@ Status: `IDENTIFIER_CONFLICT`
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
-- `url`: `mismatch` (input: `https://link.aps.org/doi/10.1103/PhysRevA.101.052337`, found: `https://doi.org/10.1103/physreva.101.052337`)
+- `url`: `match` (input: `https://link.aps.org/doi/10.1103/PhysRevA.101.052337`, found: `https://doi.org/10.1103/physreva.101.052337`)
+  - Note: both URLs contain the same DOI
 
 ## Reference celeri2023digital
 
@@ -6421,7 +6469,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
 ### Selected Record
@@ -6478,7 +6526,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -6534,7 +6582,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -6591,7 +6639,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -6648,7 +6696,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `6`
 
 ### Selected Record
@@ -6704,7 +6752,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -6760,7 +6808,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `9`
 
 ### Selected Record
@@ -6817,7 +6865,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `9`
 
 ### Selected Record
@@ -6874,7 +6922,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
 ### Selected Record
@@ -6931,7 +6979,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -6988,7 +7036,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `14`
 
 ### Selected Record
@@ -7040,7 +7088,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -7092,7 +7140,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
 ### Selected Record
@@ -7149,7 +7197,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -7205,7 +7253,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `6`
 
 ### Selected Record
@@ -7261,7 +7309,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `11`
 
 ### Selected Record
@@ -7317,7 +7365,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `7`
 
 ### Selected Record
@@ -7373,7 +7421,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `6`
 
 ### Selected Record
@@ -7430,7 +7478,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `7`
 
 ### Selected Record
@@ -7486,7 +7534,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `6`
 
 ### Selected Record
@@ -7543,7 +7591,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `8`
 
 ### Selected Record
@@ -7584,7 +7632,7 @@ None.
 
 ## Reference de2023pulse
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -7600,50 +7648,43 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `8`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `13`
 
 ### Selected Record
 
-- Source: `OpenAlex`
-- Source URL: `https://openalex.org/W4318071426`
+- Source: `Crossref`
+- Source URL: `https://doi.org/10.22331/q-2023-01-26-908`
 - Title: `Pulse based Variational Quantum Optimal Control for hybrid quantum computing`
-- Authors: `Robert de Keijzer; Oliver Tse; S. J. J. M. F. Kokkelmans`
+- Authors: `de Keijzer, Robert; Tse, Oliver; Kokkelmans, Servaas`
 - Venue: `Quantum`
 - Year: `2023`
 - Volume: `7`
 - Pages: `908`
+- Article number: `908`
 - DOI: `10.22331/q-2023-01-26-908`
 - URL: `https://doi.org/10.22331/q-2023-01-26-908`
-- Type: `article`
+- Type: `journal-article`
 
 ### Mismatches
 
-- authors:
-  - Input: `['De Keijzer, Robert', 'Tse, Oliver', 'Kokkelmans, Servaas']`
-  - Found: `['Robert de Keijzer', 'Oliver Tse', 'S. J. J. M. F. Kokkelmans']`
-  - Note: De Keijzer, Robert != Robert de Keijzer
+None.
 
 ### Field Comparisons
 
 - `doi`: `additional_metadata` (input: `None`, found: `10.22331/q-2023-01-26-908`)
 - `title`: `match` (input: `Pulse based variational quantum optimal control for hybrid quantum computing`, found: `Pulse based Variational Quantum Optimal Control for hybrid quantum computing`)
-- `authors`: `mismatch` (input: `['De Keijzer, Robert', 'Tse, Oliver', 'Kokkelmans, Servaas']`, found: `['Robert de Keijzer', 'Oliver Tse', 'S. J. J. M. F. Kokkelmans']`)
-  - Note: De Keijzer, Robert != Robert de Keijzer
+- `authors`: `match` (input: `['De Keijzer, Robert', 'Tse, Oliver', 'Kokkelmans, Servaas']`, found: `['de Keijzer, Robert', 'Tse, Oliver', 'Kokkelmans, Servaas']`)
 - `year`: `match` (input: `2023`, found: `2023`)
 - `venue`: `match` (input: `Quantum`, found: `Quantum`)
 - `volume`: `match` (input: `7`, found: `7`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `match` (input: `908`, found: `908`)
-- `article_number`: `not_checked` (input: `None`, found: `None`)
+- `article_number`: `additional_metadata` (input: `None`, found: `908`)
 - `arxiv_id`: `not_checked` (input: `None`, found: `None`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
 - `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.22331/q-2023-01-26-908`)
-
-### Lookup Errors
-
-- Crossref: provider returned non-JSON response
 
 ## Reference liang2024combining
 
@@ -7663,7 +7704,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `8`
 
 ### Selected Record
@@ -7701,7 +7742,7 @@ None.
 
 ## Reference liang2023towards
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -7711,14 +7752,14 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Towards advantages of parameterized quantum pulses`
-- Normalized: `towards advantages of parameterized quantum pulses`
+- Kind: `arxiv_id`
+- Value: `2304.09253`
+- Normalized: `2304.09253`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `7`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
@@ -7734,9 +7775,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv preprint arXiv:2304.09253`
-  - Found: `arXiv`
+None.
 
 ### Field Comparisons
 
@@ -7744,19 +7783,24 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `match` (input: `Towards advantages of parameterized quantum pulses`, found: `Towards Advantages of Parameterized Quantum Pulses`)
 - `authors`: `match` (input: `['Liang, Zhiding', 'Cheng, Jinglei', 'Song, Zhixin', 'Ren, Hang', 'Yang, Rui', 'Liu, Kecheng', 'Kogge, Peter', 'Li, Tongyang', 'Ding, Yongshan', 'Shi, Yiyu']`, found: `['Liang, Zhiding', 'Cheng, Jinglei', 'Song, Zhixin', 'Ren, Hang', 'Yang, Rui', 'Liu, Kecheng', 'Kogge, Peter', 'Li, Tongyang', 'Ding, Yongshan', 'Shi, Yiyu']`)
 - `year`: `match` (input: `2023`, found: `2023`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:2304.09253`, found: `arXiv`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2304.09253`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2304.09253`, found: `2304.09253`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
 - `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2304.09253`)
 
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
+
 ## Reference kottmann2023evaluating
 
-Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -7766,14 +7810,14 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Evaluating analytic gradients of pulse programs on quantum computers`
-- Normalized: `evaluating analytic gradients of pulse programs on quantum computers`
+- Kind: `arxiv_id`
+- Value: `2309.16756`
+- Normalized: `2309.16756`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `11`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
 ### Selected Record
 
@@ -7789,9 +7833,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Mismatches
 
-- venue:
-  - Input: `arXiv preprint arXiv:2309.16756`
-  - Found: `arXiv`
+None.
 
 ### Field Comparisons
 
@@ -7799,19 +7841,24 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 - `title`: `match` (input: `Evaluating analytic gradients of pulse programs on quantum computers`, found: `Evaluating analytic gradients of pulse programs on quantum computers`)
 - `authors`: `match` (input: `['Kottmann, Korbinian', 'Killoran, Nathan']`, found: `['Kottmann, Korbinian', 'Killoran, Nathan']`)
 - `year`: `match` (input: `2023`, found: `2023`)
-- `venue`: `mismatch` (input: `arXiv preprint arXiv:2309.16756`, found: `arXiv`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2309.16756`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
 - `volume`: `not_checked` (input: `None`, found: `None`)
 - `issue`: `not_checked` (input: `None`, found: `None`)
 - `pages`: `not_checked` (input: `None`, found: `None`)
 - `article_number`: `not_checked` (input: `None`, found: `None`)
-- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2309.16756`, found: `2309.16756`)
 - `pmid`: `not_checked` (input: `None`, found: `None`)
 - `isbn`: `not_checked` (input: `None`, found: `None`)
 - `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2309.16756`)
 
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
+
 ## Reference leng2022differentiable
 
-Status: `AMBIGUOUS_MATCH`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -7827,27 +7874,43 @@ Status: `AMBIGUOUS_MATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
-### Candidate Records
+### Selected Record
 
-1. `Crossref`: Differentiable Analog Quantum Computing for Optimization and Control
-2. `Crossref`: Differentiable Quantum Computing for Large-scale Linear Control
-3. `Crossref`: Quantum Computing with Differentiable Quantum Transforms
-4. `Crossref`: Quantum Analog Computing
-5. `Crossref`: Analog counterdiabatic quantum computing
-6. `DataCite`: From the Mind of AI: Recursive Collapse Architectures for Living AI
-7. `DataCite`: The Clay Millennium Problems as Recursive System Attractors
-8. `DataCite`: The White Puzzle: A Framework for Computation as a Recursive‑Harmonic Phenomenon
-9. `DataCite`: Completeness and Convergence in Discrete Complex Systems: A Comprehensive Synthesis of Lattice Dynamics, Synchronization, and Information Geometry
-10. `DataCite`: SDKP Framework — Complete System Architecture
-11. `OpenAlex`: Differentiable Analog Quantum Computing for Optimization and Control
-12. `OpenAlex`: Differentiable Analog Quantum Computing for Optimization and Control
+- Source: `Crossref`
+- Source URL: `https://doi.org/10.52202/068431-0340`
+- Title: `Differentiable Analog Quantum Computing for Optimization and Control`
+- Authors: `Leng, Jiaqi; Lin, Ming; Peng, Yuxiang; Qiao, Yi-Ling; Wu, Xiaodi`
+- Venue: `Advances in Neural Information Processing Systems 35`
+- Year: `2022`
+- Pages: `4707-4721`
+- DOI: `10.52202/068431-0340`
+- URL: `https://doi.org/10.52202/068431-0340`
+- Type: `proceedings-article`
 
 ### Mismatches
 
 None.
+
+### Field Comparisons
+
+- `doi`: `additional_metadata` (input: `None`, found: `10.52202/068431-0340`)
+- `title`: `match` (input: `Differentiable analog quantum computing for optimization and control`, found: `Differentiable Analog Quantum Computing for Optimization and Control`)
+- `authors`: `match` (input: `['Leng, Jiaqi', 'Peng, Yuxiang', 'Qiao, Yi-Ling', 'Lin, Ming', 'Wu, Xiaodi']`, found: `['Leng, Jiaqi', 'Lin, Ming', 'Peng, Yuxiang', 'Qiao, Yi-Ling', 'Wu, Xiaodi']`)
+- `year`: `match` (input: `2022`, found: `2022`)
+- `venue`: `match` (input: `Advances in Neural Information Processing Systems`, found: `Advances in Neural Information Processing Systems 35`)
+  - Note: venue matched after accounting for volume
+- `volume`: `not_checked` (input: `35`, found: `None`)
+  - Note: lookup source did not return this field
+- `issue`: `not_checked` (input: `None`, found: `None`)
+- `pages`: `match` (input: `4707-4721`, found: `4707-4721`)
+- `article_number`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `not_checked` (input: `None`, found: `None`)
+- `pmid`: `not_checked` (input: `None`, found: `None`)
+- `isbn`: `not_checked` (input: `None`, found: `None`)
+- `url`: `additional_metadata` (input: `None`, found: `https://doi.org/10.52202/068431-0340`)
 
 ## Reference wierichs2022general
 
@@ -7867,7 +7930,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `13`
 
 ### Selected Record
@@ -7907,7 +7970,7 @@ None.
 
 ## Reference meyer2001global
 
-Status: `AMBIGUOUS_MATCH`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -7917,33 +7980,51 @@ Status: `AMBIGUOUS_MATCH`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Global entanglement in multiparticle systems`
-- Normalized: `global entanglement in multiparticle systems`
+- Kind: `arxiv_id`
+- Value: `quant-ph/0108104`
+- Normalized: `quant-ph/0108104`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `12`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
-### Candidate Records
+### Selected Record
 
-1. `Crossref`: Global entanglement in multiparticle systems
-2. `Crossref`: Activating bound entanglement in multiparticle systems
-3. `Crossref`: Multiparticle entanglement
-4. `Crossref`: Multiparticle Entanglement
-5. `Crossref`: Multiparticle Entanglement
-6. `DataCite`: Global entanglement in multiparticle systems
-7. `DataCite`: Accessible quantification of multiparticle entanglement
-8. `DataCite`: Characterizing the width of entanglement
-9. `DataCite`: Quantum coherences of indistinguishable particles
-10. `DataCite`: Multiparticle entanglement criteria for nonsymmetric collective variances
-11. `OpenAlex`: Global entanglement in multiparticle systems
-12. `OpenAlex`: Global Entanglement in Multiparticle Systems
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.quant-ph/0108104`
+- Title: `Global entanglement in multiparticle systems`
+- Authors: `Meyer, David A.; Wallach, Nolan R.`
+- Venue: `arXiv`
+- Year: `2001`
+- DOI: `10.48550/arxiv.quant-ph/0108104`
+- URL: `https://arxiv.org/abs/quant-ph/0108104`
+- Type: `Text`
 
 ### Mismatches
 
 None.
+
+### Field Comparisons
+
+- `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.quant-ph/0108104`)
+- `title`: `match` (input: `Global entanglement in multiparticle systems`, found: `Global entanglement in multiparticle systems`)
+- `authors`: `match` (input: `['Meyer, David A', 'Wallach, Nolan R']`, found: `['Meyer, David A.', 'Wallach, Nolan R.']`)
+- `year`: `match` (input: `2001`, found: `2001`)
+- `venue`: `match` (input: `arXiv preprint quant-ph/0108104`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
+- `volume`: `not_checked` (input: `None`, found: `None`)
+- `issue`: `not_checked` (input: `None`, found: `None`)
+- `pages`: `not_checked` (input: `None`, found: `None`)
+- `article_number`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `quant-ph/0108104`, found: `quant-ph/0108104`)
+- `pmid`: `not_checked` (input: `None`, found: `None`)
+- `isbn`: `not_checked` (input: `None`, found: `None`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/quant-ph/0108104`)
+
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429
 
 ## Reference eckardt2017colloquium
 
@@ -7963,7 +8044,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `6`
 
 ### Selected Record
@@ -8020,7 +8101,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `6`
 
 ### Selected Record
@@ -8077,7 +8158,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `7`
 
 ### Selected Record
@@ -8134,7 +8215,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `6`
 
 ### Selected Record
@@ -8191,7 +8272,7 @@ Status: `TITLE_FOUND_WITH_FIELD_MISMATCHES`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -8249,7 +8330,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `15`
 
 ### Selected Record
@@ -8306,7 +8387,7 @@ Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
 - Records returned: `12`
 
 ### Selected Record
@@ -8347,7 +8428,7 @@ None.
 
 ## Reference huang2026low
 
-Status: `AMBIGUOUS_MATCH`
+Status: `FOUND_NO_SUPPLIED_FIELD_MISMATCH`
 
 ### Raw Input
 
@@ -8357,26 +8438,48 @@ Status: `AMBIGUOUS_MATCH`
 
 ### Identifier Used
 
-- Kind: `title`
-- Value: `Low-depth amplitude estimation via statistical eigengap estimation`
-- Normalized: `low-depth amplitude estimation via statistical eigengap estimation`
+- Kind: `arxiv_id`
+- Value: `2603.05475`
+- Normalized: `2603.05475`
 
 ### Lookup
 
-- Sources queried: `Crossref`, `DataCite`, `OpenAlex`
-- Records returned: `8`
+- Sources queried: `Crossref`, `DataCite`, `arXiv`, `OpenAlex`
+- Records returned: `2`
 
-### Candidate Records
+### Selected Record
 
-1. `Crossref`: Low depth algorithms for quantum amplitude estimation
-2. `Crossref`: Low-depth Amplitude Estimation without Really Trying
-3. `Crossref`: Low-depth amplitude estimation on a trapped-ion quantum computer
-4. `Crossref`: Depth estimation via sampling
-5. `Crossref`: Monocular Human Depth Estimation Via Pose Estimation
-6. `DataCite`: Low-depth amplitude estimation via statistical eigengap estimation
-7. `OpenAlex`: Low-depth amplitude estimation via statistical eigengap estimation
-8. `OpenAlex`: Low-depth amplitude estimation via statistical eigengap estimation
+- Source: `DataCite`
+- Source URL: `https://doi.org/10.48550/arxiv.2603.05475`
+- Title: `Low-depth amplitude estimation via statistical eigengap estimation`
+- Authors: `Huang, Po-Wei; Koczor, Bálint`
+- Venue: `arXiv`
+- Year: `2026`
+- DOI: `10.48550/arxiv.2603.05475`
+- URL: `https://arxiv.org/abs/2603.05475`
+- Type: `Preprint`
 
 ### Mismatches
 
 None.
+
+### Field Comparisons
+
+- `doi`: `additional_metadata` (input: `None`, found: `10.48550/arxiv.2603.05475`)
+- `title`: `match` (input: `Low-depth amplitude estimation via statistical eigengap estimation`, found: `Low-depth amplitude estimation via statistical eigengap estimation`)
+- `authors`: `match` (input: `['Huang, Po-Wei', "Koczor, B{\\'a}lint"]`, found: `['Huang, Po-Wei', 'Koczor, Bálint']`)
+- `year`: `match` (input: `2026`, found: `2026`)
+- `venue`: `match` (input: `arXiv preprint arXiv:2603.05475`, found: `arXiv`)
+  - Note: both records identify an arXiv/preprint venue
+- `volume`: `not_checked` (input: `None`, found: `None`)
+- `issue`: `not_checked` (input: `None`, found: `None`)
+- `pages`: `not_checked` (input: `None`, found: `None`)
+- `article_number`: `not_checked` (input: `None`, found: `None`)
+- `arxiv_id`: `match` (input: `2603.05475`, found: `2603.05475`)
+- `pmid`: `not_checked` (input: `None`, found: `None`)
+- `isbn`: `not_checked` (input: `None`, found: `None`)
+- `url`: `additional_metadata` (input: `None`, found: `https://arxiv.org/abs/2603.05475`)
+
+### Lookup Errors
+
+- arXiv: provider returned HTTP 429

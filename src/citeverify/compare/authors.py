@@ -27,22 +27,15 @@ def compare_authors(
         )
 
     mismatches: list[str] = []
+    matched_found_indexes: set[int] = set()
     for supplied_author in supplied:
-        position = supplied_author.position_in_list
-        found_author = (
-            found_authors[position]
-            if position is not None and position < len(found_authors)
-            else None
+        found_index = _find_compatible_author(
+            supplied_author, found_authors, matched_found_indexes
         )
-        if found_author is None:
-            mismatches.append(
-                f"{supplied_author.raw_name}: no corresponding author found"
-            )
+        if found_index is None:
+            mismatches.append(f"{supplied_author.raw_name}: no compatible author found")
             continue
-        if not author_names_compatible(supplied_author, found_author):
-            mismatches.append(
-                f"{supplied_author.raw_name} != {found_author.raw_name}"
-            )
+        matched_found_indexes.add(found_index)
 
     return FieldComparison(
         field="authors",
@@ -51,3 +44,25 @@ def compare_authors(
         result=ComparisonResult.MISMATCH if mismatches else ComparisonResult.MATCH,
         note="; ".join(mismatches) if mismatches else None,
     )
+
+
+def _find_compatible_author(
+    supplied_author: ParsedAuthor,
+    found_authors: list[ParsedAuthor],
+    matched_found_indexes: set[int],
+) -> int | None:
+    position = supplied_author.position_in_list
+    if (
+        position is not None
+        and position < len(found_authors)
+        and position not in matched_found_indexes
+        and author_names_compatible(supplied_author, found_authors[position])
+    ):
+        return position
+
+    for index, found_author in enumerate(found_authors):
+        if index in matched_found_indexes:
+            continue
+        if author_names_compatible(supplied_author, found_author):
+            return index
+    return None

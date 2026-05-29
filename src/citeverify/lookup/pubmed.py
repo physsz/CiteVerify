@@ -10,6 +10,11 @@ class PubMedProvider:
     async def get_by_doi(self, doi: str) -> LookupResponse:
         return LookupResponse(source=self.name, query_kind="doi", query_value=doi)
 
+    async def get_by_arxiv_id(self, arxiv_id: str) -> LookupResponse:
+        return LookupResponse(
+            source=self.name, query_kind="arxiv_id", query_value=arxiv_id
+        )
+
     async def search_by_title(self, title: str) -> LookupResponse:
         return LookupResponse(source=self.name, query_kind="title", query_value=title)
 

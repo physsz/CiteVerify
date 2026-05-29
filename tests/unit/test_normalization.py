@@ -1,5 +1,7 @@
+from citeverify.normalize.arxiv import arxiv_doi, extract_arxiv_id, normalize_arxiv_id
 from citeverify.normalize.author import parse_author_list
 from citeverify.normalize.doi import extract_doi, normalize_doi
+from citeverify.normalize.journal import venues_compatible
 from citeverify.normalize.text import normalize_basic_text
 from citeverify.normalize.title import normalize_title, titles_match
 
@@ -40,3 +42,17 @@ def test_author_parser_et_al() -> None:
 
 def test_latex_accent_normalization() -> None:
     assert normalize_basic_text(r'Braum{\"u}ller') == "braumuller"
+
+
+def test_arxiv_id_extraction_and_doi() -> None:
+    assert extract_arxiv_id("arXiv preprint arXiv:2603.05475") == "2603.05475"
+    assert normalize_arxiv_id("https://arxiv.org/pdf/2603.05475v2.pdf") == "2603.05475"
+    assert arxiv_doi("2603.05475") == "10.48550/arxiv.2603.05475"
+
+
+def test_venue_matches_when_found_venue_embeds_volume() -> None:
+    assert venues_compatible(
+        "Advances in Neural Information Processing Systems",
+        "Advances in Neural Information Processing Systems 35",
+        input_volume="35",
+    )

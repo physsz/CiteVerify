@@ -16,9 +16,18 @@ from citeverify.models import (
     VerificationResult,
     VerificationStatus,
 )
-from citeverify.normalize.doi import normalize_doi
-from citeverify.normalize.journal import normalize_journal
-from citeverify.normalize.pages import normalize_article_number, normalize_pages
+from citeverify.normalize.arxiv import (
+    extract_arxiv_id,
+    is_arxiv_venue,
+    normalize_arxiv_id,
+)
+from citeverify.normalize.doi import extract_doi, normalize_doi
+from citeverify.normalize.journal import normalize_journal, venues_compatible
+from citeverify.normalize.pages import (
+    normalize_article_number,
+    normalize_pages,
+    pages_compatible,
+)
 from citeverify.normalize.title import normalize_title, titles_match
 
 
@@ -43,6 +52,12 @@ class Verifier:
         doi_candidate = _first_candidate(candidates, IdentifierKind.DOI)
         if doi_candidate:
             return await self._verify_by_doi(reference, candidates, doi_candidate)
+
+        arxiv_candidate = _first_candidate(candidates, IdentifierKind.ARXIV_ID)
+        if arxiv_candidate:
+            return await self._verify_by_arxiv_id(
+                reference, candidates, arxiv_candidate
+            )
 
         title_candidate = _first_candidate(candidates, IdentifierKind.TITLE)
         if title_candidate:
@@ -127,6 +142,8 @@ class Verifier:
             )
         narrowed = _dedupe_records(_narrow_by_supplied_fields(reference, title_matches))
         if len(narrowed) != 1:
+            narrowed = _prefer_doi_bearing_records(narrowed)
+        if len(narrowed) != 1:
             return _result(
                 reference,
                 candidates,
@@ -144,6 +161,76 @@ class Verifier:
             VerificationStatus.TITLE_FOUND_WITH_FIELD_MISMATCHES
             if mismatches(comparisons)
             else VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
+        )
+        return _result(
+            reference,
+            candidates,
+            identifier,
+            sources,
+            records,
+            selected,
+            comparisons,
+            status,
+            errors,
+        )
+
+    async def _verify_by_arxiv_id(
+        self,
+        reference: ParsedReference,
+        candidates: list[IdentifierCandidate],
+        identifier: IdentifierCandidate,
+    ) -> VerificationResult:
+        responses = await self._query_providers("arxiv_id", identifier.normalized_value)
+        records, sources, errors = _collect_responses(responses)
+        matches = _dedupe_records(
+            [
+                record
+                for record in records
+                if _record_arxiv_identity(record) == identifier.normalized_value
+            ]
+        )
+        if not matches:
+            status = VerificationStatus.TITLE_NOT_FOUND
+            if errors and not records:
+                status = VerificationStatus.LOOKUP_ERROR
+            return _result(
+                reference,
+                candidates,
+                identifier,
+                sources,
+                records,
+                None,
+                [],
+                status,
+                errors,
+            )
+        if len(matches) != 1:
+            matches = _prefer_doi_bearing_records(matches)
+        if len(matches) != 1:
+            return _result(
+                reference,
+                candidates,
+                identifier,
+                sources,
+                records,
+                None,
+                [],
+                VerificationStatus.AMBIGUOUS_MATCH,
+                errors,
+            )
+        selected = matches[0]
+        comparisons = compare_references(reference, selected)
+        status = (
+            VerificationStatus.IDENTIFIER_CONFLICT
+            if any(
+                comparison.field == "title"
+                for comparison in mismatches(comparisons)
+            )
+            else (
+                VerificationStatus.TITLE_FOUND_WITH_FIELD_MISMATCHES
+                if mismatches(comparisons)
+                else VerificationStatus.FOUND_NO_SUPPLIED_FIELD_MISMATCH
+            )
         )
         return _result(
             reference,
@@ -220,6 +307,8 @@ class Verifier:
             async with self.semaphore:
                 if query_kind == "doi":
                     return await provider.get_by_doi(str(value))
+                if query_kind == "arxiv_id":
+                    return await provider.get_by_arxiv_id(str(value))
                 if query_kind == "title":
                     return await provider.search_by_title(str(value))
                 if isinstance(value, JournalLocator):
@@ -296,6 +385,14 @@ def _status_for_doi(comparisons: list[FieldComparison]) -> VerificationStatus:
 def _filter_title_matches(
     input_title: str | None, records: list[RegistryRecord]
 ) -> list[RegistryRecord]:
+    normalized_input = normalize_title(input_title)
+    exact_matches = [
+        record
+        for record in records
+        if normalized_input and normalize_title(record.title) == normalized_input
+    ]
+    if exact_matches:
+        return exact_matches
     return [record for record in records if titles_match(input_title, record.title)]
 
 
@@ -308,17 +405,23 @@ def _narrow_by_supplied_fields(
         year_matches = [record for record in narrowed if record.year == reference.year]
         if year_matches:
             narrowed = year_matches
-    if reference.doi:
-        doi = normalize_doi(reference.doi)
+    doi = normalize_doi(reference.doi) or extract_doi(reference.url or "")
+    if doi:
         doi_matches = [
             record for record in narrowed if normalize_doi(record.doi) == doi
         ]
         if doi_matches:
             narrowed = doi_matches
-    if reference.venue:
-        venue = normalize_journal(reference.venue)
+    if reference.venue and not is_arxiv_venue(reference.venue):
         venue_matches = [
-            record for record in narrowed if normalize_journal(record.venue) == venue
+            record
+            for record in narrowed
+            if venues_compatible(
+                reference.venue,
+                record.venue,
+                reference.volume,
+                record.volume,
+            )
         ]
         if venue_matches:
             narrowed = venue_matches
@@ -338,6 +441,9 @@ def _dedupe_records(records: list[RegistryRecord]) -> list[RegistryRecord]:
 
 
 def _record_identity(record: RegistryRecord) -> tuple[str, ...]:
+    arxiv_id = _record_arxiv_identity(record)
+    if arxiv_id:
+        return ("arxiv", arxiv_id)
     doi = normalize_doi(record.doi)
     if doi:
         return ("doi", doi)
@@ -351,6 +457,20 @@ def _record_identity(record: RegistryRecord) -> tuple[str, ...]:
         normalize_pages(record.pages) or "",
         normalize_article_number(record.article_number) or "",
     )
+
+
+def _record_arxiv_identity(record: RegistryRecord) -> str | None:
+    return normalize_arxiv_id(record.arxiv_id) or extract_arxiv_id(
+        record.doi,
+        record.url,
+        record.source_record_url,
+        record.venue,
+    )
+
+
+def _prefer_doi_bearing_records(records: list[RegistryRecord]) -> list[RegistryRecord]:
+    doi_records = [record for record in records if record.doi]
+    return doi_records if doi_records else records
 
 
 def _filter_journal_locator_matches(
@@ -367,7 +487,12 @@ def _filter_journal_locator_matches(
         if (
             locator.venue
             and not locator.issn
-            and normalize_journal(locator.venue) != normalize_journal(record.venue)
+            and not venues_compatible(
+                locator.venue,
+                record.venue,
+                locator.volume,
+                record.volume,
+            )
         ):
             continue
         if locator.year and record.year and locator.year != record.year:
@@ -379,7 +504,7 @@ def _filter_journal_locator_matches(
         if (
             locator.pages
             and record.pages
-            and normalize_pages(locator.pages) != normalize_pages(record.pages)
+            and not pages_compatible(locator.pages, record.pages)
         ):
             continue
         if locator.article_number and record.article_number:

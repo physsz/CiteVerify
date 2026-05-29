@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import re
 
+from rapidfuzz import fuzz
+
 from citeverify.models import ParsedAuthor
 from citeverify.normalize.text import collapse_whitespace, normalize_basic_text
 
@@ -9,6 +11,28 @@ ET_AL_PATTERN = re.compile(
     r"\b(?:et\.?\s*al\.?|and\s+others|others)\.?", re.IGNORECASE
 )
 SUFFIXES = {"jr", "jr.", "sr", "sr.", "ii", "iii", "iv"}
+FAMILY_PARTICLES = {
+    "al",
+    "da",
+    "das",
+    "de",
+    "del",
+    "della",
+    "den",
+    "der",
+    "di",
+    "do",
+    "dos",
+    "du",
+    "la",
+    "las",
+    "le",
+    "los",
+    "ten",
+    "ter",
+    "van",
+    "von",
+}
 
 
 def normalize_name_token(value: str | None) -> str | None:
@@ -24,6 +48,9 @@ def extract_initials(tokens: list[str]) -> list[str]:
     for token in tokens:
         cleaned = re.sub(r"[^A-Za-z]", "", token)
         if not cleaned:
+            continue
+        if cleaned.isupper() and 1 < len(cleaned) <= 4:
+            initials.extend(ch.upper() for ch in cleaned)
             continue
         if len(cleaned) == 1 or token.endswith("."):
             initials.extend(ch.upper() for ch in cleaned)
@@ -68,8 +95,9 @@ def parse_author(raw_name: str, position: int | None = None) -> ParsedAuthor:
             family_name = tokens[0]
             given_text = ""
         else:
-            family_name = tokens[-1]
-            given_text = " ".join(tokens[:-1])
+            family_start = _family_start_index(tokens)
+            family_name = " ".join(tokens[family_start:])
+            given_text = " ".join(tokens[:family_start])
 
     given_tokens = [token for token in re.split(r"[\s.-]+", given_text) if token]
     return ParsedAuthor(
@@ -124,6 +152,16 @@ def parse_author_list(value: str | None) -> list[ParsedAuthor]:
     return [parse_author(part, idx) for idx, part in enumerate(parts)]
 
 
+def _family_start_index(tokens: list[str]) -> int:
+    family_start = len(tokens) - 1
+    while family_start > 0:
+        previous_token = normalize_name_token(tokens[family_start - 1])
+        if previous_token not in FAMILY_PARTICLES:
+            break
+        family_start -= 1
+    return family_start
+
+
 def _is_et_al_text(value: str) -> bool:
     normalized = normalize_basic_text(value).replace(".", "")
     return normalized in {"et al", "etal", "others", "and others"}
@@ -136,12 +174,17 @@ def author_names_compatible(
         return True
     input_family = normalize_name_token(input_author.family_name)
     found_family = normalize_name_token(found_author.family_name)
-    if not input_family or not found_family or input_family != found_family:
+    if not input_family or not found_family:
+        return False
+    if input_family != found_family and fuzz.ratio(input_family, found_family) < 90:
         return False
     input_initials = input_author.given_initials
     found_initials = found_author.given_initials
     if not input_initials or not found_initials:
         return True
-    if len(input_initials) > len(found_initials):
-        return False
-    return input_initials == found_initials[: len(input_initials)]
+    shorter, longer = (
+        (input_initials, found_initials)
+        if len(input_initials) <= len(found_initials)
+        else (found_initials, input_initials)
+    )
+    return shorter == longer[: len(shorter)]

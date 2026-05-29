@@ -30,6 +30,8 @@ class LookupProvider(Protocol):
 
     async def get_by_doi(self, doi: str) -> LookupResponse: ...
 
+    async def get_by_arxiv_id(self, arxiv_id: str) -> LookupResponse: ...
+
     async def search_by_title(self, title: str) -> LookupResponse: ...
 
     async def search_by_journal_locator(
@@ -126,6 +128,50 @@ class HttpLookupProvider:
                 )
             return body, status_code, None
         return body, status_code, f"provider returned HTTP {status_code}"
+
+    async def _get_text(
+        self,
+        *,
+        query_kind: str,
+        normalized_query_value: str,
+        url: str,
+        params: dict[str, Any] | None = None,
+    ) -> tuple[str | None, int | None, str | None]:
+        cached = None
+        if self.config.use_cache and self.cache is not None:
+            cached = self.cache.get(
+                provider_name=self.name,
+                query_kind=query_kind,
+                normalized_query_value=normalized_query_value,
+                api_base=self.api_base,
+            )
+        if cached is not None:
+            return str(cached.body.get("__text", "")), cached.status_code, None
+        if self.config.offline:
+            return None, None, "offline mode: no cached response"
+
+        try:
+            response = await self._request(url, params=params)
+        except httpx.HTTPError as exc:
+            return None, None, str(exc)
+        except Exception as exc:
+            return None, None, f"provider request failed: {exc}"
+
+        status_code = response.status_code
+        if 200 <= status_code < 300:
+            if self.config.use_cache and self.cache is not None:
+                self.cache.set(
+                    provider_name=self.name,
+                    query_kind=query_kind,
+                    normalized_query_value=normalized_query_value,
+                    api_base=self.api_base,
+                    status_code=status_code,
+                    headers=dict(response.headers),
+                    body={"__text": response.text},
+                    ttl_seconds=60 * 60 * 24 * 30,
+                )
+            return response.text, status_code, None
+        return response.text, status_code, f"provider returned HTTP {status_code}"
 
     @retry(
         retry=retry_if_exception_type((httpx.TimeoutException, httpx.TransportError)),
